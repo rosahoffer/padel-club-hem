@@ -91,7 +91,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 8rem;
   border: solid 2px var(--primary-color);
   transition: all 300ms;
   background-color: var(--primary-color);
