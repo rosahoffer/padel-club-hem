@@ -2,12 +2,11 @@
     <main>
     <nav class="sticky navbar">
         <div>
-            <nuxt-link href="/" class="nav__link">
-                <span class="logo"><img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem"></span>
-            </nuxt-link>
+            <nuxt-link href="/sportaanbod" class="nav__link logo"><img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem"></nuxt-link>
         </div>
 
-        <input type="checkbox" id="nav" class="hidden" />
+
+        <input type="checkbox" id="nav" class="hidden"/>
         <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
         <div class="nav">
             <ul class="nav__items">

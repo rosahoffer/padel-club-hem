@@ -1,0 +1,18 @@
+<template>
+    <main>
+        <section>
+            <div>
+                <h1>Welkom bij Padel Club Hem!</h1>
+                <p>Reserveer nu je padelbaan en begin je avontuur vandaag nog!</p>
+                <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+            </div>
+        </section>
+        <section class="two">
+            <div>
+                <h1>Welkom bij Padel Club Hem!</h1>
+                <p>Reserveer nu je padelbaan en begin je avontuur vandaag nog!</p>
+                <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+            </div>
+        </section>
+    </main>
+</template>
