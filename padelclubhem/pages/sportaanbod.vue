@@ -1,18 +1,32 @@
+<script setup>
+
+</script>
+
 <template>
     <main>
-        <section>
-            <div>
-                <h1>Welkom bij Padel Club Hem!</h1>
-                <p>Reserveer nu je padelbaan en begin je avontuur vandaag nog!</p>
-                <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
-            </div>
-        </section>
-        <section class="two">
-            <div>
-                <h1>Welkom bij Padel Club Hem!</h1>
-                <p>Reserveer nu je padelbaan en begin je avontuur vandaag nog!</p>
-                <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
-            </div>
-        </section>
+        <div>
+        <h1>Sportaanbod</h1>
+            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+        </div>
     </main>
 </template>
+
+<style scoped>
+
+:root {
+    /* COLORS */
+
+    --primary-color: #cbfd3c;
+    --secondary-color: #ffeae3;
+    --tertiary-color: #414141;
+    --background-color: #262626;
+    --navbar-bg-color: #4b4b4b;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+
+}
+
+</style>

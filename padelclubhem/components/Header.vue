@@ -1,53 +1,58 @@
+<script setup></script>
+
 <template>
     <main>
-    <nav class="sticky navbar">
-        <div>
-            <nuxt-link href="/sportaanbod" class="nav__link logo"><img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem"></nuxt-link>
-        </div>
+        <nav class="navbar">
+            <div>
+                <nuxt-link href="/" class="nav__link logo"><img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem"></nuxt-link>
+            </div>
 
+            <input type="checkbox" id="nav" class="hidden" />
+            <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
+            <div class="nav">
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link">Sportaanbod</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link">Toernooien</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link">Lessen</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link">Business</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/sportaanbod" class="nav__link">Contact</nuxt-link>
+                    </li>
+                </ul>
+            </div>
 
-        <input type="checkbox" id="nav" class="hidden"/>
-        <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
-        <div class="nav">
-            <ul class="nav__items">
-                <li class="nav__item"><nuxt-link href="/" class="nav__link">Sportaanbod</nuxt-link></li>
-                <li class="nav__item"><nuxt-link href="/" class="nav__link">Toernooien</nuxt-link></li>
-                <li class="nav__item"><nuxt-link href="/" class="nav__link">Lessen</nuxt-link></li>
-                <li class="nav__item"><nuxt-link href="/" class="nav__link">Business</nuxt-link></li>
-                <li class="nav__item"><nuxt-link href="/" class="nav__link">Contact</nuxt-link></li>
-            </ul>
-        </div>
-
-        <div>
-            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
-        </div>
-    </nav>
-</main>
+            <div>
+                <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+            </div>
+        </nav>
+    </main>
 </template>
 
 <style scoped>
-
-
 :root {
-  /* COLORS */
+    /* COLORS */
 
-  --primary-color: #cbfd3c;
-  --secondary-color: #ffeae3;
-  --tertiary-color: #414141;
-  --background-color: #262626;
-  --navbar-bg-color: #4b4b4b;
+    --primary-color: #cbfd3c;
+    --secondary-color: #ffeae3;
+    --tertiary-color: #414141;
+    --background-color: #262626;
+    --navbar-bg-color: #4b4b4b;
 }
 
-main{
+main {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.sticky {
-    position: fixed;
-    top: 1rem;
-    z-index: 1000;
+    border-radius: 15px;
 }
 
 .logo img {
@@ -55,12 +60,19 @@ main{
 }
 
 .navbar {
-    width: 95%;
+    position: fixed;
     display: flex;
     align-items: center;
+    top: 1rem;
+    width: 95%;
     padding: 1rem 1.5rem;
     background-color: red;
     border-radius: 15px;
+    z-index: 1000;
+}
+
+.book-button {
+    width: 10rem;
 }
 
 .hidden {
@@ -145,13 +157,13 @@ main{
     .nav {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         height: 100%;
         width: 100%;
         z-index: -1;
-        background-color: var(--primary);
+        background-color: var(--primary-color);
         opacity: 0;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
     }
 
     .nav .nav__items {
@@ -197,7 +209,7 @@ main{
         font-size: 24px;
         font-weight: 600;
         transform: translateY(-20px);
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
     }
 
     .nav .nav__items .nav__item .nav__link:hover {
@@ -220,7 +232,7 @@ main{
         display: block;
         width: 20px;
         height: 2px;
-        background-color: white;
+        background-color: var(--primary-color);
         border-radius: 2px;
         margin-left: 14px;
     }
@@ -244,7 +256,7 @@ main{
 }
 
 #nav:checked+.nav__open i {
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     transition: transform 0.2s ease;
 }
 
@@ -256,18 +268,14 @@ main{
     opacity: 0;
 }
 
-#nav:checked~.nav__item a {
-    display: block !important;
-}
-
 #nav:checked+.nav__open i:nth-child(3) {
     transform: translateY(-6px) rotate(90deg);
 }
 
 #nav:checked~.nav {
-    z-index: 9990;
+    transform: translateX(100%);
     opacity: 1;
-    background-color: var(--background-color);
+    z-index: 9990;
 }
 
 #nav:checked~.nav ul li a {

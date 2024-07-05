@@ -87,6 +87,7 @@ p {
 /* book button  */
 
 .book-button {
+  max-width: 9rem;
   position: relative;
   display: flex;
   align-items: center;
