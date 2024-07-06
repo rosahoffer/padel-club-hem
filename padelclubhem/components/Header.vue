@@ -9,59 +9,57 @@ function toggleMenu() {
 </script>
 
 <template>
-  <main>
-    <div class="navbar-container">
-      <nav class="navbar">
-        <div class="logo-container">
-          <nuxt-link href="/" class="nav__link logo" id="logo">
-            <img
-              src="assets/images/padelclubhem-logo.png"
-              alt="Logo Padel Club Hem"
-            />
-          </nuxt-link>
-        </div>
-
-        <div class="book-button-container">
-          <nuxt-link href="/" class="book-button" role="link"
-            >🏓 Boek een baan!</nuxt-link
-          >
-        </div>
-
-        <!-- Menu Toggle Button -->
-        <div class="nav__open" @click="toggleMenu">
-          <i :class="{ open: isMenuOpen }"></i>
-          <i :class="{ open: isMenuOpen }"></i>
-        </div>
-
-        <!-- The menu itself -->
-        <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
-          <div class="bubble-container">
-            <div id="bubble" :class="{ open: isMenuOpen }"></div>
+    <main>
+      <div class="navbar-container">
+        <nav class="navbar">
+          <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
+            <nuxt-link href="/" class="nav__link logo" id="logo">
+              <img
+                src="assets/images/padelclubhem-logo.png"
+                alt="Logo Padel Club Hem"
+              />
+            </nuxt-link>
           </div>
-          <ul class="nav__items">
-            <li class="nav__item">
-              <nuxt-link href="/sportaanbod" class="nav__link"
-                >Sportaanbod</nuxt-link
-              >
-            </li>
-            <li class="nav__item">
-              <nuxt-link href="/" class="nav__link">Toernooien</nuxt-link>
-            </li>
-            <li class="nav__item">
-              <nuxt-link href="/" class="nav__link">Lessen</nuxt-link>
-            </li>
-            <li class="nav__item">
-              <nuxt-link href="/" class="nav__link">Business</nuxt-link>
-            </li>
-            <li class="nav__item">
-              <nuxt-link href="/" class="nav__link">Contact</nuxt-link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </main>
-</template>
+  
+          <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
+            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+          </div>
+  
+          <!-- Menu Toggle Button -->
+          <div class="nav__open" @click="toggleMenu">
+            <i :class="{ open: isMenuOpen }"></i>
+            <i :class="{ open: isMenuOpen }"></i>
+          </div>
+  
+          <!-- The menu itself -->
+          <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
+            <div class="bubble-container">
+              <div id="bubble" :class="{ open: isMenuOpen }"></div>
+            </div>
+            <ul class="nav__items">
+              <li class="nav__item">
+                <nuxt-link href="/sportaanbod" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
+              </li>
+              <li class="nav__item">
+                <nuxt-link href="/" class="nav__link" @click="toggleMenu">Toernooien</nuxt-link>
+              </li>
+              <li class="nav__item">
+                <nuxt-link href="/" class="nav__link" @click="toggleMenu">Lessen</nuxt-link>
+              </li>
+              <li class="nav__item">
+                <nuxt-link href="/" class="nav__link" @click="toggleMenu">Business</nuxt-link>
+              </li>
+              <li class="nav__item">
+                <nuxt-link href="/" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </main>
+  </template>
+  
+
 
 <style scoped>
 :root {
@@ -94,6 +92,20 @@ function toggleMenu() {
 .logo-container img {
   height: 50px;
   transition: filter 0.3s;
+}
+
+.logo-container.menu-open img {
+  filter: brightness(0);
+}
+
+.book-button-container .book-button {
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.book-button-container.menu-open .book-button {
+  background-color: black;
+  color: white; /* Adjust the text color as needed */
 }
 
 .nav__open {
@@ -228,6 +240,7 @@ function toggleMenu() {
     border-radius: 0;
     flex-direction: row;
     align-items: center;
+    background-color: var(--navbar-bg-color);
   }
 
   .nav__items {
