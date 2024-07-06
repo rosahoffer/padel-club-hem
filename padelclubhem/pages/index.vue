@@ -8,6 +8,18 @@
         <h1>Welkom bij Padel Club Hem</h1>
             <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
         </div>
+        <div>
+        <h1>Welkom bij Padel Club Hem</h1>
+            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+        </div>
+        <div>
+        <h1>Welkom bij Padel Club Hem</h1>
+            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+        </div>
+        <div>
+        <h1>Welkom bij Padel Club Hem</h1>
+            <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+        </div>
     </main>
 </template>
 
@@ -26,6 +38,10 @@
 main {
     width: 100%;
     padding: 10rem 1rem;
+}
+
+div{
+    margin: 3rem 0;
 }
 
 </style>
