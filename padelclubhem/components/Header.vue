@@ -1,37 +1,11 @@
 <script setup>
 import { ref } from "vue";
-import gsap from "gsap";
 
-const navToggle = ref(false);
+const isMenuOpen = ref(false);
 
-const toggleMenu = () => {
-  navToggle.value = !navToggle.value;
-  const navMenu = document.getElementById("navMenu");
-  const logo = document.getElementById("logo");
-  const bubbleContainer = document.querySelector(".bubble-container");
-
-  if (navToggle.value) {
-    gsap.to(navMenu, {
-      duration: 0.3,
-      height: "100vh",
-      opacity: 1,
-      display: "flex",
-      ease: "power2.inOut",
-    });
-    gsap.to(logo, { duration: 0.3, filter: "brightness(0) invert(1)" });
-    bubbleContainer.style.display = "block";
-  } else {
-    gsap.to(navMenu, {
-      duration: 0.3,
-      height: "0",
-      opacity: 0,
-      display: "none",
-      ease: "power2.inOut",
-    });
-    gsap.to(logo, { duration: 0.3, filter: "brightness(1) invert(0)" });
-    bubbleContainer.style.display = "none";
-  }
-};
+function toggleMenu() {
+  isMenuOpen.value = !isMenuOpen.value;
+}
 </script>
 
 <template>
@@ -53,17 +27,16 @@ const toggleMenu = () => {
           >
         </div>
 
-        <!-- Checkbox for the menu -->
-        <input type="checkbox" id="navToggle" class="hidden" />
-        <label for="navToggle" class="nav__open">
-          <i></i>
-          <i></i>
-        </label>
+        <!-- Menu Toggle Button -->
+        <div class="nav__open" @click="toggleMenu">
+          <i :class="{ open: isMenuOpen }"></i>
+          <i :class="{ open: isMenuOpen }"></i>
+        </div>
 
         <!-- The menu itself -->
-        <div class="nav" id="navMenu">
+        <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
           <div class="bubble-container">
-            <div id="bubble"></div>
+            <div id="bubble" :class="{ open: isMenuOpen }"></div>
           </div>
           <ul class="nav__items">
             <li class="nav__item">
@@ -123,15 +96,12 @@ const toggleMenu = () => {
   transition: filter 0.3s;
 }
 
-.hidden {
-  display: none;
-}
-
 .nav__open {
   display: flex;
   flex-direction: column;
   cursor: pointer;
   transition: all 0.3s;
+  z-index: 15; /* Ensure it stays on top */
 }
 
 .nav__open i {
@@ -142,13 +112,23 @@ const toggleMenu = () => {
   transition: all 0.3s;
 }
 
+.nav__open i.open:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--background-color);
+}
+
+.nav__open i.open:nth-child(2) {
+  transform: translateY(-4px) rotate(-45deg);
+  background-color: var(--background-color);
+}
+
 .nav {
   display: none;
   flex-direction: column;
   width: 100%;
   text-align: center;
   position: absolute;
-  top: 100%;
+  top: 0;
   left: 0;
   background-color: var(--primary-color);
   z-index: 5;
@@ -159,10 +139,49 @@ const toggleMenu = () => {
   border-radius: 10px;
 }
 
+.nav.open {
+  display: flex;
+  opacity: 1;
+  top: 0;
+}
+
+.bubble-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  z-index: -2;
+}
+
+#bubble.open {
+  width: 200vw;
+  height: 200vh;
+}
+
 .nav__items {
   list-style: none;
   padding: 5rem 0;
   text-align: left;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.nav.open .nav__items {
+  opacity: 1;
 }
 
 .nav__item {
@@ -182,46 +201,17 @@ const toggleMenu = () => {
   border-radius: 5px;
 }
 
-.hidden:checked + .nav__open + .nav {
-  position: absolute;
-  display: flex;
-  opacity: 0.5;
-  top: 0;
+.book-button {
+  z-index: 16;
 }
 
-.hidden:checked + .nav__open i:nth-child(1) {
-  transform: translateY(10px) rotate(45deg);
+.logo-container {
+  z-index: 17;
+  background-color: black;
 }
 
-.hidden:checked + .nav__open i:nth-child(2) {
-  transform: translateY(0px) rotate(-45deg);
-}
-
-.bubble-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: none; /* Initially hidden */
-}
-
-.nav.open .bubble-container {
-  display: block; /* Show bubble when menu open */
-}
-
-#bubble {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 200vw; /* Initial large circle */
-  height: 200vh;
-  background-color: var(--primary-color);
-  border-radius: 50%; /* Circle */
-  transition: all 0.3s ease;
-  z-index: -2;
+.nav__items {
+  z-index: 18;
 }
 
 @media (min-width: 768px) {
@@ -233,7 +223,6 @@ const toggleMenu = () => {
     display: flex; /* Show navbar on larger screens */
     position: static;
     width: auto;
-    background-color: transparent;
     opacity: 1;
     padding: 0;
     border-radius: 0;
@@ -242,12 +231,16 @@ const toggleMenu = () => {
   }
 
   .nav__items {
+    display: flex;
     margin-top: 0;
     flex-direction: row;
   }
 
   .nav__item {
     margin: 0 10px;
+  }
+  .navbar {
+  color: var(--background-color);
   }
 
   .book-button-container {
