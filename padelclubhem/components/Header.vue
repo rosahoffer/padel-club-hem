@@ -14,7 +14,7 @@ function toggleMenu() {
             <nav class="navbar">
                 <!-- Logo Section -->
                 <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/" class="nav__link logo" @click="toggleMenu" id="logo">
+                    <nuxt-link href="/" class="nav__link logo" id="logo">
                         <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
                     </nuxt-link>
                 </div>
