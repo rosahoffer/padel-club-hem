@@ -16,7 +16,7 @@
         <div class="cta-buttons">
             <nuxt-link href="https://www.instagram.com/padelclubhem/" class="primary-button">🚀 Volg ons op social
                 media</nuxt-link>
-            <nuxt-link href="mailto:info@padelclubhem.nl" class="primary-button">Neem contact op</nuxt-link>
+            <nuxt-link href="mailto:info@padelclubhem.nl" class="cta-button subtitle-bold-lowercase">Neem contact op</nuxt-link>
         </div>
     </div>]
     <footer>
@@ -67,11 +67,19 @@ h4 {
     gap: 1rem;
 }
 
-.primary-button:last-child {
+.cta-button {
     background-color: var(--background-color);
     border: var(--background-color);
     color: var(--primary-color);
     text-decoration: underline;
+    font-size: 0.7rem;
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.cta-button:hover {
+    text-decoration: none;
 }
 
 footer {
