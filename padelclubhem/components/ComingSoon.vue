@@ -7,7 +7,7 @@
                 <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
             </nuxt-link>
         </div>
-        <h1>Binnenkort Beschikbaar!</h1>
+        <h1>Binnenkort geopend</h1>
         <h3 class="subtitle-bold-lowercase">Bereid je voor op een nieuwe sportieve ervaring!</h3>
         <p>Welkom bij Padel Club Hem! We werken hard om onze nieuwe sportfaciliteit klaar te maken en we kunnen niet
             wachten om jullie te verwelkomen.
@@ -100,6 +100,11 @@ footer p {
         margin: 0 auto;
         display: flex;
         justify-content: center;
+    }
+
+    h1{
+        font-size: 3rem;
+        line-height: 3rem;
     }
 }
 </style>
