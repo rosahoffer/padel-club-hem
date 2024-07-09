@@ -21,7 +21,7 @@ function toggleMenu() {
 
                 <!-- Booking Button Section -->
                 <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/" class="book-button" role="link">🏓 Boek een baan!</nuxt-link>
+                    <nuxt-link href="/" class="primary-button" role="link">🏓 Boek een baan!</nuxt-link>
                 </div>
 
                 <!-- Menu Toggle Button -->
@@ -99,11 +99,11 @@ function toggleMenu() {
     filter: brightness(0%);
 }
 
-.book-button-container .book-button {
+.book-button-container .primary-button {
     transition: background-color 0.3s;
 }
 
-.book-button-container.menu-open .book-button {
+.book-button-container.menu-open .primary-button {
     background-color: var(--background-color);
     color: var(--primary-color);
     padding: 0.6rem 0.8rem 0.6rem 0.7rem;
@@ -214,7 +214,7 @@ function toggleMenu() {
     transition: background-color 0.3s;
 }
 
-.book-button {
+.primary-button {
     z-index: 16;
 }
 
@@ -226,7 +226,7 @@ function toggleMenu() {
     z-index: 18;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
     .nav__open {
         display: none;
     }
