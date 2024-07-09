@@ -19,9 +19,9 @@
             <nuxt-link href="mailto:info@padelclubhem.nl" class="cta-button subtitle-bold-lowercase">Neem contact op</nuxt-link>
         </div>
     </div>
-    <footer>
+    <section>
         <p>Padel Club Hem | Torenweg 44, 1607 CP Hem</p>
-    </footer>
+    </section>
 </template>
 
 <style scoped>
@@ -82,12 +82,12 @@ h4 {
     text-decoration: none;
 }
 
-footer {
+section {
     padding: 1rem;
     background-color: var(--primary-color);
 }
 
-footer p {
+section p {
     color: var(--background-color);
     font-size: 0.7rem;
     line-height: 1rem;
