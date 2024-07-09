@@ -18,7 +18,7 @@
                 media</nuxt-link>
             <nuxt-link href="mailto:info@padelclubhem.nl" class="cta-button subtitle-bold-lowercase">Neem contact op</nuxt-link>
         </div>
-    </div>]
+    </div>
     <footer>
         <p>Padel Club Hem | Torenweg 44, 1607 CP Hem</p>
     </footer>
