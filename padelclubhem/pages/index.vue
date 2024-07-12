@@ -3,5 +3,9 @@
 </script>
 
 <template>
-  <ComingSoon />
+  <main>
+    <section>
+      <h1>Welkom bij Padel Club Hem</h1>
+    </section>
+  </main>
 </template>
