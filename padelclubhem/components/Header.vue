@@ -14,7 +14,7 @@ function toggleMenu() {
             <nav class="navbar">
                 <!-- Logo Section -->
                 <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/" class="nav__link logo main-logo" id="logo">
+                    <nuxt-link href="/homepage" class="nav__link logo main-logo" id="logo">
                         <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
                     </nuxt-link>
                 </div>
@@ -37,16 +37,19 @@ function toggleMenu() {
                     </div>
                     <ul class="nav__items">
                         <li class="nav__item">
-                            <nuxt-link href="/sportaanbod" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
+                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
                         </li>
                         <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Toernooien</nuxt-link>
+                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Evenementen</nuxt-link>
                         </li>
                         <li class="nav__item">
                             <nuxt-link href="/" class="nav__link" @click="toggleMenu">Lessen</nuxt-link>
                         </li>
                         <li class="nav__item">
                             <nuxt-link href="/" class="nav__link" @click="toggleMenu">Business</nuxt-link>
+                        </li>
+                        <li class="nav__item">
+                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportcafé</nuxt-link>
                         </li>
                         <li class="nav__item">
                             <nuxt-link href="/" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
