@@ -4,7 +4,7 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
 
 <template>
     <main>
-        <section>
+        <section class="container-one">
             <div class="intro-container">
                 <h1>Welkom bij Padel Club Hem</h1>
                 <p>Indoor sport voor iedere doelgroep op de gezelligste club in West-Friesland!</p>
@@ -13,8 +13,12 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
                 </div>
             </div>
         </section>
-        <section>
-            <!-- Je volgende sectie content hier -->
+        <section class="container-two">
+            <h2>Over de club</h2>
+            <p>Bij Padelclub Hem staat beleving voorop. Wij heten je welkom in de Padelclub Hem community om lekker te
+                sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
+                sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
+                als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
         </section>
     </main>
 </template>
@@ -33,7 +37,7 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
     --hook-radius: 5px;
 }
 
-section {
+.container-one {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -55,4 +59,20 @@ section {
     width: 100%;
 }
 
+.container-two {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 0 1rem;
+}
+
+.container-two h2, p {
+    color: var(--tertiary-color);
+}
+
+.container-two p {
+    margin-top: 2rem;
+
+}
 </style>
