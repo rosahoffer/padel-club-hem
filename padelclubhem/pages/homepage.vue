@@ -15,10 +15,11 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
         </section>
         <section class="container-two">
             <h2>Over de club</h2>
-            <p>Bij Padelclub Hem staat beleving voorop. Wij heten je welkom in de Padelclub Hem community om lekker te
+            <p>Bij Padel Club Hem staat beleving voorop. Wij heten je welkom in de community om lekker te
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
                 sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
+            <nuxt-link href="/" class="secondary-button">Bekijk ons sportaanbod</nuxt-link>
         </section>
     </main>
 </template>
@@ -53,6 +54,11 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
     gap: 3rem;
 }
 
+.intro-container p{
+    color: var(--secondary-color);
+    padding: 0 1.5rem;
+}
+
 .scroll-separator {
     position: absolute;
     bottom: 0;
@@ -64,15 +70,14 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
     display: flex;
     flex-direction: column;
     background-color: var(--secondary-color);
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
-.container-two h2, p {
+.container-two > h2, p {
     color: var(--tertiary-color);
 }
 
 .container-two p {
     margin-top: 2rem;
-
 }
 </style>

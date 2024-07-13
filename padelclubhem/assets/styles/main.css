@@ -150,3 +150,9 @@ a:focus-visible{
   color: var(--primary-color);
   border: solid 2px var(--primary-color);
 }
+
+/* secondary button  */
+
+.secondary-button{
+  padding: 1rem 0;
+}
