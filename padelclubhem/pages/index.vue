@@ -1,3 +1,9 @@
+<template>
+  <div>
+    <ComingSoon/>
+  </div>
+</template>
+
 <script>
 export default {
   head() {
@@ -67,12 +73,7 @@ export default {
           content: 'ma-vr 07:00 t/m 24:00 uur, za-zo 8:00 t/m 23:00 uur'
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
-
-
-<template>
-    <ComingSoon />
-</template>
