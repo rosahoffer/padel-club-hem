@@ -179,3 +179,33 @@ a:focus-visible{
 .secondary-button:focus svg {
   transform: rotate(45deg);
 }
+
+
+/* images styles  */
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-overlay {
+  overflow: hidden;
+  width: 100%;
+  height: 25rem;
+  background-color: var(--primary-color);
+}
+
+.image-overlay img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.green-separator {
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--primary-color);
+}
+

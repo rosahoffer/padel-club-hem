@@ -25,19 +25,6 @@
 </template>
 
 <style scoped>
-:root {
-    /* COLORS */
-
-    --primary-color: #cbfd3c;
-    --secondary-color: #ffeae3;
-    --tertiary-color: #414141;
-    --background-color: #262626;
-    --navbar-bg-color: #4b4b4b;
-
-    /* RADIUS  */
-
-    --border-radius: 25px;
-}
 
 .coming-soon-container {
     width: 100%;

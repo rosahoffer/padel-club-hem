@@ -1,5 +1,6 @@
 <script setup>
 import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
+import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
 </script>
 
 <template>
@@ -19,7 +20,7 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
                 sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
-            <nuxt-link href="#" class="secondary-button subtitle-medium">
+            <nuxt-link href="/" class="secondary-button subtitle-medium">
                 Bekijk ons sportaanbod
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -27,7 +28,7 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
                         fill="#414141" />
                 </svg>
             </nuxt-link>
-            <nuxt-link href="#" class="secondary-button subtitle-medium">
+            <nuxt-link href="/" class="secondary-button subtitle-medium">
                 Benieuwd naar onze locatie?
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -36,22 +37,22 @@ import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
                 </svg>
             </nuxt-link>
         </section>
+        <section class="image-wrapper">
+            <div class="image-overlay">
+                <div class="image-container">
+                    <img src="/assets/images/man-playing-padel.png" alt="Afbeelding man die aan het paddellen is"
+                        loading="lazy" width="100%" height="100%">
+                </div>
+                <div class="green-separator"></div>
+            </div>
+        </section>
+        <section>
+            <MarqueeSlider/>
+        </section>
     </main>
 </template>
 
 <style scoped>
-:root {
-    /* COLORS */
-    --primary-color: #cbfd3c;
-    --secondary-color: #ffeae3;
-    --tertiary-color: #414141;
-    --background-color: #262626;
-    --navbar-bg-color: #4b4b4b;
-
-    /* RADIUS  */
-    --border-radius: 25px;
-    --hook-radius: 5px;
-}
 
 .container-one {
     position: relative;
@@ -97,8 +98,7 @@ p {
     margin: 2rem 0;
 }
 
-.secondary-button:last-child{
+.secondary-button:last-child {
     border-top: none;
 }
-
 </style>

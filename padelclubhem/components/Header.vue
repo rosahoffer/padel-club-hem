@@ -62,16 +62,6 @@ function toggleMenu() {
 </template>
 
 <style scoped>
-:root {
-    /* COLORS */
-    --primary-color: #cbfd3c;
-    /* Groen */
-    --secondary-color: #ffeae3;
-    --tertiary-color: #414141;
-    --background-color: #262626;
-    /* Voor logo */
-    --navbar-bg-color: #4b4b4b;
-}
 
 .navbar-container {
     position: relative;
