@@ -153,6 +153,29 @@ a:focus-visible{
 
 /* secondary button  */
 
-.secondary-button{
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 0;
+  background-color: transparent;
+  color: var(--tertiary-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--tertiary-color);
+  border-top: 2px solid var(--tertiary-color);
+  max-width: 25rem;
+}
+
+.secondary-button svg {
+  transition: transform 0.3s ease;
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+  text-decoration: underline;
+}
+
+.secondary-button:hover svg,
+.secondary-button:focus svg {
+  transform: rotate(45deg);
 }
