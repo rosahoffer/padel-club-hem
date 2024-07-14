@@ -98,17 +98,17 @@ const svgContainer = ref(null);
 onMounted(() => {
     gsap.to(svgContainer.value, {
         rotation: 360,
-        duration: 8,
-        ease: 'none',
         scrollTrigger: {
             trigger: svgContainer.value,
-            start: 'top center',
-            end: 'bottom center',
-            scrub: true,
-        },
+            start: 'top 80%',
+            end: 'bottom 10%',
+            scrub: true
+        }
     });
 });
 </script>
+
+
 
 <style scoped>
 .svg-container {
