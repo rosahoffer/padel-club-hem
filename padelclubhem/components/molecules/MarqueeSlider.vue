@@ -24,8 +24,7 @@ import Ball from '~/components/atoms/Ball.vue';
 <style scoped>
 .slider {
     display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
+    padding: 5rem 0;
 }
 
 .text-icon {
@@ -33,6 +32,7 @@ import Ball from '~/components/atoms/Ball.vue';
     align-items: center;
     gap: 1rem;
     text-wrap: nowrap;
+    margin-right: 1rem;
 }
 
 h2 {

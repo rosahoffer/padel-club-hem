@@ -47,15 +47,17 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
                 <div class="green-separator"></div>
             </div>
         </section>
-        <section>
-            <MarqueeSlider/>
+        <section class="container-three">
+            <MarqueeSlider />
+        </section>
+        <section class="container-four">
+
         </section>
     </main>
     <Footer />
 </template>
 
 <style scoped>
-
 .container-one {
     position: relative;
     width: 100%;
