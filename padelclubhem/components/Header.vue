@@ -32,8 +32,8 @@ function toggleMenu() {
 
                 <!-- The Menu -->
                 <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
-                    <div class="bubble-container">
-                        <div id="bubble" :class="{ open: isMenuOpen }"></div>
+                    <div>
+                        <div :class="{ open: isMenuOpen }"></div>
                     </div>
                     <ul class="nav__items">
                         <li class="nav__item">
@@ -150,33 +150,6 @@ function toggleMenu() {
     display: flex;
     opacity: 1;
     top: 0;
-}
-
-.bubble-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-#bubble {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 0;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    transition: all 0.5s ease;
-    z-index: -2;
-}
-
-#bubble.open {
-    width: 200vw;
-    height: 200vh;
 }
 
 .nav__items {

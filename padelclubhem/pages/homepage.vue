@@ -4,6 +4,7 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
 </script>
 
 <template>
+    <Header />
     <main>
         <section class="container-one">
             <div class="intro-container">
@@ -50,6 +51,7 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
             <MarqueeSlider/>
         </section>
     </main>
+    <Footer />
 </template>
 
 <style scoped>
