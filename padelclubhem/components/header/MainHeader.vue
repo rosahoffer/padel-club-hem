@@ -140,7 +140,7 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.3rem 1.5rem 0.8rem 0.5rem;
+    padding: 1.2rem 1.5rem 1rem 0.5rem;
     background-color: var(--background-color);
     border-radius: 15px;
     margin: 1.5rem 0;
@@ -149,7 +149,7 @@ onBeforeUnmount(() => {
 .logo-container img {
     height: 50px;
     transition: filter 0.3s;
-    margin: 0 0 0.5rem 1.5rem;
+    margin: 0 0 0.5rem 1rem;
 }
 
 .logo-container.menu-open img {

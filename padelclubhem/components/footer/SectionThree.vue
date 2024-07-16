@@ -1,8 +1,7 @@
 <template>
-        <OrganismContactContain />
-        <OrganismJoinTheClub />
         <div class="contain">
             <AtomsMainLogo />
+            <MoleculesFooterLinks />
             <MoleculesSocialMediaIcons />
             <MoleculesCopyright />
         </div>
@@ -12,7 +11,7 @@
 .contain {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem 1.5rem;
+    gap: 2rem;
+    padding: 4rem 1.5rem 1.5rem 1.5rem;
 }
 </style>

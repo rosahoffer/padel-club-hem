@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h2>Serveer je vragen aan ons</h2>
+        <h2>Serveer je vragen aan ons!</h2>
         <p>Heb je vragen, suggesties
             of wil je gewoon hallo zeggen?
             We staan klaar om je te helpen!</p>
