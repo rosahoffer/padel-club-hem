@@ -100,7 +100,7 @@ a:focus-visible{
 /* primary-button  */
 
 .primary-button {
-  max-width: fit-content;
+  min-width: 8rem;
   position: relative;
   display: flex;
   align-items: center;

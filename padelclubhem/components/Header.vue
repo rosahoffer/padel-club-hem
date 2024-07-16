@@ -2,33 +2,44 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const isMenuOpen = ref(false);
+const isMenuClosing = ref(false);
 
 function toggleMenu() {
-    isMenuOpen.value = !isMenuOpen.value;
+    if (isMenuOpen.value) {
+        isMenuClosing.value = true;
+        setTimeout(() => {
+            isMenuOpen.value = false;
+            isMenuClosing.value = false;
+        }, 300); // Match this duration to the slideOut animation duration
+    } else {
+        isMenuOpen.value = true;
+    }
 }
 
 function handleResize() {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1250) {
-        // Als het scherm groter is dan 1250px, maak de navigatielinks zichtbaar
         isMenuOpen.value = true;
     } else {
-        // Op kleinere schermen, sluit het menu en verberg de links
         isMenuOpen.value = false;
     }
 }
 
-onMounted(() => {
-    // Voeg een event listener toe voor het window resize event
-    window.addEventListener('resize', handleResize);
+let debounceTimer;
+function debounce(fn, delay) {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => {
+        fn();
+    }, delay);
+}
 
-    // Roep handleResize aan bij het laden om de initiële staat te bepalen
+onMounted(() => {
+    window.addEventListener('resize', () => debounce(handleResize, 200));
     handleResize();
 });
 
 onBeforeUnmount(() => {
-    // Verwijder de event listener bij het unmounten van het component
-    window.removeEventListener('resize', handleResize);
+    window.removeEventListener('resize', () => debounce(handleResize, 200));
 });
 </script>
 
@@ -50,14 +61,14 @@ onBeforeUnmount(() => {
                     </div>
 
                     <!-- Menu Toggle Button -->
-                    <div class="nav__open" @click="toggleMenu">
+                    <button class="nav__open" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-controls="navMenu" aria-label="Toggle menu">
                         <i :class="{ open: isMenuOpen }"></i>
                         <i :class="{ open: isMenuOpen }"></i>
-                    </div>
+                    </button>
                 </div>
 
                 <!-- The Menu -->
-                <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
+                <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu">
                     <div>
                         <div :class="{ open: isMenuOpen }"></div>
                     </div>
@@ -88,6 +99,31 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped>
+@keyframes slideIn {
+    0% {
+        transform: translateY(-50%);
+        top: 1rem;
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
 .navbar-container {
     position: relative;
     display: flex;
@@ -121,7 +157,7 @@ onBeforeUnmount(() => {
 .wrapper {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .book-button-container .primary-button {
@@ -132,7 +168,7 @@ onBeforeUnmount(() => {
     background-color: var(--background-color);
     color: var(--primary-color);
     padding: 0.6rem 0.8rem 0.6rem 0.7rem;
-    margin-right: 1rem;
+    border: none;
 }
 
 .nav__open {
@@ -141,6 +177,9 @@ onBeforeUnmount(() => {
     cursor: pointer;
     transition: all 0.3s;
     z-index: 15;
+    border: none;
+    background: none;
+    padding: 0;
 }
 
 .nav__open i {
@@ -172,7 +211,6 @@ onBeforeUnmount(() => {
     left: 0;
     background-color: var(--primary-color);
     z-index: 5;
-    opacity: 0;
     overflow: hidden;
     transition: all 0.3s;
     padding: 1rem;
@@ -181,8 +219,11 @@ onBeforeUnmount(() => {
 
 .nav.open {
     display: flex;
-    opacity: 1;
-    top: 0;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.nav.closing {
+    animation: slideOut 0.3s ease-in-out;
 }
 
 .nav__items {
