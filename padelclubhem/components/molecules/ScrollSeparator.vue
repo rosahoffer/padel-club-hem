@@ -1,11 +1,9 @@
-<script setup>
-import ScrollDown from '~/components/atoms/ScrollDown.vue';
-</script>
+<script setup></script>
 
 <template>
     <div class="scroll-down-separator">
         <div class="circle">
-            <ScrollDown />
+            <AtomsScrollDown />
         </div>
     </div>
 </template>

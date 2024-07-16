@@ -1,17 +1,14 @@
-<script setup>
-import ScrollSeparator from '~/components/molecules/ScrollSeparator.vue';
-import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
-</script>
+<script setup></script>
 
 <template>
     <Header />
-    <main>
+    <main aria-label="Hoofdinhoud">
         <section class="container-one">
             <div class="intro-container">
                 <h1>Welkom bij Padel Club Hem</h1>
                 <p>Indoor sport voor iedere doelgroep op de gezelligste club in West-Friesland!</p>
                 <div class="scroll-separator">
-                    <ScrollSeparator />
+                    <MoleculesScrollSeparator />
                 </div>
             </div>
         </section>
@@ -21,7 +18,7 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
                 sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
-            <nuxt-link href="/" class="secondary-button subtitle-medium">
+            <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
                 Bekijk ons sportaanbod
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -29,7 +26,7 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
                         fill="#414141" />
                 </svg>
             </nuxt-link>
-            <nuxt-link href="/" class="secondary-button subtitle-medium">
+            <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Benieuwd naar onze locatie?">
                 Benieuwd naar onze locatie?
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -48,10 +45,9 @@ import MarqueeSlider from '~/components/molecules/MarqueeSlider.vue';
             </div>
         </section>
         <section class="container-three">
-            <MarqueeSlider />
+            <MoleculesMarqueeSlider />
         </section>
         <section class="container-four">
-
         </section>
     </main>
     <Footer />

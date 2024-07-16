@@ -7,12 +7,14 @@ export default defineNuxtConfig({
   ],
 
   compatibilityDate: '2024-07-05',
-  modules: ["nuxt-marquee"],
+  modules: ["nuxt-marquee", "@nuxtjs/seo", "@nuxtjs/html-validator"],
   components: true,
 
   app: {
     pageTransition: { name: 'page', mode: 'in-out' },
     head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
       htmlAttrs: {
         lang: 'nl'
       }

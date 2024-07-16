@@ -1,3 +1,25 @@
+<script setup>
+import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+const svgContainer = ref(null);
+
+onMounted(() => {
+    gsap.to(svgContainer.value, {
+        rotation: 360,
+        scrollTrigger: {
+            trigger: svgContainer.value,
+            start: 'top 80%',
+            end: 'bottom 10%',
+            scrub: true
+        }
+    });
+});
+</script>
+
 <template>
     <div class="svg-container">
         <div ref="svgContainer" class="ball">
@@ -85,30 +107,6 @@
         </div>
     </div>
 </template>
-
-<script setup>
-import { ref, onMounted } from 'vue';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-const svgContainer = ref(null);
-
-onMounted(() => {
-    gsap.to(svgContainer.value, {
-        rotation: 360,
-        scrollTrigger: {
-            trigger: svgContainer.value,
-            start: 'top 80%',
-            end: 'bottom 10%',
-            scrub: true
-        }
-    });
-});
-</script>
-
-
 
 <style scoped>
 .svg-container {

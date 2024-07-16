@@ -1,20 +1,26 @@
-<script setup>
-import Ball from '~/components/atoms/Ball.vue';
-</script>
+<script setup></script>
 
 <template>
     <NuxtMarquee>
         <div class="slider">
             <div class="text-icon">
-                <Ball />
+                <AtomsBall />
                 <h2>Kom in beweging</h2>
             </div>
             <div class="text-icon">
-                <Ball />
+                <AtomsBall />
                 <h2>Kom in beweging</h2>
             </div>
             <div class="text-icon">
-                <Ball />
+                <AtomsBall />
+                <h2>Kom in beweging</h2>
+            </div>
+            <div class="text-icon">
+                <AtomsBall />
+                <h2>Kom in beweging</h2>
+            </div>
+            <div class="text-icon">
+                <AtomsBall />
                 <h2>Kom in beweging</h2>
             </div>
         </div>

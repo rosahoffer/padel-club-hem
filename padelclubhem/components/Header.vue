@@ -44,12 +44,11 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <main>
         <div class="navbar-container">
             <nav class="navbar">
                 <!-- Logo Section -->
                 <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/homepage" class="nav__link logo main-logo" id="logo">
+                    <nuxt-link href="/homepage" class="logo" id="logo" aria-label="Ga naar de homepagina">
                         <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
                     </nuxt-link>
                 </div>
@@ -57,11 +56,12 @@ onBeforeUnmount(() => {
                 <!-- Booking Button Section -->
                 <div class="wrapper">
                     <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
-                        <nuxt-link href="/" class="primary-button" role="link">🏓 Boek een baan!</nuxt-link>
+                        <nuxt-link href="/" class="primary-button">🏓 Boek een baan!</nuxt-link>
                     </div>
 
                     <!-- Menu Toggle Button -->
-                    <button class="nav__open" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-controls="navMenu" aria-label="Toggle menu">
+                    <button class="nav__open" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-controls="navMenu"
+                        aria-label="Open menu">
                         <i :class="{ open: isMenuOpen }"></i>
                         <i :class="{ open: isMenuOpen }"></i>
                     </button>
@@ -95,7 +95,6 @@ onBeforeUnmount(() => {
                 </div>
             </nav>
         </div>
-    </main>
 </template>
 
 <style scoped>
@@ -105,10 +104,12 @@ onBeforeUnmount(() => {
         top: 1rem;
         opacity: 0;
     }
+
     80% {
         transform: translateY(0%);
         opacity: 1;
     }
+
     100% {
         transform: translateY(0);
     }
@@ -118,6 +119,7 @@ onBeforeUnmount(() => {
     0% {
         transform: translateY(0);
     }
+
     100% {
         transform: translateY(-100%);
         opacity: 0;
@@ -138,7 +140,7 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1.5rem 0.3rem 0.5rem;
+    padding: 1.3rem 1.5rem 0.8rem 0.5rem;
     background-color: var(--background-color);
     border-radius: 15px;
     margin: 1.5rem 0;
@@ -147,7 +149,7 @@ onBeforeUnmount(() => {
 .logo-container img {
     height: 50px;
     transition: filter 0.3s;
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem 1.5rem;
 }
 
 .logo-container.menu-open img {
@@ -162,13 +164,13 @@ onBeforeUnmount(() => {
 
 .book-button-container .primary-button {
     transition: background-color 0.3s;
+    padding: 0.4rem 0.6rem 0.4rem 0.5rem;
 }
 
 .book-button-container.menu-open .primary-button {
     background-color: black;
     color: var(--primary-color);
-    padding: 0.6rem 0.8rem 0.6rem 0.7rem;
-    border: none;
+    border: solid 2px var(--background-color)
 }
 
 .nav__open {
