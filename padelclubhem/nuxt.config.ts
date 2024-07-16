@@ -1,6 +1,4 @@
-import { defineNuxtConfig } from 'nuxt/config';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
-
+// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
@@ -12,27 +10,12 @@ export default defineNuxtConfig({
   modules: ["nuxt-marquee"],
   components: true,
 
-  build: {
-    cache: true,
-    plugins: [
-      new HardSourceWebpackPlugin()
-    ],
-    parallel: true,
-    optimizeCSS: true,
-    terser: {
-      terserOptions: {
-        compress: {
-          drop_console: true
-        }
+  app: {
+    pageTransition: { name: 'page', mode: 'in-out' },
+    head: {
+      htmlAttrs: {
+        lang: 'nl'
       }
     }
-  },
-
-  head: {
-    htmlAttrs: {
-      lang: 'nl'
-    }
   }
-
-  
 });
