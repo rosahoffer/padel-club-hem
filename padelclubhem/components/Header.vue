@@ -165,7 +165,7 @@ onBeforeUnmount(() => {
 }
 
 .book-button-container.menu-open .primary-button {
-    background-color: var(--background-color);
+    background-color: black;
     color: var(--primary-color);
     padding: 0.6rem 0.8rem 0.6rem 0.7rem;
     border: none;
@@ -294,7 +294,7 @@ onBeforeUnmount(() => {
         background-color: var(--primary-color);
         color: var(--background-color);
         padding: 0.5rem 1rem;
-        margin-left: 1rem;
+        margin: 0 2rem 0 1rem;
         font-size: 1rem;
         min-width: 12rem;
     }
@@ -314,7 +314,7 @@ onBeforeUnmount(() => {
         background-color: var(--navbar-bg-color);
         border-radius: var(--border-radius);
         order: 2;
-        margin-left: 4rem;
+        margin-left: 3rem;
     }
 
     .nav__items {

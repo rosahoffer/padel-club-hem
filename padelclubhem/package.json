@@ -15,5 +15,8 @@
     "nuxt-marquee": "^1.0.4",
     "vue": "latest",
     "vue-meta": "^2.4.0"
+  },
+  "devDependencies": {
+    "hard-source-webpack-plugin": "^0.13.1"
   }
 }
