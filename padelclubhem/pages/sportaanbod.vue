@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <main aria-label="Hoofdinhoud Homepagina">
+    <main aria-label="Hoofdinhoud Sportaanbod">
         <HeaderMainHeader />
         <HomeSectionOne />
         <HomeSectionTwo />

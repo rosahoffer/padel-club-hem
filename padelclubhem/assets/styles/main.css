@@ -180,6 +180,35 @@ a:focus-visible{
   transform: rotate(45deg);
 }
 
+/* secondary button green  */
+
+.secondary-button-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--primary-color);
+  border-top: 2px solid var(--primary-color);
+  max-width: 25rem;
+}
+
+.secondary-button-green svg {
+  transition: transform 0.3s ease;
+}
+
+.secondary-button-green:hover,
+.secondary-button-green:focus {
+  text-decoration: underline;
+}
+
+.secondary-button-green:hover svg,
+.secondary-button-green:focus svg {
+  transform: rotate(45deg);
+}
+
 
 /* images styles  */
 
@@ -207,5 +236,25 @@ a:focus-visible{
   width: 100%;
   height: 0.5rem;
   background-color: var(--primary-color);
+}
+
+/* service card image  */
+
+.image-wrapper-service-card {
+  position: relative;
+}
+
+.image-overlay-service-card {
+  overflow: hidden;
+  width: 100%;
+  height: 14rem;
+  background-color: var(--primary-color);
+}
+
+.image-overlay-service-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
 }
 
