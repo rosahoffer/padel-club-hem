@@ -1,14 +1,3 @@
-<script>
-import { gsap } from 'gsap';
-
-export default {
-    mounted() {
-        gsap.from('#title', { opacity: 0, x: -100, duration: 1, ease: 'power2.out' });
-        gsap.from('.fly-in', { y: -50, opacity: 0, duration: 0.5, delay: 0.5, ease: 'back.out(1.7)' });
-    }
-}
-</script>
-
 <template>
     <section>
         <div class="intro-container">
@@ -38,13 +27,8 @@ section {
     gap: 3rem;
 }
 
-span {
-    font-family: "Climate Crisis", sans-serif;
-    font-variation-settings: "YEAR" 1979;
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    text-transform: uppercase;
-    color: var(--primary-color);
+.intro-container h1 {
+    padding: 0 1.5rem;
 }
 
 .intro-container p {
@@ -85,5 +69,40 @@ span {
 
 .fly-in {
     animation: flyIn 0.5s ease-in-out forwards;
+}
+
+/* BREAKPOINT TABLET  */
+
+@media (min-width: 40rem) {
+
+    section {
+        background-color: red;
+    }
+
+    .intro-container h1 {
+        font-size: 4.5rem;
+        line-height: 4.5rem;
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+
+    .intro-container p {
+        padding: 0 3rem;
+    }
+}
+
+/* BREAKPOINT DESKTOP  */
+
+@media (min-width: 80rem) {
+
+    .intro-container h1 {
+        font-size: 6rem;
+        line-height: 6rem;
+        max-width: 50rem;
+    }
+
+    .intro-container p {
+        padding: 0 12rem;
+    }
 }
 </style>
