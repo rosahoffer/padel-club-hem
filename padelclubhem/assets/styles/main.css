@@ -87,6 +87,11 @@ p {
 @media (min-width: 40rem) {
 
   h1,h2 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+  }
+
+h2 {
   font-size: 3.5rem;
   line-height: 3.5rem;
 }
@@ -98,8 +103,13 @@ p {
 }
 
 @media (min-width: 80rem) {
+
+  h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
   
-  h1,h2 {
+  h2 {
   font-size: 4.5rem;
   line-height: 4.5rem;
 }
@@ -264,6 +274,35 @@ a:focus-visible{
 
 .secondary-button-green:hover svg,
 .secondary-button-green:focus svg {
+  transform: rotate(45deg);
+}
+
+/* secondary button white  */
+
+.secondary-button-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  background-color: transparent;
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--secondary-color);
+  border-top: 2px solid var(--secondary-color);
+  max-width: auto;
+}
+
+.secondary-button-white svg {
+  transition: transform 0.3s ease;
+}
+
+.secondary-button-white:hover,
+.secondary-button-white:focus {
+  text-decoration: underline;
+}
+
+.secondary-button-white:hover svg,
+.secondary-button-white:focus svg {
   transform: rotate(45deg);
 }
 
