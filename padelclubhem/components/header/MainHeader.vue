@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
 const isMenuOpen = ref(false);
 const isMenuClosing = ref(false);
@@ -7,10 +7,6 @@ const isMenuClosing = ref(false);
 function toggleMenu() {
     if (isMenuOpen.value) {
         isMenuClosing.value = true;
-        setTimeout(() => {
-            isMenuOpen.value = false;
-            isMenuClosing.value = false;
-        }, 300);
     } else {
         isMenuOpen.value = true;
     }
@@ -25,21 +21,23 @@ function handleResize() {
     }
 }
 
-let debounceTimer;
 function debounce(fn, delay) {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => {
-        fn();
-    }, delay);
+    let debounceTimer;
+    return function () {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(fn, delay);
+    };
 }
 
+const debouncedResizeHandler = debounce(handleResize, 200);
+
 onMounted(() => {
-    window.addEventListener('resize', () => debounce(handleResize, 200));
+    window.addEventListener('resize', debouncedResizeHandler);
     handleResize();
 });
 
 onBeforeUnmount(() => {
-    window.removeEventListener('resize', () => debounce(handleResize, 200));
+    window.removeEventListener('resize', debouncedResizeHandler);
 });
 </script>
 
@@ -68,7 +66,8 @@ onBeforeUnmount(() => {
             </div>
 
             <!-- The Menu -->
-            <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu">
+            <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu"
+                @animationend="isMenuClosing && (isMenuOpen = isMenuClosing = false)">
                 <div>
                     <div :class="{ open: isMenuOpen }"></div>
                 </div>
@@ -170,7 +169,7 @@ onBeforeUnmount(() => {
 .book-button-container.menu-open .primary-button {
     background-color: black;
     color: var(--primary-color);
-    border: solid 2px var(--background-color)
+    border: solid 2px var(--background-color);
 }
 
 .nav__open {
@@ -189,7 +188,7 @@ onBeforeUnmount(() => {
     border-radius: var(--border-radius);
     width: 25px;
     height: 3px;
-    margin: 4px 0;
+    margin: 3px 0;
     transition: all 0.3s;
 }
 
@@ -199,7 +198,7 @@ onBeforeUnmount(() => {
 }
 
 .nav__open i.open:nth-child(2) {
-    transform: translateY(-4px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
     background-color: var(--background-color);
 }
 
@@ -342,7 +341,8 @@ onBeforeUnmount(() => {
         transform: scale(1.05);
     }
 
-    .nav__item a:focus {
+    .nav__item a:focus,
+    .nav__item a:active {
         color: var(--primary-color);
         font-weight: 600;
     }

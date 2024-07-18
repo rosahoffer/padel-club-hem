@@ -3,10 +3,7 @@
 <template>
     <main aria-label="Hoofdinhoud Sportaanbod">
         <HeaderMainHeader />
-        <HomeSectionOne />
-        <HomeSectionTwo />
-        <HomeSectionThree />
-        <HomeSectionFour />
+        <SportaanbodSectionOne />
         <FooterMainFooter />
     </main>
 </template>
