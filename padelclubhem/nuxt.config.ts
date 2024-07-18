@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   components: true,
 
   app: {
-    pageTransition: { name: 'page', mode: 'in-out' },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',

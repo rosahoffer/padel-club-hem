@@ -5,19 +5,15 @@ const isMenuOpen = ref(false);
 const isMenuClosing = ref(false);
 
 function toggleMenu() {
-    if (isMenuOpen.value) {
-        isMenuClosing.value = true;
-    } else {
-        isMenuOpen.value = true;
-    }
+    isMenuOpen.value = !isMenuOpen.value;
 }
 
 function handleResize() {
     const screenWidth = window.innerWidth;
-    if (screenWidth >= 1250) {
-        isMenuOpen.value = true;
-    } else {
-        isMenuOpen.value = false;
+    const shouldOpen = screenWidth >= 1250;
+
+    if (isMenuOpen.value !== shouldOpen) {
+        isMenuOpen.value = shouldOpen;
     }
 }
 
@@ -140,7 +136,7 @@ onBeforeUnmount(() => {
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 1.5rem 1rem 0.5rem;
-    background-color: var(--background-color);
+    background-color: var(--navbar-bg-color);
     border-radius: 15px;
     margin: 1.5rem 0;
 }
@@ -231,8 +227,6 @@ onBeforeUnmount(() => {
     list-style: none;
     margin: 6rem 0 0 0;
     text-align: left;
-    transition: opacity 0.5s ease;
-    opacity: 0;
 }
 
 .nav.open .nav__items {
