@@ -43,4 +43,29 @@ h2 {
     font-size: 2rem;
     color: var(--secondary-color);
 }
+
+@media (min-width: 60rem) {
+
+    .slider {
+        padding: 7rem 0;
+    }
+
+    .text-icon {
+        gap: 2rem;
+        margin-right: 2rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (min-width: 80rem) {
+
+.slider {
+    padding: 8rem 0;
+}
+
+}
 </style>

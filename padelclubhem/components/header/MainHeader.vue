@@ -10,7 +10,7 @@ function toggleMenu() {
         setTimeout(() => {
             isMenuOpen.value = false;
             isMenuClosing.value = false;
-        }, 300); // Match this duration to the slideOut animation duration
+        }, 300);
     } else {
         isMenuOpen.value = true;
     }
@@ -44,57 +44,57 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-        <div class="navbar-container">
-            <nav class="navbar">
-                <!-- Logo Section -->
-                <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/homepage" class="logo" id="logo" aria-label="Ga naar de homepagina">
-                        <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
-                    </nuxt-link>
+    <div class="navbar-container">
+        <nav class="navbar">
+            <!-- Logo Section -->
+            <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
+                <nuxt-link href="/homepage" class="logo" id="logo" aria-label="Ga naar de homepagina">
+                    <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
+                </nuxt-link>
+            </div>
+
+            <!-- Booking Button Section -->
+            <div class="wrapper">
+                <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
+                    <nuxt-link href="/" class="primary-button">🏓 Boek een baan!</nuxt-link>
                 </div>
 
-                <!-- Booking Button Section -->
-                <div class="wrapper">
-                    <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
-                        <nuxt-link href="/" class="primary-button">🏓 Boek een baan!</nuxt-link>
-                    </div>
+                <!-- Menu Toggle Button -->
+                <button class="nav__open" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-controls="navMenu"
+                    aria-label="Open menu">
+                    <i :class="{ open: isMenuOpen }"></i>
+                    <i :class="{ open: isMenuOpen }"></i>
+                </button>
+            </div>
 
-                    <!-- Menu Toggle Button -->
-                    <button class="nav__open" @click="toggleMenu" :aria-expanded="isMenuOpen" aria-controls="navMenu"
-                        aria-label="Open menu">
-                        <i :class="{ open: isMenuOpen }"></i>
-                        <i :class="{ open: isMenuOpen }"></i>
-                    </button>
+            <!-- The Menu -->
+            <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu">
+                <div>
+                    <div :class="{ open: isMenuOpen }"></div>
                 </div>
-
-                <!-- The Menu -->
-                <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu">
-                    <div>
-                        <div :class="{ open: isMenuOpen }"></div>
-                    </div>
-                    <ul class="nav__items">
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
-                        </li>
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Evenementen</nuxt-link>
-                        </li>
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Lessen</nuxt-link>
-                        </li>
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Business</nuxt-link>
-                        </li>
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportcafé</nuxt-link>
-                        </li>
-                        <li class="nav__item">
-                            <nuxt-link href="/" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+                <ul class="nav__items">
+                    <li class="nav__item">
+                        <nuxt-link href="/sportaanbod" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Evenementen</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Lessen</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Business</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportcafé</nuxt-link>
+                    </li>
+                    <li class="nav__item">
+                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </template>
 
 <style scoped>
@@ -342,8 +342,18 @@ onBeforeUnmount(() => {
         transform: scale(1.05);
     }
 
-    .nav__link:focus {
+    .nav__item a:focus {
         color: var(--primary-color);
+        font-weight: 600;
+    }
+
+    .nav.open {
+        display: flex;
+        animation: none;
+    }
+
+    .nav.closing {
+        animation: none;
     }
 }
 </style>

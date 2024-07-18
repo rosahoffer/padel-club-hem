@@ -111,8 +111,23 @@ p {
 
   p {
     font-size: 1.2rem;
-    line-height: 2rem;
+    line-height: 2.2rem;
 }
+
+  .subtitle-medium {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .subtitle-bold-lowercase {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .subtitle-bold-uppercase {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
 }
 
 /* HOVER & FOCUS STATES  */
@@ -182,6 +197,18 @@ a:focus-visible{
   border: solid 2px var(--primary-color);
 }
 
+
+@media (min-width: 80rem) {
+
+  .primary-button {
+    padding: 0.5rem 1rem;
+    margin: 0 2rem 0 1rem;
+    font-size: 1rem;
+    min-width: 12rem;
+  }
+  
+}
+
 /* secondary button  */
 
 .secondary-button {
@@ -194,7 +221,7 @@ a:focus-visible{
   text-decoration: none;
   border-bottom: 2px solid var(--tertiary-color);
   border-top: 2px solid var(--tertiary-color);
-  max-width: 25rem;
+  max-width: auto;
 }
 
 .secondary-button svg {
@@ -223,7 +250,7 @@ a:focus-visible{
   text-decoration: none;
   border-bottom: 2px solid var(--primary-color);
   border-top: 2px solid var(--primary-color);
-  max-width: 25rem;
+  max-width: auto;
 }
 
 .secondary-button-green svg {

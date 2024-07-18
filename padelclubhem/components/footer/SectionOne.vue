@@ -9,7 +9,6 @@
 </template>
 
 <style scoped>
-
 section {
     display: flex;
     flex-direction: column;
@@ -21,4 +20,35 @@ section {
     text-align: center;
 }
 
+@media (min-width: 40rem) {
+    section {
+        gap: 2rem;
+        padding: 7rem 3rem;
+    }
+}
+
+@media (min-width: 60rem) {
+    section {
+        gap: 3rem;
+        padding: 8rem 10rem;
+    }
+
+    section p {
+        max-width: 30rem;
+    }
+}
+
+@media (min-width: 80rem) {
+    section {
+        gap: 3em;
+        padding: 8rem 15rem;
+    }
+}
+
+@media (min-width: 90rem) {
+    section {
+        gap: 3em;
+        padding: 10rem 25rem;
+    }
+}
 </style>

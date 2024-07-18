@@ -69,7 +69,7 @@ p {
     }
 
     .intro-content p {
-        margin: 3rem 0;
+        margin: 2.5rem 0;
     }
 }
 
@@ -83,11 +83,17 @@ p {
 
     .intro-content h2,
     p {
-        max-width: 25rem;
+        max-width: 35rem;
+        margin-top: -2.4rem;
     }
 
     .image-overlay {
-        height: 100%;
+        width: 100%;
+        height: 35rem;
+    }
+
+    .secondary-button {
+        max-width: 35rem;
     }
 }
 
@@ -101,16 +107,35 @@ p {
 
     .intro-content {
         padding: 0;
+        width: 60%;
+        padding-right: 4rem;
     }
 
     .intro-content h2,
     p {
-        max-width: 40rem;
+        max-width: 50rem;
+        margin-top: -0.5rem;
+    }
+
+    .intro-content p {
+        margin: 5rem 0;
     }
 
     .image-overlay {
-        width: 40rem;
-        height: 40rem;
+        width: 100%;
+        height: 50rem;
+    }
+
+    .secondary-button {
+        max-width: 50rem;
+        padding: 1.5rem 0;
+    }
+}
+
+@media (min-width: 90rem) {
+
+    .image-overlay {
+        height: 45rem;
     }
 }
 </style>

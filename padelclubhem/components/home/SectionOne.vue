@@ -75,10 +75,6 @@ section {
 
 @media (min-width: 40rem) {
 
-    section {
-        background-color: red;
-    }
-
     .intro-container h1 {
         font-size: 4.5rem;
         line-height: 4.5rem;

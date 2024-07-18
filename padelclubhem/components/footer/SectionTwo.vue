@@ -1,6 +1,6 @@
 <template>
-    <div class="slider">
-        <NuxtMarquee>
+    <NuxtMarquee>
+        <div class="slider">
             <div class="text">
                 <h2>Join the club</h2>
             </div>
@@ -16,8 +16,8 @@
             <div class="text">
                 <h2>Join the club</h2>
             </div>
-        </NuxtMarquee>
-    </div>
+        </div>
+    </NuxtMarquee>
 </template>
 
 <style scoped>
@@ -35,5 +35,27 @@
 
 h2 {
     color: var(--background-color);
+}
+
+@media (min-width: 60rem) {
+
+    .slider {
+        padding: 5rem 0;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 80rem) {
+
+.slider {
+    padding: 7rem 0;
+}
+
+h2 {
+    font-size: 6rem;
+}
 }
 </style>

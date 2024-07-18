@@ -55,15 +55,15 @@ onMounted(() => {
 <template>
     <section class="services-contain">
         <div class="intro-text">
-            <p class="subtitle-medium">Evenementen, Lessen & Business</p>
+            <p class="subtitle-medium">Voor de eerste keer bij ons op locatie?</p>
             <h2>Ontdek ons aanbod</h2>
         </div>
         <section class="service-card service-card-one">
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/girl-playing-tennis.png" alt="Afbeelding van evenementen"
-                            loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                            width="100%" height="100%">
                     </div>
                 </div>
             </div>
@@ -87,8 +87,8 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/girl-playing-tennis.png" alt="Afbeelding van evenementen"
-                            loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                            width="100%" height="100%">
                     </div>
                 </div>
             </div>
@@ -111,8 +111,8 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/girl-playing-tennis.png" alt="Afbeelding van evenementen"
-                            loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                            width="100%" height="100%">
                     </div>
                 </div>
             </div>
@@ -170,5 +170,109 @@ p {
     flex-direction: column;
     gap: 2rem;
     margin: 2rem 0 0 0;
+}
+
+@media (min-width: 40rem) {
+
+    .intro-text {
+        gap: 3rem;
+        padding: 5rem 3rem 0 3rem;
+    }
+
+    .service-card {
+        padding: 5rem 3rem;
+    }
+
+    .image-overlay-service-card {
+        width: 100%;
+        height: 20rem;
+    }
+}
+
+@media (min-width: 60rem) {
+
+    .intro-text {
+        gap: 3rem;
+        padding: 5rem 3rem 0 3rem;
+    }
+
+    .intro-text h2 {
+        max-width: 40rem;
+    }
+
+
+    .service-card {
+        display: flex;
+        gap: 4rem;
+        padding: 5rem 3rem;
+    }
+
+    .image-overlay-service-card {
+        width: 25rem;
+        height: 23rem;
+    }
+
+    .image-overlay-service-card img {
+        width: 150%;
+        height: 150%;
+    }
+
+    .information-service-card {
+        margin: 0;
+        max-width: 30rem;
+    }
+}
+
+@media (min-width: 80rem) {
+
+    .intro-text {
+        padding: 8rem 3rem 3rem 3rem;
+    }
+
+    .intro-text h2 {
+        max-width: 60rem;
+    }
+
+    .service-card {
+        gap: 6rem;
+        padding: 7rem 3rem;
+    }
+
+    .image-overlay-service-card {
+        width: 35rem;
+        height: 25rem;
+    }
+
+    .image-overlay-service-card img {
+        width: 150%;
+        height: 150%;
+    }
+
+    .information-service-card {
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 90rem) {
+
+.service-card {
+    gap: 8rem;
+    padding: 8rem 3rem;
+}
+
+.image-overlay-service-card {
+    width: 45rem;
+    height: 30rem;
+}
+
+.image-overlay-service-card img {
+    width: 150%;
+    height: 150%;
+}
+
+.information-service-card {
+    max-width: 45rem;
+    gap: 4rem;
+}
 }
 </style>

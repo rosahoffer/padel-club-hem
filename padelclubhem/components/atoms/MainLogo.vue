@@ -8,4 +8,10 @@
 img {
     width: 7rem;
 }
+
+@media (min-width: 80rem) {
+    img {
+    width: 12rem;
+}
+}
 </style>
