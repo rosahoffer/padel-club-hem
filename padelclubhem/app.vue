@@ -1,4 +1,19 @@
+<template>
+  <div>
+    <TennisBallLoader v-if="loading" />
+    <div v-else>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </div>
+  </div>
+</template>
+
 <script setup>
+import { ref, onMounted } from 'vue'
+import TennisBallLoader from '@/components/TennisBallLoader.vue' // Gebruik '@' voor alias naar 'src' directory
+
+// SEO meta gegevens
 useSeoMeta({
   title: 'Padel Club Hem - Boek een Padel- of Tennisbaan in West-Friesland',
   meta: [
@@ -19,12 +34,13 @@ useSeoMeta({
     { property: 'openingHours', content: 'ma-vr 07:00 t/m 24:00 uur, za-zo 8:00 t/m 23:00 uur' }
   ]
 })
-</script>
 
-<template>
-  <div>
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
-  </div>
-</template>
+// Loading state
+const loading = ref(true)
+
+onMounted(() => {
+  setTimeout(() => {
+    loading.value = false
+  }, 2500) // Simuleer een laadperiode van 3 seconden
+})
+</script>

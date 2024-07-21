@@ -86,10 +86,10 @@ p {
 
 @media (min-width: 40rem) {
 
-  h1,h2 {
+h1,h2 {
     font-size: 4.5rem;
     line-height: 4.5rem;
-  }
+}
 
 h2 {
   font-size: 3.5rem;
