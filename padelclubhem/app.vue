@@ -40,7 +40,7 @@ const loading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
-  }, 2500)
+  }, 2000)
 })
 </script>
 

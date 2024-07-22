@@ -19,7 +19,6 @@
     top: 0;
     left: 0;
     background-color: var(--background-color);
-    /* Zorg ervoor dat je een achtergrondkleur definieert */
     z-index: 9999;
 }
 
@@ -28,14 +27,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
-        moveDown 1s 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
-        moveUp 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .tennis-ball {
     position: absolute;
-    animation: spin 1.5s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0) translateY(-50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        top: 30%;
+    }
+
+    100% {
+        top: 0%;
+    }
 }
 
 @keyframes spin {
@@ -45,51 +74,6 @@
 
     to {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes init {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-@keyframes moveDown {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(300px);
-    }
-}
-
-@keyframes moveUp {
-    0% {
-        transform: translateY(300px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 600px) {
-    .tennis-ball-wrapper {
-        /* Pas hier de waarden aan voor kleinere schermen */
-        animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
-                   moveDown 1s 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
-                   moveUp 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    }
-
-    .tennis-ball {
-        animation: spin 1s linear infinite; /* Versnel de rotatie op kleinere schermen */
     }
 }
 </style>
