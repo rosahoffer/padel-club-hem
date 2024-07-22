@@ -79,4 +79,17 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 600px) {
+    .tennis-ball-wrapper {
+        /* Pas hier de waarden aan voor kleinere schermen */
+        animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
+                   moveDown 1s 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
+                   moveUp 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    .tennis-ball {
+        animation: spin 1s linear infinite; /* Versnel de rotatie op kleinere schermen */
+    }
+}
 </style>
