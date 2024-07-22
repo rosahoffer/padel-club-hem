@@ -47,18 +47,18 @@ onMounted(() => {
 <style>
 .page-enter-active,
 .page-leave-active {
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .page-enter-from,
 .page-leave-to {
-  transform: scale(1.1) translateX(100%);
+  transform: translateX(100%);
   opacity: 0;
 }
 
 .page-enter-to,
 .page-leave-from {
-  transform: scale(1) translateX(0);
+  transform: translateX(0);
   opacity: 1;
 }
 </style>
