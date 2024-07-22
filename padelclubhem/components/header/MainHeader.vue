@@ -84,7 +84,7 @@ onBeforeUnmount(() => {
                         <nuxt-link href="/" class="nav__link" @click="toggleMenu">Sportcafé</nuxt-link>
                     </li>
                     <li class="nav__item">
-                        <nuxt-link href="/" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
+                        <nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
                     </li>
                 </ul>
             </div>

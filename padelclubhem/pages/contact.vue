@@ -1,9 +1,10 @@
 <script setup></script>
 
 <template>
-    <main aria-label="Hoofdinhoud Evenementen">
+    <main aria-label="Hoofdinhoud Contact">
         <HeaderMainHeader />
-        <ComingSoonPage />
+        <ContactSectionOne />
+        <ContactSectionTwo />
         <FooterMainFooter />
     </main>
 </template>

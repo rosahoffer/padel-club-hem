@@ -15,10 +15,10 @@ export default {
 <template>
     <div class="wrapper">
         <section class="intro-content">
-            <p class="subtitle-medium">Sportaanbod</p>
-            <h1>Let's Play!</h1>
-            <p>Bij Padel Club Hem bieden we een breed scala aan sportmogelijkheden voor iedereen. Of je nu een
-                doorgewinterde speler bent of net begint, bij ons kun je zowel padellen als tennissen op topniveau.</p>
+            <p class="subtitle-medium">Contact</p>
+            <h1>Bereik Ons</h1>
+            <p>We staan klaar om je vragen te beantwoorden of gewoon een praatje te maken over padel en tennis. Aarzel
+                niet om contact met ons op te nemen - we kijken ernaar uit om van je te horen!</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">
@@ -32,8 +32,8 @@ export default {
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/man-playing-padel-two.png"
-                            alt="Afbeelding man die aan het paddellen is" loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/bereik-ons-image.png"
+                            alt="Afbeelding bereik ons" loading="lazy" width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
                 </div>
