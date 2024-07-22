@@ -19,7 +19,10 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1',
       htmlAttrs: {
         lang: 'nl'
-      }
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      ]
     }
   }
 });
