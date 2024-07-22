@@ -65,18 +65,17 @@
     }
 
     100% {
-        transform: translateY(500px);
+        transform: translateY(300px);
     }
 }
 
 @keyframes moveUp {
     0% {
-        transform: translateY(500px);
+        transform: translateY(300px);
     }
 
     100% {
         transform: translateY(0);
     }
 }
-
 </style>
