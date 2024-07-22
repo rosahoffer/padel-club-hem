@@ -24,11 +24,17 @@
 
 .tennis-ball-wrapper {
     position: relative;
-    animation: bounce 2s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: init 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards,
+        moveDown 1s 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
+        moveUp 1s 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 }
 
 .tennis-ball {
-    animation: spin 1s infinite;
+    position: absolute;
+    animation: spin 1.5s linear infinite;
 }
 
 @keyframes spin {
@@ -41,22 +47,36 @@
     }
 }
 
-@keyframes bounce {
+@keyframes init {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
 
-    0%,
-    20%,
-    50%,
-    80%,
     100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    0% {
         transform: translateY(0);
     }
 
-    40% {
-        transform: translateY(-150px);
-    }
-
-    60% {
-        transform: translateY(-75px);
+    100% {
+        transform: translateY(500px);
     }
 }
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(500px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 </style>

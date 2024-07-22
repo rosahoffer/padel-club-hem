@@ -11,7 +11,6 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
-import TennisBallLoader from '@/components/TennisBallLoader.vue' // Gebruik '@' voor alias naar 'src' directory
 
 // SEO meta gegevens
 useSeoMeta({
@@ -41,6 +40,19 @@ const loading = ref(true)
 onMounted(() => {
   setTimeout(() => {
     loading.value = false
-  }, 2500) // Simuleer een laadperiode van 3 seconden
+  }, 2500)
 })
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>
