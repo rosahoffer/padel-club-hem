@@ -19,6 +19,7 @@
     top: 0;
     left: 0;
     background-color: var(--background-color);
+    /* Zorg ervoor dat je een achtergrondkleur definieert */
     z-index: 9999;
 }
 
