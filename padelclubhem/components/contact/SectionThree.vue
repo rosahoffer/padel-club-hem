@@ -110,7 +110,7 @@
 @media (min-width: 120rem) {
 
     .contact-container {
-        padding: 5rem 10rem 0rem 10rem;
+        padding: 8rem 10rem 8rem 10rem;
     }
 }
 </style>

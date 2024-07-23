@@ -29,8 +29,14 @@
 
 @media (min-width: 120rem) {
 
-    h2, p {
-        padding: 3rem 10rem 3rem;
+    p {
+        padding: 3rem 7rem 0rem 7rem;
+        max-width: 70rem;
+    }
+
+    h2 {
+        padding: 0rem 7rem 3rem 7rem;
+        max-width: 70rem;
     }
 }
 </style>

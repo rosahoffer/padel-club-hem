@@ -245,7 +245,7 @@ form button {
 @media (min-width: 120rem) {
 
 form {
-    padding: 0 10rem;
+    padding: 0 7rem;
 }
 }
 </style>
