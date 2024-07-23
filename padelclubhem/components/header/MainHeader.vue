@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
         background-color: var(--navbar-bg-color);
         border-radius: var(--border-radius);
         order: 2;
-        margin-left: 3rem;
+        margin-left: 5rem;
     }
 
     .nav__items {

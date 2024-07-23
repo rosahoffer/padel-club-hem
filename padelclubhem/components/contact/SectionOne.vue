@@ -165,14 +165,14 @@ export default {
     }
 
     .ball-separator-wrapper {
-        height: 8rem;
+        height: 5rem;
     }
 }
 
 @media (min-width: 90rem) {
 
     .ball-separator-wrapper {
-        height: 13rem;
+        height: 10rem;
     }
 }
 

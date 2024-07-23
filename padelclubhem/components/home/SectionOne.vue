@@ -92,14 +92,13 @@ section {
 @media (min-width: 80rem) {
 
     .intro-container h1 {
-        font-size: 6rem;
-        line-height: 6rem;
-        max-width: 50rem;
+        font-size: 7rem;
+        line-height: 7rem;
+        max-width: 60rem;
     }
 
     .intro-container p {
         padding: 0 12rem;
     }
 }
-
 </style>
