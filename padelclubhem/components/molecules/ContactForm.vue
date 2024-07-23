@@ -15,21 +15,24 @@
             </select>
         </div>
         <div class="wrapper">
-            <div>
+            <div class="flex-wrap-name">
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="firstName">Naam *</label>
-                    <input type="text" id="firstName" v-model="form.firstName" required aria-required="true" placeholder="Jouw naam..." />
+                    <input type="text" id="firstName" v-model="form.firstName" required aria-required="true"
+                        placeholder="Jouw naam..." />
                 </div>
 
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="lastName">Achternaam *</label>
-                    <input type="text" id="lastName" v-model="form.lastName" required aria-required="true" placeholder="Jouw achternaam..." />
+                    <input type="text" id="lastName" v-model="form.lastName" required aria-required="true"
+                        placeholder="Jouw achternaam..." />
                 </div>
             </div>
-            <div>
+            <div class="flex-wrap-contact">
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="email">E-mail *</label>
-                    <input type="email" id="email" v-model="form.email" required aria-required="true" placeholder="Jouw e-mailadres..." />
+                    <input type="email" id="email" v-model="form.email" required aria-required="true"
+                        placeholder="Jouw e-mailadres..." />
                 </div>
 
                 <div class="form-group">
@@ -41,7 +44,8 @@
 
         <div class="form-group">
             <label class="subtitle-bold-uppercase" for="message">Bericht *</label>
-            <textarea id="message" v-model="form.message" required aria-required="true" placeholder="Typ hier jouw bericht..."></textarea>
+            <textarea id="message" v-model="form.message" required aria-required="true"
+                placeholder="Typ hier jouw bericht..."></textarea>
         </div>
 
         <button class="primary-button" type="submit" :disabled="loading">
@@ -113,6 +117,7 @@ const handleSubmit = async () => {
         }, 5000);
     }
 };
+
 </script>
 
 <style scoped>
@@ -148,6 +153,12 @@ form textarea {
     line-height: 1.8rem;
 }
 
+form select,
+form select:focus {
+    padding: 2rem 0;
+    cursor: pointer;
+}
+
 form textarea {
     height: 10rem;
     resize: none;
@@ -164,6 +175,7 @@ form input:focus,
 form select:focus,
 form textarea:focus {
     border-bottom: 2px solid var(--primary-color);
+    background-color: var(--background-color);
 }
 
 form button {
@@ -194,6 +206,17 @@ form button {
     }
 
     .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-wrap-name {
+        display: flex;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .flex-wrap-contact {
         display: flex;
         gap: 2rem;
         width: 100%;
