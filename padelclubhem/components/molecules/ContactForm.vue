@@ -137,6 +137,7 @@ form textarea {
     background-color: var(--background-color);
     outline: none;
     border: none;
+    border-radius: 0;
     border-bottom: 2px solid var(--secondary-color);
     color: var(--secondary-color);
     font-family: "Poppins", sans-serif;
