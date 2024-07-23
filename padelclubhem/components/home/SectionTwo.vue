@@ -138,4 +138,10 @@ p {
         height: 45rem;
     }
 }
+
+/* @media (min-width: 100rem) {
+    .wrapper {
+        padding: 5rem 10rem 0rem 10rem;
+    }
+} */
 </style>

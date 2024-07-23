@@ -306,6 +306,35 @@ a:focus-visible{
   transform: rotate(45deg);
 }
 
+/* secondary button black  */
+
+.secondary-button-black {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  background-color: transparent;
+  color: var(--background-color);
+  text-decoration: none;
+  border-bottom: 2px solid var(--background-color);
+  border-top: 2px solid var(--background-color);
+  max-width: auto;
+}
+
+.secondary-button-black svg {
+  transition: transform 0.3s ease;
+}
+
+.secondary-button-black:hover,
+.secondary-button-black:focus {
+  text-decoration: underline;
+}
+
+.secondary-button-black:hover svg,
+.secondary-button-black:focus svg {
+  transform: rotate(45deg);
+}
+
 
 /* images styles  */
 

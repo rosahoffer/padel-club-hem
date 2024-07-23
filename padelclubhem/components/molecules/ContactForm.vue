@@ -186,25 +186,12 @@ form button {
 }
 
 .error {
-    color: red;
-    background-color: var(--secondary-color);
-    border: 1px solid  var(--secondary-color);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
-    font-size: 1rem;
+    color: var(--secondary-color);
 }
 
 .success {
     color: var(--primary-color);
-    background-color: var(--background-color);
-    border: 1px solid var(--background-color);
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    margin-top: 1rem;
-    font-size: 1rem;
 }
-
 
 @media (min-width: 60rem) {
     .form {
