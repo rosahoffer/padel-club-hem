@@ -7,7 +7,7 @@
                     <p>Padel is een dynamische en snelgroeiende sport die leuk is voor alle leeftijden en niveaus. Onze
                         moderne padelbanen bieden de perfecte omgeving voor zowel recreatieve spelers als competitieve
                         toernooien.</p>
-                    <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
+                    <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
                         Boek een padelbaan
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -32,7 +32,7 @@
                         moderne padelbanen bieden de perfecte omgeving voor zowel recreatieve spelers als competitieve
                         toernooien.</p>
                     <nuxt-link href="/" class="secondary-button-white subtitle-medium"
-                        aria-label="Bekijk ons sportaanbod">
+                        aria-label="Boek een tennisbaan">
                         Boek een tennisbaan
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"

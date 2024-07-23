@@ -6,7 +6,7 @@
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
                 sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
-            <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
+            <nuxt-link href="/sportaanbod" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
                 Bekijk ons sportaanbod
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -14,7 +14,7 @@
                         fill="#414141" />
                 </svg>
             </nuxt-link>
-            <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Benieuwd naar onze locatie?">
+            <nuxt-link href="/contact" class="secondary-button subtitle-medium" aria-label="Benieuwd naar onze locatie?">
                 Benieuwd naar onze locatie?
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -139,9 +139,9 @@ p {
     }
 }
 
-/* @media (min-width: 100rem) {
+@media (min-width: 100rem) {
     .wrapper {
         padding: 5rem 10rem 0rem 10rem;
     }
-} */
+}
 </style>

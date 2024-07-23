@@ -241,4 +241,11 @@ form button {
         padding: 2rem 0;
     }
 }
+
+@media (min-width: 100rem) {
+
+form {
+    padding: 0 10rem;
+}
+}
 </style>

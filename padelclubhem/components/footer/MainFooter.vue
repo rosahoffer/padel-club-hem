@@ -1,7 +1,9 @@
 <script setup></script>
 
 <template>
-    <FooterSectionOne />
-    <FooterSectionTwo />
-    <FooterSectionThree />
+    <div>
+        <FooterSectionOne />
+        <FooterSectionTwo />
+        <FooterSectionThree />
+    </div>
 </template>

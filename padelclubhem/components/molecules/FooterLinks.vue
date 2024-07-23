@@ -28,7 +28,7 @@
       <address>
         <p>
           <a href="mailto:info@padelclubhem.nl" class="contact__link">info@padelclubhem.nl</a><br>
-          <a href="tel:+316123456789" class="contact__link">+31 6123 456 789</a><br>
+          <!-- <a href="tel:+316123456789" class="contact__link">+31 6123 456 789</a><br> -->
           Torenweg 44<br>
           1607 CP Hem
         </p>

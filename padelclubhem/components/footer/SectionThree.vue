@@ -53,4 +53,13 @@
         gap: 8rem;
     }
 }
+
+@media (min-width: 100rem) {
+
+    .contain {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+}
 </style>

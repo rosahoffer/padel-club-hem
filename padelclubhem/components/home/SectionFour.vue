@@ -73,7 +73,8 @@ onMounted(() => {
                 <p>Ontdek onze leuke evenementen waar je jouw vaardigheden kunt laten zien en nieuwe vrienden kunt
                     maken. Of
                     je nu een beginner bent of een ervaren speler, er zijn evenementen voor iedereen!</p>
-                <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
+                <nuxt-link href="/evenementen" class="secondary-button subtitle-medium"
+                    aria-label="Bekijk onze evenementen">
                     Bekijk onze evenementen
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -95,9 +96,12 @@ onMounted(() => {
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Verbeter je spel met professionele lessen</p>
                 <h3>Lessen</h3>
-                <p>Leer van de besten! Onze professionele instructeurs staan klaar om je spel naar een hoger niveau te
-                    tillen. Of je nu net begint of je techniek wilt verfijnen, we hebben lessen voor alle niveaus.</p>
-                <nuxt-link href="/" class="secondary-button-green subtitle-medium" aria-label="Bekijk ons sportaanbod">
+                <p>Bij Padel Club Hem bieden we een breed scala aan lessen om je spel naar een hoger niveau te tillen.
+                    Of je nu een beginner bent die de basisprincipes wil leren of een gevorderde speler die zijn
+                    techniek wil verfijnen, onze professionele leraren staan voor je klaar. We werken zowel met
+                    padelscholen, tennisscholen als onze eigen leraren.</p>
+                <nuxt-link href="/lessen" class="secondary-button-green subtitle-medium"
+                    aria-label="Bekijk onze lessen">
                     Ontdek onze lessen
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -122,7 +126,8 @@ onMounted(() => {
                 <p>Wekelijkse sportsessies voor teambuilding, sponsormogelijkheden voor bedrijfszichtbaarheid,
                     toernooien, en netwerkmogelijkheden in een sportieve omgeving.
                     ontdek de zakelijke voordelen</p>
-                <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
+                <nuxt-link href="/business" class="secondary-button subtitle-medium"
+                    aria-label="Bekijk onze business pagina">
                     Ontdek de zakelijke voordelen
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -255,26 +260,36 @@ p {
 
 @media (min-width: 90rem) {
 
-.service-card {
-    gap: 8rem;
-    padding: 8rem 3rem;
+    .service-card {
+        gap: 8rem;
+        padding: 8rem 3rem;
+    }
+
+    .image-overlay-service-card {
+        width: 45rem;
+        height: 30rem;
+    }
+
+    .image-overlay-service-card img {
+        width: 150%;
+        height: 150%;
+    }
+
+    .information-service-card {
+        max-width: 45rem;
+        gap: 4rem;
+    }
 }
 
-.image-overlay-service-card {
-    width: 45rem;
-    height: 30rem;
-}
+@media (min-width: 100rem) {
 
-.image-overlay-service-card img {
-    width: 150%;
-    height: 150%;
-}
+    .intro-text {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
 
-.information-service-card {
-    max-width: 45rem;
-    gap: 4rem;
+    .service-card {
+        padding: 10rem;
+    }
 }
-}
-
-
 </style>

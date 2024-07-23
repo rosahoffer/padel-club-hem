@@ -1,7 +1,9 @@
 <template>
     <section class="contact-container">
-        <p class="subtitle-medium">Stel je vraag</p>
-        <h2>Smash Ons Een Bericht</h2>
+        <div>
+            <p class="subtitle-medium">Stel je vraag</p>
+            <h2>Smash Ons Een Bericht</h2>
+        </div>
         <MoleculesContactForm />
     </section>
 </template>
@@ -24,6 +26,13 @@
     .contact-container {
         gap: 3rem;
         padding: 8rem 3rem;
+    }
+}
+
+@media (min-width: 100rem) {
+
+    div {
+        padding: 0 10rem;
     }
 }
 </style>

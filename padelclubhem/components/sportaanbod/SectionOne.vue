@@ -175,4 +175,11 @@ export default {
         height: 13rem;
     }
 }
+
+@media (min-width: 100rem) {
+
+.wrapper {
+    margin: 3rem 10rem 0 10rem;
+}
+}
 </style>

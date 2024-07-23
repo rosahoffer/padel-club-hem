@@ -2,7 +2,7 @@
     <div class="social-media-container">
         <ul>
             <li>
-                <nuxt-link class="facebook" href="https://www.facebook.com/profile.php?id=61560566112040">
+                <nuxt-link class="facebook" href="https://www.facebook.com/345531431977126">
                     <span></span>
                     <span></span>
                     <span></span>
