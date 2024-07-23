@@ -2,13 +2,13 @@
 import { gsap } from 'gsap';
 
 export default {
-  mounted() {
-    const timeline = gsap.timeline();
-    timeline.from(".intro-content", { duration: 1, y: -50, opacity: 0, ease: "bounce.out" })
+    mounted() {
+        const timeline = gsap.timeline();
+        timeline.from(".intro-content", { duration: 1, y: -50, opacity: 0, ease: "bounce.out" })
             .from(".section-image-wrapper", { duration: 1, y: 50, opacity: 0, ease: "power2.out" }, "-=0.5")
             .from(".scroll-down-container-wrapper", { duration: 1, y: 20, opacity: 0, ease: "bounce.out" }, "-=0.5")
             .from(".ball-separator-wrapper", { duration: 1, x: -50, opacity: 0, ease: "power2.out" }, "-=0.5");
-  }
+    }
 }
 </script>
 
@@ -96,6 +96,11 @@ export default {
     z-index: 10;
 }
 
+.image-overlay img {
+    width: 130%;
+    height: 130%;
+}
+
 @media (min-width: 40rem) {
     .intro-content {
         gap: 3rem;
@@ -178,16 +183,16 @@ export default {
 
 @media (min-width: 100rem) {
 
-.intro-content {
-    margin: 3rem 10rem 0 10rem;
-}
+    .intro-content {
+        margin: 3rem 10rem 0 10rem;
+    }
 
-.section-image-wrapper{
-    padding-right: 10rem;
-}
+    .section-image-wrapper {
+        padding-right: 10rem;
+    }
 
-.scroll-down-container-wrapper{
-    padding-right: 10rem;
-}
+    .scroll-down-container-wrapper {
+        padding-right: 10rem;
+    }
 }
 </style>
