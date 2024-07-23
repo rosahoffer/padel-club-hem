@@ -281,7 +281,7 @@ p {
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 120rem) {
 
     .intro-text {
         padding-left: 10rem;

@@ -139,7 +139,7 @@ p {
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 120rem) {
     .wrapper {
         padding: 5rem 10rem 0rem 10rem;
     }

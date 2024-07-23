@@ -54,7 +54,7 @@
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 120rem) {
 
     .contain {
         padding-left: 10rem;

@@ -27,7 +27,7 @@
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 120rem) {
 
     h2, p {
         padding: 3rem 10rem 3rem;

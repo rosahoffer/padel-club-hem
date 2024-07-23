@@ -107,7 +107,7 @@
     }
 }
 
-@media (min-width: 100rem) {
+@media (min-width: 120rem) {
 
     .contact-container {
         padding: 5rem 10rem 0rem 10rem;
