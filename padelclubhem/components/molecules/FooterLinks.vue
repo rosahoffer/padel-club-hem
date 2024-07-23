@@ -16,7 +16,7 @@
           <nuxt-link to="/business" class="nav__link">Business</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Sportcafé</nuxt-link>
+          <nuxt-link to="/sportcafe" class="nav__link">Sportcafé</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact" class="nav__link">Contact</nuxt-link>
