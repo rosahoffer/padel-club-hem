@@ -87,10 +87,10 @@ const handleSubmit = async () => {
             body: JSON.stringify({
                 access_key: form.value.access_key,
                 subject: `Nieuwe inzending website: ${form.value.subject}`,
-                name: `${form.value.firstName} ${form.value.lastName}`,
+                naam: `${form.value.firstName} ${form.value.lastName}`,
                 email: form.value.email,
-                phone: form.value.phone,
-                message: form.value.message
+                telefoonnummer: form.value.phone,
+                bericht: form.value.message
             })
         });
 
