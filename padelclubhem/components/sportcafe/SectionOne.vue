@@ -16,7 +16,7 @@ export default {
     <div class="wrapper">
         <section class="intro-content">
             <p class="subtitle-medium">Sportcafe</p>
-            <h1>Toe aan pauze?</h1>
+            <h1>Even pauze?</h1>
             <p>Coming soon, nog geen tekst hiervoor</p>
         </section>
         <div class="ball-separator-wrapper">
@@ -177,8 +177,16 @@ export default {
 
 @media (min-width: 100rem) {
 
-    .wrapper {
+    .intro-content {
         margin: 3rem 10rem 0 10rem;
+    }
+
+    .section-image-wrapper{
+        padding-right: 10rem;
+    }
+
+    .scroll-down-container-wrapper{
+        padding-right: 10rem;
     }
 }
 </style>

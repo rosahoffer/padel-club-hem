@@ -178,8 +178,16 @@ export default {
 
 @media (min-width: 100rem) {
 
-.wrapper {
+.intro-content {
     margin: 3rem 10rem 0 10rem;
+}
+
+.section-image-wrapper{
+    padding-right: 10rem;
+}
+
+.scroll-down-container-wrapper{
+    padding-right: 10rem;
 }
 }
 </style>
