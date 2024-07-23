@@ -55,7 +55,6 @@
 
 <script setup>
 import { ref } from 'vue';
-
 const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
 const form = ref({
@@ -78,29 +77,29 @@ const handleSubmit = async () => {
     success.value = false;
 
     try {
-        const response = await Promise.race([
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    access_key: form.value.access_key,
-                    subject: `Nieuwe inzending website: ${form.value.subject}`,
-                    name: `${form.value.firstName} ${form.value.lastName}`,
-                    email: form.value.email,
-                    phone: form.value.phone,
-                    message: form.value.message
-                })
-            }),
-            new Promise((_, reject) =>
-                setTimeout(() => reject(new Error('Timeout')), 10000) // Timeout na 10 seconden
-            )
-        ]);
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                access_key: form.value.access_key,
+                subject: `Nieuwe inzending website: ${form.value.subject}`,
+                name: `${form.value.firstName} ${form.value.lastName}`,
+                email: form.value.email,
+                phone: form.value.phone,
+                message: form.value.message
+            })
+        });
 
         const result = await response.json();
 
         if (response.ok) {
             success.value = true;
-            form.value = { access_key: accessKey, subject: "", firstName: "", lastName: "", email: "", phone: "", message: "" };
+            form.value.subject = "";
+            form.value.firstName = "";
+            form.value.lastName = "";
+            form.value.email = "";
+            form.value.phone = "";
+            form.value.message = "";
         } else {
             error.value = result.message || "Er is iets fout gegaan!";
         }

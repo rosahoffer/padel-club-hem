@@ -7,19 +7,19 @@
           <nuxt-link to="/sportaanbod" class="nav__link">Sportaanbod</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Evenementen</nuxt-link>
+          <nuxt-link to="/evenmenten" class="nav__link">Evenementen</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Lessen</nuxt-link>
+          <nuxt-link to="lessen" class="nav__link">Lessen</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Business</nuxt-link>
+          <nuxt-link to="/business" class="nav__link">Business</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/" class="nav__link">Sportcafé</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Contact</nuxt-link>
+          <nuxt-link to="/contact" class="nav__link">Contact</nuxt-link>
         </li>
       </ul>
     </div>
