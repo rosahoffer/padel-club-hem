@@ -2,7 +2,7 @@
     <section class="contact-container">
         <p class="subtitle-medium">Neem contact op en blijf in beweging!</p>
         <h2>Gegevens</h2>
-        
+
     </section>
 </template>
 
@@ -17,6 +17,10 @@
 }
 
 .contact-container h2 {
+    color: var(--background-color);
+}
+
+.contact-container p {
     color: var(--background-color);
 }
 
