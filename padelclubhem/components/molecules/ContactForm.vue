@@ -2,8 +2,8 @@
     <form @submit.prevent="handleSubmit">
         <div class="form-group">
             <label class="subtitle-bold-uppercase" for="subject">Onderwerp*</label>
-            <select id="subject" v-model="form.subject" required>
-                <option value="" disabled selected>Kies een optie</option>
+            <select id="subject" v-model="form.subject" required aria-required="true">
+                <option value="" disabled>Kies een optie</option>
                 <option value="Baanreservering">Baanreservering</option>
                 <option value="Competitie">Competitie</option>
                 <option value="Toernooien">Toernooien</option>
@@ -18,19 +18,18 @@
             <div>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="firstName">Naam *</label>
-                    <input type="text" id="firstName" v-model="form.firstName" required placeholder="Jouw naam..." />
+                    <input type="text" id="firstName" v-model="form.firstName" required aria-required="true" placeholder="Jouw naam..." />
                 </div>
 
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="lastName">Achternaam *</label>
-                    <input type="text" id="lastName" v-model="form.lastName" required
-                        placeholder="Jouw achternaam..." />
+                    <input type="text" id="lastName" v-model="form.lastName" required aria-required="true" placeholder="Jouw achternaam..." />
                 </div>
             </div>
             <div>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" for="email">E-mail *</label>
-                    <input type="email" id="email" v-model="form.email" required placeholder="Jouw e-mailadres..." />
+                    <input type="email" id="email" v-model="form.email" required aria-required="true" placeholder="Jouw e-mailadres..." />
                 </div>
 
                 <div class="form-group">
@@ -42,21 +41,21 @@
 
         <div class="form-group">
             <label class="subtitle-bold-uppercase" for="message">Bericht *</label>
-            <textarea id="message" v-model="form.message" required placeholder="Typ hier jouw bericht..."></textarea>
+            <textarea id="message" v-model="form.message" required aria-required="true" placeholder="Typ hier jouw bericht..."></textarea>
         </div>
 
         <button class="primary-button" type="submit" :disabled="loading">
             {{ loading ? 'Verzenden...' : 'Verzend je bericht' }}
         </button>
 
-        <p v-if="error" class="error">{{ error }}</p>
-        <p v-if="success" class="success">Bericht succesvol verzonden!</p>
+        <p v-if="error" class="error" aria-live="assertive">{{ error }}</p>
+        <p v-if="success" class="success" aria-live="assertive">Bericht succesvol verzonden!</p>
     </form>
 </template>
 
-
 <script setup>
 import { ref } from 'vue';
+
 const accessKey = import.meta.env.VITE_ACCESS_KEY;
 
 const form = ref({
@@ -79,29 +78,29 @@ const handleSubmit = async () => {
     success.value = false;
 
     try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                access_key: form.value.access_key,
-                subject: `Nieuwe inzending website: ${form.value.subject}`,
-                name: `${form.value.firstName} ${form.value.lastName}`,
-                email: form.value.email,
-                phone: form.value.phone,
-                message: form.value.message
-            })
-        });
+        const response = await Promise.race([
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    access_key: form.value.access_key,
+                    subject: `Nieuwe inzending website: ${form.value.subject}`,
+                    name: `${form.value.firstName} ${form.value.lastName}`,
+                    email: form.value.email,
+                    phone: form.value.phone,
+                    message: form.value.message
+                })
+            }),
+            new Promise((_, reject) =>
+                setTimeout(() => reject(new Error('Timeout')), 10000) // Timeout na 10 seconden
+            )
+        ]);
 
         const result = await response.json();
 
         if (response.ok) {
             success.value = true;
-            form.value.subject = "";
-            form.value.firstName = "";
-            form.value.lastName = "";
-            form.value.email = "";
-            form.value.phone = "";
-            form.value.message = "";
+            form.value = { access_key: accessKey, subject: "", firstName: "", lastName: "", email: "", phone: "", message: "" };
         } else {
             error.value = result.message || "Er is iets fout gegaan!";
         }
@@ -118,6 +117,10 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
+.form {
+    padding-top: 3rem;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -133,7 +136,7 @@ form input,
 form select,
 form textarea {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem 0;
     background-color: var(--background-color);
     outline: none;
     border: none;
@@ -147,9 +150,7 @@ form textarea {
 }
 
 form textarea {
-    width: 100%;
     height: 10rem;
-    padding: 0.5rem;
     resize: none;
 }
 
@@ -163,9 +164,7 @@ form select::placeholder {
 form input:focus,
 form select:focus,
 form textarea:focus {
-    border: 2px solid var(--primary-color);
-    background-color: var(--background-color);
-    padding: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 form button {
@@ -185,9 +184,9 @@ form button {
 }
 
 @media (min-width: 60rem) {
-
     .form {
         width: 100%;
+        padding-top: 5rem;
     }
 
     .form-group {
