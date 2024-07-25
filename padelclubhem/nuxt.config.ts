@@ -1,4 +1,12 @@
 export default defineNuxtConfig({
+
+  runtimeConfig: {
+    public: {
+      hygraphApiUrl: process.env.HYGRAPH_API_URL,
+      hygraphApiToken: process.env.HYGRAPH_API_TOKEN,
+    }
+  },
+
   devtools: { enabled: true },
   css: [
     '@/assets/styles/main.css' 
