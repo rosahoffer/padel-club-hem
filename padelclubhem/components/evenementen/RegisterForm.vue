@@ -132,15 +132,18 @@ const handleSubmit = async () => {
         success.value = true;
         people.value = [{ firstName: '', lastName: '', email: '', phone: '' }];
     } catch (err) {
+        console.error('Error sending email:', err);
+        console.error('Error response:', err.response ? err.response.data : 'No response data');
         error.value = err.message || 'Er is iets fout gegaan! Neem contact op met de organisatie.';
     } finally {
         loading.value = false;
         setTimeout(() => {
             error.value = '';
             success.value = false;
-        }, 5000);
+        }, 10000);
     }
 };
+
 </script>
 
 <style scoped>
