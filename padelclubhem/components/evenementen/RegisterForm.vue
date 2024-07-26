@@ -1,4 +1,5 @@
 <template>
+    <HeaderMainHeader/>
     <div class="container">
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
@@ -72,6 +73,7 @@
             </p>
         </form>
     </div>
+    <FooterMainFooter/>
 </template>
 
 <script setup>
@@ -168,6 +170,7 @@ h3 {
 
 .subtitle-small{
     font-size: 0.8rem;
+    line-height: 1.2rem;
 }
 
 .form {
@@ -261,35 +264,23 @@ form .primary-button, .primary-button-outline {
     color: var(--primary-color);
 }
 
+@media (min-width: 40rem) {
+    .container {
+        gap: 3rem;
+        padding: 10rem 3rem;
+    }
+}
+
 @media (min-width: 60rem) {
+
     .form {
-        width: 100%;
-        padding-top: 5rem;
+        max-width: 80rem;
+        margin: 0 auto;
+        margin-top: 5rem;
     }
 
     .form-group {
         margin-bottom: 2rem;
-        width: 100%;
-    }
-
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-wrap-name {
-        display: flex;
-        gap: 2rem;
-        width: 100%;
-    }
-
-    .flex-wrap-contact {
-        display: flex;
-        gap: 2rem;
-        width: 100%;
-    }
-
-    .wrapper div {
         width: 100%;
     }
 
@@ -304,9 +295,15 @@ form .primary-button, .primary-button-outline {
     form input:focus,
     form select:focus,
     form textarea:focus {
-        font-size: 1.2rem;
-        line-height: 2rem;
+        font-size: 1rem;
+        line-height: 1.8rem;
         padding: 2rem 0;
+    }
+}
+
+@media (min-width: 120rem) {
+    .title-contain {
+        padding: 3rem 7rem 0rem 7rem;
     }
 }
 </style>
