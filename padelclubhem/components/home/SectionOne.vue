@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="intro-container">
-            <h1 class="fly-in">Welkom bij Padelclub Hem</h1>
+            <h1 class="fly-in">Welkom bij Padel Club Hem</h1>
             <p class="fly-in">Indoor sport voor iedere doelgroep op de gezelligste club in West-Friesland!</p>
             <div class="scroll-separator">
                 <MoleculesScrollSeparator />

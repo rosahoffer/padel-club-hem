@@ -185,14 +185,6 @@ form button {
     margin-left: auto;
 }
 
-.error {
-    color: var(--secondary-color);
-}
-
-.success {
-    color: var(--primary-color);
-}
-
 @media (min-width: 60rem) {
     .form {
         width: 100%;
