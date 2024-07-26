@@ -157,6 +157,7 @@ const handleSubmit = async () => {
 }
 
 .container {
+    width: 100%;
     padding: 8rem 1.5rem 3rem 1.5rem;
 }
 
@@ -170,6 +171,7 @@ h3 {
 }
 
 .form {
+    width: 100%;
     padding-top: 3rem;
 }
 
