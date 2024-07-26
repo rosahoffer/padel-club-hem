@@ -2,8 +2,8 @@
     <div class="container">
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
-            <p class="subtitle-bold-lowercase event-name">{{ eventName }}</p>
-            <h3>Inschrijven</h3>
+            <h3>{{ eventName }}</h3>
+            <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
         <form @submit.prevent="handleSubmit">
             <div class="person-form">
@@ -147,32 +147,37 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
+
+.container {
+    width: 100%;
+    padding: 10rem 1.5rem 1.5rem 1.5rem;
+}
+
 .title-contain {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    background-color: var(--background-color);
     padding-bottom: 2.5rem;
 }
 
-.container {
-    width: 100%;
-    padding: 8rem 1.5rem 3rem 1.5rem;
-}
-
-.event-name{
-    color: var(--primary-color);
-    margin-top: -2rem;
-}
-
 h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    text-wrap: flex;
+}
+
+.subtitle-small{
+    font-size: 0.8rem;
 }
 
 .form {
     width: 100%;
     padding-top: 3rem;
+}
+
+.person-form{
+    width: 100%;
+    padding-bottom: 3rem;
 }
 
 .padding{
@@ -203,7 +208,7 @@ form textarea {
     color: var(--secondary-color);
     font-family: "Poppins", sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.8rem;
 }
 
@@ -230,7 +235,8 @@ form input:focus,
 form select:focus,
 form textarea:focus {
     border-bottom: 2px solid var(--primary-color);
-    background-color: var(--background-color);
+    background-color: transparent;
+    padding: 1rem;
 }
 
 form .submit-buttons {
