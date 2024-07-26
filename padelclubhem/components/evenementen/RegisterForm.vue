@@ -3,7 +3,7 @@
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
             <p class="subtitle-bold-lowercase event-name">{{ eventName }}</p>
-            <h2>Inschrijven</h2>
+            <h3>Inschrijven</h3>
         </div>
         <form @submit.prevent="handleSubmit">
             <div class="person-form">
@@ -162,7 +162,7 @@ const handleSubmit = async () => {
     margin-top: -2rem;
 }
 
-h2 {
+h3 {
     color: var(--secondary-color);
 }
 
