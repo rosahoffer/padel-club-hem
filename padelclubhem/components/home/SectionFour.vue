@@ -96,7 +96,7 @@ onMounted(() => {
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Verbeter je spel met professionele lessen</p>
                 <h3>Lessen</h3>
-                <p>Bij Padel Club Hem bieden we een breed scala aan lessen om je spel naar een hoger niveau te tillen.
+                <p>Bij Padelclub Hem bieden we een breed scala aan lessen om je spel naar een hoger niveau te tillen.
                     Of je nu een beginner bent die de basisprincipes wil leren of een gevorderde speler die zijn
                     techniek wil verfijnen, onze professionele leraren staan voor je klaar. We werken zowel met
                     padelscholen, tennisscholen als onze eigen leraren.</p>

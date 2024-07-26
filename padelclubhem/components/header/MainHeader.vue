@@ -43,7 +43,7 @@ onBeforeUnmount(() => {
             <!-- Logo Section -->
             <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
                 <nuxt-link href="/homepage" class="logo" id="logo" aria-label="Ga naar de homepagina">
-                    <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
+                    <img src="assets/images/padelclubhem-logo.png" alt="Logo Padelclub Hem" />
                 </nuxt-link>
             </div>
 

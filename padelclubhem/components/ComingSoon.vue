@@ -4,12 +4,12 @@
     <div class="coming-soon-container">
         <div>
             <nuxt-link class="logo-container">
-                <img src="assets/images/padelclubhem-logo.png" alt="Logo Padel Club Hem" />
+                <img src="assets/images/padelclubhem-logo.png" alt="Logo Padelclub Hem" />
             </nuxt-link>
         </div>
         <h1>Coming Soon</h1>
         <h3 class="subtitle-bold-lowercase">Bereid je voor op een nieuwe sportieve ervaring!</h3>
-        <p>Welkom bij Padel Club Hem! We werken hard om onze nieuwe sportfaciliteit klaar te maken en we kunnen niet
+        <p>Welkom bij Padelclub Hem! We werken hard om onze nieuwe sportfaciliteit klaar te maken en we kunnen niet
             wachten om jullie te verwelkomen.
         </p>
 
@@ -20,7 +20,7 @@
         </div>
     </div>
     <section>
-        <p>Padel Club Hem | Torenweg 44, 1607 CP Hem</p>
+        <p>Padelclub Hem | Torenweg 44, 1607 CP Hem</p>
     </section>
 </template>
 

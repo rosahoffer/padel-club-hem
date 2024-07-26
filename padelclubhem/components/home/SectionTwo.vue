@@ -2,7 +2,7 @@
     <div class="wrapper">
         <section class="intro-content">
             <h2>Over de club</h2>
-            <p>Bij Padel Club Hem staat beleving voorop. Wij heten je welkom in de community om lekker te
+            <p>Bij Padelclub Hem staat beleving voorop. Wij heten je welkom in de community om lekker te
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
                 sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>

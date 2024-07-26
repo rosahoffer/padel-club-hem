@@ -9,17 +9,18 @@ onMounted(async () => {
         const response = await fetch('/api/events');
         if (!response.ok) throw new Error('Network response was not ok.');
         const data = await response.json();
+        if (!data) throw new Error('No data received');
         events.value = data;
     } catch (error) {
         console.error('Failed to fetch events:', error);
     }
 });
 
-const toggleEvent = (eventId: string) => {
-    openEvent.value = openEvent.value === eventId ? null : eventId;
+const toggleEvent = (eventSlug: string) => {
+    openEvent.value = openEvent.value === eventSlug ? null : eventSlug;
 };
 
-const isOpen = (eventId: string) => openEvent.value === eventId;
+const isOpen = (eventSlug: string) => openEvent.value === eventSlug;
 </script>
 
 <template>
@@ -31,10 +32,14 @@ const isOpen = (eventId: string) => openEvent.value === eventId;
         <div class="subtitle-medium" v-if="events.length === 0">Geen evenementen gevonden</div>
         <div v-else>
             <ul class="events">
-                <li v-for="event in events" :key="event.id" class="event-item">
-                    <div class="event-info" :class="{ 'active': isOpen(event.id) }" @click="toggleEvent(event.id)"
-                        :aria-expanded="isOpen(event.id).toString()" :aria-controls="'event-details-' + event.id"
-                        tabindex="0">
+                <li v-for="event in events" :key="event.slug" class="event-item">
+                    <div
+                        class="event-info"
+                        :class="{ 'active': isOpen(event.slug) }"
+                        @click="toggleEvent(event.slug)"
+                        :aria-controls="'event-details-' + event.slug"
+                        tabindex="0"
+                    >
                         <p class="subtitle-bold-uppercase">{{ event.date }}</p>
                         <div class="title-svg-flex">
                             <p class="subtitle-medium">{{ event.title }}</p>
@@ -47,7 +52,7 @@ const isOpen = (eventId: string) => openEvent.value === eventId;
                         </div>
                     </div>
                     <transition name="fade">
-                        <div v-if="isOpen(event.id)" :id="'event-details-' + event.id" class="event-details">
+                        <div v-if="isOpen(event.slug)" :id="'event-details-' + event.slug" class="event-details">
                             <div class="image-wrapper">
                                 <div class="image-overlay">
                                     <div class="image-container">
@@ -74,6 +79,7 @@ const isOpen = (eventId: string) => openEvent.value === eventId;
         </div>
     </section>
 </template>
+
 
 
 <style scoped>

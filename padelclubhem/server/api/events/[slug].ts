@@ -1,12 +1,10 @@
-import { defineEventHandler } from 'h3';
-
 export default defineEventHandler(async (event) => {
-  const { id } = event.context.params as { id: string };
+  const { slug } = event.context.params as { slug: string };
   
   const config = useRuntimeConfig();
   const query = `
   {
-    event(where: { id: "${id}" }) {
+    event(where: { slug: "${slug}" }) {
       title
       image {
         url

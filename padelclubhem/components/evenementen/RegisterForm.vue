@@ -1,11 +1,10 @@
 <template>
     <div class="container">
         <div class="title-contain">
-            <p class="subtitle-medium">Schrijf je in voor{{ eventName }}</p>
+            <p class="subtitle-medium">Schrijf je in voor {{ eventName }}</p>
             <h2>Inschrijven</h2>
         </div>
         <form @submit.prevent="handleSubmit">
-            <!-- Altijd het eerste formulier weergeven -->
             <div class="person-form">
                 <p class="subtitle-medium">Persoon 1</p>
                 <div class="form-group">
@@ -26,8 +25,6 @@
                     <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" />
                 </div>
             </div>
-
-            <!-- Toon extra formulieren als mensen toevoegen -->
             <div v-if="people.length > 1">
                 <div v-for="(person, index) in people.slice(1)" :key="index + 1" class="person-form">
                     <p class="subtitle-medium">Persoon {{ index + 2 }}</p>
@@ -52,18 +49,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Knop om extra persoon toe te voegen -->
-            <button type="button" @click="addPerson" :disabled="people.length >= 8">
-                Extra persoon inschrijven
-            </button>
-
-            <!-- Knop om formulier in te dienen -->
-            <button type="submit" :disabled="loading">
-                {{ loading ? 'Verzenden...' : 'Verzend je inschrijving' }}
-            </button>
-
-            <!-- Fout- en succesberichten -->
+            <button type="button" @click="addPerson" :disabled="people.length >= 8">Extra persoon inschrijven</button>
+            <button type="submit" :disabled="loading">{{ loading ? 'Verzenden...' : 'Verzend je inschrijving'
+                }}</button>
             <p v-if="error" class="error">{{ error }}</p>
             <p v-if="success" class="success">Inschrijving succesvol verzonden!</p>
         </form>
@@ -75,16 +63,10 @@ import { ref } from 'vue';
 import emailjs from 'emailjs-com';
 
 const props = defineProps({
-    eventId: String,
-    eventName: {
-        type: String,
-        default: 'Onbekend evenement'
-    },
-    eventSlug: {
-        type: String,
-        default: 'onbekend-slug'
-    }
+    eventSlug: String,
+    eventName: String,
 });
+
 
 const people = ref([{ firstName: '', lastName: '', email: '', phone: '' }]);
 const loading = ref(false);
@@ -103,11 +85,10 @@ const handleSubmit = async () => {
     success.value = false;
 
     try {
-        // Bevestigingsmail naar elke persoon die zich heeft ingeschreven
         for (const person of people.value) {
             await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION, {
-                from_name: 'Padel Club Hem',
-                to_email: person.email, // Bevestigingsmail naar het opgegeven e-mailadres
+                from_name: 'Padelclub Hem',
+                to_email: person.email,
                 eventName: props.eventName,
                 firstName: person.firstName,
                 lastName: person.lastName,
@@ -115,7 +96,6 @@ const handleSubmit = async () => {
             }, import.meta.env.VITE_EMAILJS_USER_ID);
         }
 
-        // Administratieve e-mail naar info@padelclubhem.nl met alle gegevens
         const messageBody = people.value
             .map((person, index) => `
           Persoon ${index + 1}:
@@ -127,8 +107,8 @@ const handleSubmit = async () => {
             .join('\n\n');
 
         await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN, {
-            from_name: 'Inschrijving voor evenement',
-            to_email: 'info@padelclubhem.nl', // Administratieve e-mail
+            from_name: `Inschrijving voor evenement: ${props.eventName}`,
+            to_email: 'info@padelclubhem.nl',
             eventName: props.eventName,
             messageBody: messageBody,
         }, import.meta.env.VITE_EMAILJS_USER_ID);
@@ -148,7 +128,6 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-
 .title-contain {
     width: 100%;
     display: flex;
@@ -158,11 +137,11 @@ const handleSubmit = async () => {
     padding-bottom: 2.5rem;
 }
 
-.container{
+.container {
     padding: 8rem 1.5rem 3rem 1.5rem;
 }
 
-h2{
+h2 {
     color: var(--secondary-color);
 }
 

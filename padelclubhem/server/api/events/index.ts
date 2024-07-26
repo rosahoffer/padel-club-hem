@@ -1,5 +1,3 @@
-import { defineEventHandler } from 'h3';
-
 export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
   const query = `
@@ -31,7 +29,6 @@ export default defineEventHandler(async () => {
   });
   
   const { data } = await response.json();
-  console.log('Data:', data);
   return data.events;
   
 });
