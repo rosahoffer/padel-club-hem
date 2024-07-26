@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <p class="subtitle-medium">Schrijf je in voor{{ eventName }}</p>
-        <h2>Inschrijven</h2>
+    <div class="container">
+        <div class="title-contain">
+            <p class="subtitle-medium">Schrijf je in voor{{ eventName }}</p>
+            <h2>Inschrijven</h2>
+        </div>
         <form @submit.prevent="handleSubmit">
             <!-- Altijd het eerste formulier weergeven -->
             <div class="person-form">
@@ -146,6 +148,24 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
+
+.title-contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: var(--background-color);
+    padding-bottom: 2.5rem;
+}
+
+.container{
+    padding: 8rem 1.5rem 3rem 1.5rem;
+}
+
+h2{
+    color: var(--secondary-color);
+}
+
 .form {
     padding-top: 3rem;
 }
