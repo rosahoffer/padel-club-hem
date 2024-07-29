@@ -18,11 +18,11 @@ onMounted(() => {
         ease: 'none',
         scrollTrigger: {
             trigger: carousel,
-            start: 'top 30%',
-            end: 'bottom 30%',
+            start: 'top top',
+            end: `+=${totalWidth}`,
             scrub: true,
             pin: true,
-            anticipatePin: 1,
+            anticipatePin: 1
         }
     });
 });
@@ -51,41 +51,50 @@ onMounted(() => {
 html,
 body {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 .image-carousel {
-    padding: 3rem 0;
-    background-color: var(--primary-color);
+    padding: 0;
+    background-color: var(--secondary-color);
     overflow: hidden;
     position: relative;
-    height: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 }
 
 .image-list {
     display: flex;
-    width: auto;
+    width: 100%;
     will-change: transform;
 }
 
 .image-item {
     flex: 0 0 100vw;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 .image-list-img {
     width: 100%;
-    height: 15rem;
+    height: 30rem;
     object-fit: cover;
     transition: 0.3s ease all;
 }
 
-@media (min-width: 60rem) {
-    .image-carousel {
-        padding: 5rem 0;
+@media (min-width: 40rem) {
+    .image-list {
+        width: auto;
     }
+}
 
+@media (min-width: 60rem) {
     .image-list-img {
-        height: 30rem;
+        height: 40rem;
     }
 }
 </style>

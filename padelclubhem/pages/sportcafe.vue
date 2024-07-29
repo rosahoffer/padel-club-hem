@@ -6,7 +6,6 @@
         <SportcafeSectionOne />
         <SportcafeSectionTwo />
         <SportcafeSectionThree />
-        <SportcafeSectionFour />
         <FooterMainFooter />
     </main>
 </template>
