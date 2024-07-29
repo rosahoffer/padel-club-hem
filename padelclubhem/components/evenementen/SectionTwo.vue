@@ -268,12 +268,12 @@ section {
 }
 
 @media (min-width: 120rem) {
-    p {
+    .title-contain p {
         padding: 3rem 7rem 0rem 7rem;
         max-width: 70rem;
     }
 
-    h2 {
+    .title-contain h2 {
         padding: 0rem 7rem 3rem 7rem;
         max-width: 70rem;
     }

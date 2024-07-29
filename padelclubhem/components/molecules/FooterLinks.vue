@@ -109,8 +109,8 @@ address {
 
 @media (min-width: 80rem) {
 
-.footer-menu {
-  gap: 8rem;
-}
+  .footer-menu {
+    gap: 8rem;
+  }
 }
 </style>

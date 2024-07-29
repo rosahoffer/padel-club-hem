@@ -4,7 +4,7 @@
         <p>Heb je vragen, suggesties
             of wil je gewoon hallo zeggen?
             We staan klaar om je te helpen!</p>
-        <nuxt-link href="contact/" class="primary-button">Stuur een bericht</nuxt-link>
+        <nuxt-link href="/contact" class="primary-button">Stuur een bericht</nuxt-link>
     </section>
 </template>
 

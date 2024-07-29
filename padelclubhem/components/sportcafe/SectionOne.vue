@@ -15,9 +15,11 @@ export default {
 <template>
     <div class="wrapper">
         <section class="intro-content">
-            <p class="subtitle-medium">Sportcafe</p>
+            <p class="subtitle-medium">Sportcafé</p>
             <h1>Even pauze?</h1>
-            <p>Coming soon, nog geen tekst hiervoor</p>
+            <p>Ons sportcafé is de perfecte plek om te ontspannen en te genieten na een intensieve sportsessie. Of je nu
+                een speler bent die net van de baan komt, een toeschouwer die de wedstrijden volgt, of gewoon iemand die
+                houdt van een gezellige sportieve sfeer, ons café biedt voor ieder wat wils.</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">
@@ -31,8 +33,8 @@ export default {
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/kantine.jpg"
-                            alt="Afbeelding van de kantine" loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/kantine.jpg" alt="Afbeelding van de kantine" loading="lazy"
+                            width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
                 </div>
@@ -80,7 +82,7 @@ export default {
 
 .image-overlay {
     width: 100%;
-    height: 20rem;
+    height: 18rem;
 }
 
 .section-image-wrapper {
@@ -170,9 +172,9 @@ export default {
 
 @media (min-width: 90rem) {
 
-.ball-separator-wrapper {
-    height: 10rem;
-}
+    .ball-separator-wrapper {
+        height: 10rem;
+    }
 }
 
 @media (min-width: 120rem) {
@@ -181,11 +183,11 @@ export default {
         margin: 3rem 7rem 0 7rem;
     }
 
-    .section-image-wrapper{
+    .section-image-wrapper {
         padding-right: 7rem;
     }
 
-    .scroll-down-container-wrapper{
+    .scroll-down-container-wrapper {
         padding-right: 7rem;
     }
 }

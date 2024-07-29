@@ -152,7 +152,7 @@ const handleSubmit = async () => {
 
 .container {
     width: 100%;
-    padding: 10rem 1.5rem 1.5rem 1.5rem;
+    padding: 10rem 1.5rem 3rem 1.5rem;
 }
 
 .title-contain {
@@ -273,7 +273,12 @@ form .primary-button, .primary-button-outline {
 
 @media (min-width: 60rem) {
 
-    .form {
+    .subtitle-small{
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+
+    form {
         max-width: 80rem;
         margin: 0 auto;
         margin-top: 5rem;
