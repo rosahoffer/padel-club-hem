@@ -81,7 +81,7 @@ body {
 
 .image-list-img {
     width: 100%;
-    height: 30rem;
+    height: 20rem;
     object-fit: cover;
     transition: 0.3s ease all;
 }
