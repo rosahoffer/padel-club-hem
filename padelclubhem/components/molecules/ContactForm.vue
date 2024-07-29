@@ -185,6 +185,7 @@ form button {
     margin-left: auto;
 }
 
+
 @media (min-width: 60rem) {
     .form {
         width: 100%;

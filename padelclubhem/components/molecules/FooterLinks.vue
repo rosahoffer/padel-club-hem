@@ -7,7 +7,7 @@
           <nuxt-link to="/sportaanbod" class="nav__link">Sportaanbod</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/evenmenten" class="nav__link">Evenementen</nuxt-link>
+          <nuxt-link to="/evenementen" class="nav__link">Evenementen</nuxt-link>
         </li>
         <li>
           <nuxt-link to="lessen" class="nav__link">Lessen</nuxt-link>
