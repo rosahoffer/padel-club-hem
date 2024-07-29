@@ -42,6 +42,11 @@ section {
     width: 100%;
 }
 
+
+.fly-in {
+    animation: flyIn 1s ease-in-out forwards;
+}
+
 /* Animations */
 @keyframes flyIn {
     0% {
@@ -65,10 +70,6 @@ section {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.fly-in {
-    animation: flyIn 0.5s ease-in-out forwards;
 }
 
 /* BREAKPOINT TABLET  */

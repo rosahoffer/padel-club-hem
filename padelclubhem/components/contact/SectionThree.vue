@@ -1,6 +1,6 @@
 <template>
     <section class="contact-container">
-        <p class="subtitle-medium">Neem contact op en blijf in beweging!</p>
+        <p class="subtitle-medium" >neem contact op en blijf in beweging!</p>
         <h2>Gegevens</h2>
         <div class="info-contact-container">
             <div class="contact-group">
