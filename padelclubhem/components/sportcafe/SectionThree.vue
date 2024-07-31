@@ -1,33 +1,3 @@
-<script setup>
-import { onMounted } from 'vue';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
-onMounted(() => {
-    const carousel = document.querySelector('.image-carousel');
-    const imageList = document.querySelector('.image-list');
-
-    // Bepaal de totale breedte van de image list
-    const totalWidth = imageList.scrollWidth - carousel.clientWidth;
-
-    // Maak een GSAP animatie die de scroll van de image list koppelt aan de scroll van de carousel
-    gsap.to(imageList, {
-        x: -totalWidth,
-        ease: 'none',
-        scrollTrigger: {
-            trigger: carousel,
-            start: 'top top',
-            end: `+=${totalWidth}`,
-            scrub: true,
-            pin: true,
-            anticipatePin: 1
-        }
-    });
-});
-</script>
-
 <template>
     <section class="image-carousel" id="sfeerimpressie" aria-label="Sfeerimpressie Sportcafe">
         <div class="image-list">
@@ -48,53 +18,51 @@ onMounted(() => {
 </template>
 
 <style scoped>
-html,
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
 .image-carousel {
-    padding: 0;
-    background-color: var(--secondary-color);
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+    padding: 3rem 0;
+    background-color: var(--primary-color);
 }
 
 .image-list {
+    overflow-x: scroll;
+    overflow-y: hidden;
     display: flex;
-    width: 100%;
-    will-change: transform;
+    grid-row-start: 2;
 }
 
 .image-item {
-    flex: 0 0 100vw;
-    margin-right: 1rem;
+    display: flex;
+    min-width: 80vw;
+    margin-right: 0.5rem;
+}
+
+.image-item:last-child {
+    margin-right: 0;
 }
 
 .image-list-img {
-    width: 100%;
-    height: 20rem;
     object-fit: cover;
     transition: 0.3s ease all;
-}
-
-@media (min-width: 40rem) {
-    .image-list {
-        width: auto;
-    }
+    margin: 0;
+    width: 100%;
+    height: 15rem;
 }
 
 @media (min-width: 60rem) {
+    .image-carousel {
+        padding: 5rem 0;
+    }
+
+    .image-item {
+        margin-right: 1rem;
+    }
+
     .image-list-img {
-        height: 40rem;
+        object-fit: cover;
+        transition: 0.3s ease all;
+        margin: 0;
+        width: 100%;
+        height: 30rem;
     }
 }
 </style>
