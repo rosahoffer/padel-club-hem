@@ -11,11 +11,7 @@ export default defineNuxtConfig({
   css: [
     '@/assets/styles/main.css' 
   ],
-
-   plugins: [
-    '@/plugins/cursor.js'
-  ],
-
+  
   compatibilityDate: '2024-07-05', 
 
   modules: [

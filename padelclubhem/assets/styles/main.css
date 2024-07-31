@@ -28,24 +28,6 @@ body {
   background-color: var(--background-color);
 }
 
-/* CURSOR  */
-
-#custom-cursor {
-  width: 20px;
-  height: 20px;
-  background-color: #cbfd3c;
-  border-radius: 50%;
-  position: absolute;
-  pointer-events: none;
-  transition: transform 0.1s ease;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-}
-
-#custom-cursor.hover {
-  background-color: #cbfd3c;
-}
-
 /* HEADINGS */
 
 h1,

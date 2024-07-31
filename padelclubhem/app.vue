@@ -1,13 +1,15 @@
 <template>
   <div>
+    <div id="cursor"></div>
     <TennisBallLoader v-if="loading" />
     <div v-else>
       <NuxtLayout>
         <NuxtPage />
-      </NuxtLayout>
+      </NuxtLayout>n
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -41,24 +43,25 @@ onMounted(() => {
   setTimeout(() => {
     loading.value = false
   }, 2000)
-})
+
+  // JavaScript for custom cursor
+  const cursor = document.getElementById('cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+});
 </script>
 
 <style>
-.page-enter-active,
-.page-leave-active {
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.page-enter-from,
-.page-leave-to {
-  transform: translateX(100%);
-  opacity: 0;
-}
-
-.page-enter-to,
-.page-leave-from {
-  transform: translateX(0);
-  opacity: 1;
+#cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--background-color);
+  border: solid 1px var(--primary-color);
+  pointer-events: none;
 }
 </style>
