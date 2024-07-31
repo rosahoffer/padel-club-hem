@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div id="cursor"></div>
     <TennisBallLoader v-if="loading" />
     <div v-else>
       <NuxtLayout>
@@ -43,25 +42,5 @@ onMounted(() => {
   setTimeout(() => {
     loading.value = false
   }, 2000)
-
-  // JavaScript for custom cursor
-  const cursor = document.getElementById('cursor');
-
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.top = `${e.clientY}px`;
-    cursor.style.left = `${e.clientX}px`;
-  });
 });
 </script>
-
-<style>
-#cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--background-color);
-  border: solid 1px var(--primary-color);
-  pointer-events: none;
-}
-</style>

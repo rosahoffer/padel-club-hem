@@ -3,7 +3,9 @@
 <template>
     <main aria-label="Hoofdinhoud Lessen">
         <HeaderMainHeader />
-        <ComingSoonPage />
+        <LessenSectionOne />
+        <LessenSectionTwo />
+        <LessenSectionThree />
         <FooterMainFooter />
     </main>
 </template>

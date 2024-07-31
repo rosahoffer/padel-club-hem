@@ -29,7 +29,7 @@ const isOpen = (eventSlug: string) => openEvent.value === eventSlug;
             <p class="subtitle-medium">De evenementen kalender</p>
             <h2>Doe je mee?</h2>
         </div>
-        <div class="subtitle-medium" v-if="events.length === 0">Er zijn op dit moment nog geen evenementen beschikbaar. Houd onze website in de gaten voor nieuwe evenementen.</div>
+        <div class="subtitle-small" v-if="events.length === 0">Er zijn op dit moment nog geen evenementen beschikbaar. Houd onze website in de gaten voor nieuwe evenementen.</div>
         <div v-else>
             <ul class="events">
                 <li v-for="event in events" :key="event.slug" class="event-item">

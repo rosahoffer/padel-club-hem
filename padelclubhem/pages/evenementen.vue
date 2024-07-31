@@ -3,6 +3,7 @@
 <template>
     <main aria-label="Hoofdinhoud Evenementen">
         <HeaderMainHeader />
+        <EvenementenSectionOne />
         <EvenementenSectionTwo />
         <EvenementenSectionThree />
         <FooterMainFooter />

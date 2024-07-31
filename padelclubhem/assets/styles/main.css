@@ -57,6 +57,12 @@ p {
   color: var(--secondary-color);
 }
 
+.subtitle-small{
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: var(--secondary-color);
+}
+
 .subtitle-medium {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
