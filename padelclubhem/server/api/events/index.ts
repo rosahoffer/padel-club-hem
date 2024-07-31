@@ -13,7 +13,6 @@ export default defineEventHandler(async () => {
         time
         ageGroup
         registrationFee
-        availableSlots
         slug
         }
     }
