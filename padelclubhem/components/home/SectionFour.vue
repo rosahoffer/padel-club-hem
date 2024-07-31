@@ -223,8 +223,7 @@ p {
     }
 
     .information-service-card {
-        margin: 0;
-        max-width: 30rem;
+        max-width: 50%;
     }
 
     h3 {
