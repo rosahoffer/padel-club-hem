@@ -88,8 +88,8 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
-                            width="100%" height="100%">
+                        <img src="/assets/images/man-playing-padel-blue.jpg" alt="Afbeelding van evenementen"
+                            loading="lazy" width="100%" height="100%">
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                        <img src="/assets/images/business-image.jpg" alt="Afbeelding van evenementen" loading="lazy"
                             width="100%" height="100%">
                     </div>
                 </div>
@@ -226,58 +226,41 @@ p {
         margin: 0;
         max-width: 30rem;
     }
+
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 90rem) {
 
     .intro-text {
         padding: 8rem 3rem 3rem 3rem;
     }
+
 
     .intro-text h2 {
         max-width: 60rem;
     }
 
     .service-card {
-        gap: 6rem;
+        gap: 5rem;
         padding: 7rem 3rem;
     }
 
     .image-overlay-service-card {
-        width: 35rem;
+        width: 45rem;
         height: 25rem;
     }
 
     .image-overlay-service-card img {
-        width: 150%;
-        height: 150%;
+        width: 120%;
+        height: 120%;
     }
 
     .information-service-card {
-        max-width: 40rem;
-    }
-}
-
-@media (min-width: 90rem) {
-
-    .service-card {
-        gap: 8rem;
-        padding: 8rem 3rem;
-    }
-
-    .image-overlay-service-card {
-        width: 45rem;
-        height: 30rem;
-    }
-
-    .image-overlay-service-card img {
-        width: 150%;
-        height: 150%;
-    }
-
-    .information-service-card {
-        max-width: 45rem;
-        gap: 4rem;
+        max-width: 50%;
     }
 }
 

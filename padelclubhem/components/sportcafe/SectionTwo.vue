@@ -71,9 +71,11 @@ const isOpen = (sectionSlug: string) => openSection.value === sectionSlug;
                     </div>
                     <transition name="fade">
                         <div v-if="isOpen('sport')" id="section-details-sport" class="section-details">
-                            <p>Mis geen moment van je favoriete sportwedstrijden. Ons café is uitgerust met schermen
-                                waarop live sportevenementen worden uitgezonden. Kom langs en juich je favoriete team
-                                toe in goed gezelschap.</p>
+                            <p>Bij ons kun je genieten van een echte sportkroegsfeer. Volg bijvoorbeeld de Formule
+                                1-races, juich voor het Nederlands elftal tijdens hun wedstrijden, bewonder de
+                                spectaculaire rally’s van de padellers van het wereldniveau en geniet uiteraard van de
+                                spelers op Roland Garros of Wimbledon! We bieden je ultiem sportplezier met een heerlijk
+                                biertje, wijntje of frisje erbij.</p>
                         </div>
                     </transition>
                 </li>

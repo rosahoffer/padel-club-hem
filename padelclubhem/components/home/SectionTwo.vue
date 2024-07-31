@@ -27,7 +27,7 @@
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/man-playing-padel.png" alt="Afbeelding man die aan het paddellen is"
+                        <img src="/assets/images/man-playing-padel.jpg" alt="Afbeelding man die aan het paddellen is"
                             loading="lazy" width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
@@ -59,6 +59,13 @@ p {
     border-top: none;
 }
 
+.image-overlay {
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+}
+
 
 /* BREAKPOINT TABLET  */
 
@@ -88,8 +95,8 @@ p {
     }
 
     .image-overlay {
-        width: 100%;
-        height: 35rem;
+        width: 30rem;
+        height: 40rem;
     }
 
     .secondary-button {
@@ -122,7 +129,7 @@ p {
     }
 
     .image-overlay {
-        width: 100%;
+        width: 45rem;
         height: 50rem;
     }
 
