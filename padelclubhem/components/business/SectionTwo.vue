@@ -23,8 +23,7 @@ onMounted(async () => {
             <h2>Zakelijke voordelen</h2>
         </div>
         <div class="subtitle-small" v-if="businesses.length === 0">Er zijn op dit moment nog geen zakelijke abonnementen
-            beschikbaar. Houd
-            onze website in de gaten voor nieuwe zakelijke voordelen.</div>
+            beschikbaar. Houd onze website in de gaten voor nieuwe zakelijke voordelen.</div>
         <div v-else>
             <ul class="businesses">
                 <li v-for="business in businesses" :key="business.id">
@@ -87,6 +86,7 @@ section {
     display: flex;
     flex-direction: column;
     list-style-type: none;
+    gap: 5rem;
 }
 
 .business-item {
@@ -156,6 +156,7 @@ h3 {
         max-width: 70rem;
         margin: 0 auto;
         margin-top: 5rem;
+        gap: 10rem;
     }
 
     .business-item {
