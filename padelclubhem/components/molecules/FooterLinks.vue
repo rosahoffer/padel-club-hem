@@ -10,7 +10,7 @@
           <nuxt-link to="/evenementen" class="nav__link">Evenementen</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="lessen" class="nav__link">Lessen</nuxt-link>
+          <nuxt-link to="/lessen" class="nav__link">Lessen</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/business" class="nav__link">Business</nuxt-link>
@@ -28,7 +28,7 @@
       <address>
         <p>
           <a href="mailto:info@padelclubhem.nl" class="contact__link">info@padelclubhem.nl</a><br>
-          <!-- <a href="tel:+316123456789" class="contact__link">+31 6123 456 789</a><br> -->
+          <a href="tel:+31615482416" class="contact__link">+31615482416</a><br>
           Torenweg 44<br>
           1607 CP Hem
         </p>
@@ -37,7 +37,7 @@
     <div>
       <h3>Openingstijden</h3>
       <p>Banen: ma-vr 07:00 t/m 24:00 uur</p>
-      <p>Sportcafé: ma-vr 07:00 t/m 12:00 & 16:00 t/m 23:00</p>
+      <p>Sportcafé: Vanaf 7 oktober ma-vr 07:00 t/m 12:00 & 16:00 t/m 23:00</p>
       <p>Za-zo 08:00 t/m 23:00 uur</p>
     </div>
   </nav>

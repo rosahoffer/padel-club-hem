@@ -129,7 +129,7 @@ export default {
     .ball-separator-wrapper {
         position: absolute;
         bottom: 0;
-        height: 10rem;
+        height: 6rem;
     }
 
     .section-image-wrapper {
@@ -168,17 +168,6 @@ export default {
         top: -4rem;
         right: 7rem;
     }
-
-    .ball-separator-wrapper {
-        height: 8rem;
-    }
-}
-
-@media (min-width: 90rem) {
-
-.ball-separator-wrapper {
-    height: 10rem;
-}
 }
 
 @media (min-width: 120rem) {
