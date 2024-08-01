@@ -3,7 +3,9 @@
 <template>
     <main aria-label="Hoofdinhoud Business">
         <HeaderMainHeader />
-        <ComingSoonPage />
+        <BusinessSectionOne />
+        <BusinessSectionTwo />
+        <BusinessSectionThree />
         <FooterMainFooter />
     </main>
 </template>
