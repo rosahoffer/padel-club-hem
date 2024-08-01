@@ -2,13 +2,13 @@
 import { gsap } from 'gsap';
 
 export default {
-  mounted() {
-    const timeline = gsap.timeline();
-    timeline.from(".intro-content", { duration: 1, y: -50, opacity: 0, ease: "bounce.out" })
+    mounted() {
+        const timeline = gsap.timeline();
+        timeline.from(".intro-content", { duration: 1, y: -50, opacity: 0, ease: "bounce.out" })
             .from(".section-image-wrapper", { duration: 1, y: 50, opacity: 0, ease: "power2.out" }, "-=0.5")
             .from(".scroll-down-container-wrapper", { duration: 1, y: 20, opacity: 0, ease: "bounce.out" }, "-=0.5")
             .from(".ball-separator-wrapper", { duration: 1, x: -50, opacity: 0, ease: "power2.out" }, "-=0.5");
-  }
+    }
 }
 </script>
 
@@ -32,8 +32,8 @@ export default {
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/bereik-ons-image.png"
-                            alt="Afbeelding bereik ons" loading="lazy" width="100%" height="100%">
+                        <img src="/assets/images/bereik-ons-image.png" alt="Afbeelding bereik ons" loading="lazy"
+                            width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
                 </div>
@@ -81,7 +81,23 @@ export default {
 
 .image-overlay {
     width: 100%;
-    height: 20rem;
+    height: 18rem;
+}
+
+.image-overlay {
+    width: 100%;
+    height: 18rem;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-overlay img {
+    width: 110%;
+    height: 110%;
 }
 
 .section-image-wrapper {
@@ -121,6 +137,11 @@ export default {
         max-width: 35rem;
     }
 
+    .image-overlay img {
+        width: 130%;
+        height: 130%;
+    }
+
     .ball-separator-wrapper {
         position: absolute;
         bottom: 0;
@@ -131,10 +152,6 @@ export default {
         width: 100%;
         height: auto;
         margin-top: auto;
-    }
-
-    .image-overlay {
-        width: 100%;
     }
 
     .scroll-down-container-wrapper {
@@ -155,10 +172,6 @@ export default {
         max-width: 40rem;
     }
 
-    .image-overlay {
-        width: 100%;
-    }
-
     .scroll-down-container-wrapper {
         top: -4rem;
         right: 7rem;
@@ -167,16 +180,16 @@ export default {
 
 @media (min-width: 120rem) {
 
-.intro-content {
-    margin: 3rem 7rem 0 7rem;
-}
+    .intro-content {
+        margin: 3rem 7rem 0 7rem;
+    }
 
-.section-image-wrapper{
-    padding-right: 7rem;
-}
+    .section-image-wrapper {
+        padding-right: 7rem;
+    }
 
-.scroll-down-container-wrapper{
-    padding-right: 7rem;
-}
+    .scroll-down-container-wrapper {
+        padding-right: 7rem;
+    }
 }
 </style>

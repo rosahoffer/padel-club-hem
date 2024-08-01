@@ -85,6 +85,22 @@ export default {
     height: 18rem;
 }
 
+.image-overlay {
+    width: 100%;
+    height: 18rem;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-overlay img {
+    width: 150%;
+    height: 150%;
+}
+
 .section-image-wrapper {
     position: relative;
 }
@@ -122,6 +138,11 @@ export default {
         max-width: 35rem;
     }
 
+    .image-overlay img {
+        width: 150%;
+        height: 150%;
+    }
+
     .ball-separator-wrapper {
         position: absolute;
         bottom: 0;
@@ -132,10 +153,6 @@ export default {
         width: 100%;
         height: auto;
         margin-top: auto;
-    }
-
-    .image-overlay {
-        width: 100%;
     }
 
     .scroll-down-container-wrapper {
@@ -154,10 +171,6 @@ export default {
 
     .intro-content>p {
         max-width: 40rem;
-    }
-
-    .image-overlay {
-        width: 100%;
     }
 
     .scroll-down-container-wrapper {
