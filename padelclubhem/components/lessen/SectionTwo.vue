@@ -37,7 +37,18 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
                     <div class="les-info" :class="{ 'active': isOpen(les.slug) }" @click="toggleLes(les.slug)"
                         :aria-controls="'les-details-' + les.slug" tabindex="0">
                         <div class="ball">
-                            <AtomsBallPink />
+                            <svg width="60" height="59" viewBox="0 0 60 59" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M56.6038 41.133C56.2693 41.8957 56.01 42.5243 55.7257 43.1445C52.9911 49.0868 48.5923 53.3278 42.7301 56.1691C40.8317 57.091 39.962 57.0575 39.2344 54.7861C33.6063 37.1937 21.9153 25.5856 4.4205 19.8276C2.33819 19.1404 1.65244 18.2938 2.85667 16.0477C6.00105 10.1891 10.5002 5.89787 16.3959 2.89736C18.336 1.90836 18.8796 2.3861 19.4817 4.30542C24.2819 19.7773 34.3088 30.6898 48.8181 37.5709C50.6412 38.4342 52.6315 38.9622 54.5549 39.6159C55.4246 39.9093 56.4031 40.0266 56.6038 41.1246V41.133Z"
+                                    fill="#CBFD3C" />
+                                <path
+                                    d="M32.8217 58.8373C15.4776 60.6451 0.0255687 47.1492 0 30.3209C0 27.5218 0.656263 26.8053 3.52848 27.6134C16.8668 31.354 30.171 45.433 32.8302 58.8373H32.8217Z"
+                                    fill="#CBFD3C" />
+                                <path
+                                    d="M27.1698 0.391121C44.5652 -1.99809 60.9011 12.4881 59.9613 29.4809C59.893 30.73 60.2945 32.2222 57.757 31.736C44.6848 29.2294 29.0836 13.3683 27.1698 0.391121Z"
+                                    fill="#CBFD3C" />
+                            </svg>
                         </div>
                         <div class="title-svg-flex">
                             <p class="subtitle-medium">{{ les.titel }}</p>
@@ -115,6 +126,11 @@ section {
     cursor: pointer;
     padding: 1rem 0;
     transition: background-color 0.3s ease;
+}
+
+.ball svg {
+    width: 1rem;
+    height: 1rem;
 }
 
 .title-svg-flex {
@@ -195,7 +211,7 @@ section {
         padding: 10rem 3rem;
     }
 
-    .ball{
+    .ball {
         margin-right: 3rem;
     }
 
@@ -224,6 +240,11 @@ section {
 
     .les-info {
         padding: 1.5rem 0
+    }
+
+    .ball svg {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .title-svg-flex {

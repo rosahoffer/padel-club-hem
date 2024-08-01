@@ -20,7 +20,7 @@ onMounted(async () => {
     <section>
         <div class="title-contain">
             <p class="subtitle-medium">Bekijk al onze zakelijke voordelen</p>
-            <h2>Sportieve Bedrijfsvoordelen</h2>
+            <h2>Zakelijke voordelen</h2>
         </div>
         <div class="subtitle-small" v-if="businesses.length === 0">Er zijn op dit moment nog geen zakelijke abonnementen
             beschikbaar. Houd
@@ -95,12 +95,15 @@ section {
     gap: 2.5rem;
 }
 
+.business-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
 .image-overlay {
     width: 100%;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    margin: 1rem 0;
+    height: 15rem;
 }
 
 .subtitle-bold-lowercase {
@@ -110,6 +113,11 @@ section {
 
 h3 {
     color: var(--secondary-color);
+}
+
+.secondary-button-white{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (min-width: 40rem) {
