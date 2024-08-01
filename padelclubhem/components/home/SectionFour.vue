@@ -62,7 +62,7 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/playing-padel.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van evenementen" loading="lazy"
                             width="100%" height="100%">
                     </div>
                 </div>

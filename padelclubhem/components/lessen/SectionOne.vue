@@ -32,7 +32,7 @@ export default {
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van de evenementen pagina"
+                        <img src="/assets/images/man-playing-padel-blue.jpg" alt="Afbeelding van de evenementen pagina"
                             loading="lazy" width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>

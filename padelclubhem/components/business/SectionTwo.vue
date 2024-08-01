@@ -127,28 +127,39 @@ h3 {
     }
 
     .image-overlay {
-        width: 20rem;
-        height: 15rem;
+        width: 100%;
+        height: 20rem;
     }
 
     .image-container {
-        width: 20rem;
-        height: 15rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .business-item {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        height: 20rem;
+    }
+
+    .business-item > div{
+        width: 50%;
+        height: 20rem;
+        justify-content: space-between;
     }
 }
 
 @media (min-width: 60rem) {
     .businesses {
-        max-width: 80rem;
+        max-width: 70rem;
         margin: 0 auto;
         margin-top: 5rem;
-        flex-direction: row;
     }
 
     .business-item {
-        display: flex;
-        flex-direction: row;
-        gap: 2.5rem;
+        gap: 4rem;
     }
 }
 
@@ -162,5 +173,6 @@ h3 {
         padding: 0rem 7rem 3rem 7rem;
         max-width: 70rem;
     }
+
 }
 </style>
