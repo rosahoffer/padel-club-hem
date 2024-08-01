@@ -1,19 +1,19 @@
-export default defineEventHandler(async (event) => {
-  const { slug } = event.context.params as { slug: string };
+export default defineEventHandler(async (evenement) => {
+  const { slug } = evenement.context.params as { slug: string };
   
   const config = useRuntimeConfig();
   const query = `
   {
-    event(where: { slug: "${slug}" }) {
-      title
+    evenement(where: { slug: "${slug}" }) {
+      titel
       image {
         url
       }
-      description
-      date
-      time
-      ageGroup
-      registrationFee
+      beschrijving
+      datum
+      tijd
+      leeftijd
+      inschrijfgeld
       slug
     }
   }`;
@@ -28,5 +28,5 @@ export default defineEventHandler(async (event) => {
   });
   
   const { data } = await response.json();
-  return data.event;
+  return data.evenement;
 });

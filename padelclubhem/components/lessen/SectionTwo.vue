@@ -29,16 +29,16 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
             <p class="subtitle-medium">bekijk al onze lessen</p>
             <h2>Vind jouw les!</h2>
         </div>
-        <div class="subtitle-small" v-if="lessen.length === 0">Er zijn op dit moment nog geen lessen beschikbaar. Houd onze website in de gaten voor nieuwe lessen.</div>
+        <div class="subtitle-small" v-if="lessen.length === 0">Er zijn op dit moment nog geen lessen beschikbaar. Houd
+            onze website in de gaten voor nieuwe lessen.</div>
         <div v-else>
             <ul class="lessen">
                 <li v-for="les in lessen" :key="les.slug" class="les-item">
-                    <div
-                        class="les-info"
-                        :class="{ 'active': isOpen(les.slug) }"
-                        @click="toggleLes(les.slug)"
-                        :aria-controls="'les-details-' + les.slug"
-                        tabindex="0">
+                    <div class="les-info" :class="{ 'active': isOpen(les.slug) }" @click="toggleLes(les.slug)"
+                        :aria-controls="'les-details-' + les.slug" tabindex="0">
+                        <div class="ball">
+                            <AtomsBallPink />
+                        </div>
                         <div class="title-svg-flex">
                             <p class="subtitle-medium">{{ les.titel }}</p>
                             <svg class="les-arrow" width="16" height="22" viewBox="0 0 16 22" fill="none"
@@ -54,8 +54,8 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
                             <div class="image-wrapper">
                                 <div class="image-overlay">
                                     <div class="image-container">
-                                        <img v-if="les.image" :src="les.image.url" alt="Les Image"
-                                            class="les-image" loading="lazy" width="100%" height="100%">
+                                        <img v-if="les.image" :src="les.image.url" alt="Les Image" class="les-image"
+                                            loading="lazy" width="100%" height="100%">
                                     </div>
                                 </div>
                             </div>
@@ -66,8 +66,7 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
                                     <p class="les-subtag">Inschrijfgeld: {{ les.prijsPerLes }} EUR</p>
                                 </div>
                                 <p class="les-description">{{ les.beschrijving }}</p>
-                                <nuxt-link class="primary-button"
-                                    :to="'/inschrijven-les/register/' + les.slug">Ik
+                                <nuxt-link class="primary-button" :to="'/inschrijven-les/register/' + les.slug">Ik
                                     wil mij inschrijven!</nuxt-link>
                             </div>
                         </div>
@@ -194,6 +193,10 @@ section {
     section {
         gap: 3rem;
         padding: 10rem 3rem;
+    }
+
+    .ball{
+        margin-right: 3rem;
     }
 
     .title-svg-flex {

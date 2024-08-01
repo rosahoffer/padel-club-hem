@@ -53,71 +53,92 @@
         </button>
 
         <p v-if="error" class="error" aria-live="assertive">{{ error }}</p>
-        <p v-if="success" class="success" aria-live="assertive">Bericht succesvol verzonden!</p>
+        <p v-if="success" class="success" aria-live="assertive">
+            Bericht succesvol verzonden! Je ontvangt een bevestigingsmail op het opgegeven e-mailadres.
+            Controleer ook je spam- of ongewenste e-mailmap als je de bevestiging niet binnen enkele minuten
+            ontvangt.
+        </p>
     </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-const accessKey = import.meta.env.VITE_ACCESS_KEY;
+import emailjs from 'emailjs-com';
 
 const form = ref({
-    access_key: accessKey,
-    subject: "",
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: ""
+    subject: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
 });
-
 const loading = ref(false);
-const error = ref("");
+const error = ref('');
 const success = ref(false);
 
 const handleSubmit = async () => {
     loading.value = true;
-    error.value = "";
+    error.value = '';
     success.value = false;
 
     try {
-        const response = await fetch('https://api.web3forms.com/submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                access_key: form.value.access_key,
-                subject: `Nieuwe inzending website: ${form.value.subject}`,
-                naam: `${form.value.firstName} ${form.value.lastName}`,
-                email: form.value.email,
-                telefoonnummer: form.value.phone,
-                bericht: form.value.message
-            })
-        });
+        await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION_CONTACT,
+            {
+                from_name: 'Padelclub Hem',
+                to_email: form.value.email,
+                subject: form.value.subject,
+                firstName: form.value.firstName,
+                lastName: form.value.lastName,
+                phone: form.value.phone,
+                message: form.value.message,
+            },
+            import.meta.env.VITE_EMAILJS_USER_ID
+        );
 
-        const result = await response.json();
+        const messageBody = `
+          Onderwerp: ${form.value.subject}
+          Voornaam: ${form.value.firstName}
+          Achternaam: ${form.value.lastName}
+          Email: ${form.value.email}
+          Telefoonnummer: ${form.value.phone}
+          Bericht: ${form.value.message}
+        `;
 
-        if (response.ok) {
-            success.value = true;
-            form.value.subject = "";
-            form.value.firstName = "";
-            form.value.lastName = "";
-            form.value.email = "";
-            form.value.phone = "";
-            form.value.message = "";
-        } else {
-            error.value = result.message || "Er is iets fout gegaan!";
-        }
+        await emailjs.send(
+            import.meta.env.VITE_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN_CONTACT,
+            {
+                from_name: `Nieuwe inzending website: ${form.value.subject}`,
+                to_email: 'info@padelclubhem.nl',
+                subject: form.value.subject,
+                messageBody: messageBody,
+            },
+            import.meta.env.VITE_EMAILJS_USER_ID
+        );
+
+        success.value = true;
+        form.value = {
+            subject: '',
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            message: ''
+        };
     } catch (err) {
-        error.value = "Er is iets fout gegaan!";
+        console.error('Error sending email:', err);
+        error.value = err.message || 'Er is iets fout gegaan! Neem contact op met de organisatie.';
     } finally {
         loading.value = false;
         setTimeout(() => {
-            error.value = "";
+            error.value = '';
             success.value = false;
-        }, 5000);
+        }, 10000);
     }
 };
-
 </script>
 
 <style scoped>
@@ -237,8 +258,8 @@ form button {
 
 @media (min-width: 120rem) {
 
-form {
-    padding: 0 7rem;
-}
+    form {
+        padding: 0 7rem;
+    }
 }
 </style>

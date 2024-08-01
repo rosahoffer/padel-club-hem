@@ -2,17 +2,17 @@ export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
   const query = `
     {
-        events {
+        evenementen {
         id
-        title
+        titel
         image {
-            url
+          url
         }
-        description
-        date
-        time
-        ageGroup
-        registrationFee
+        beschrijving
+        datum
+        tijd
+        leeftijd
+        inschrijfgeld
         slug
         }
     }
@@ -28,6 +28,6 @@ export default defineEventHandler(async () => {
   });
   
   const { data } = await response.json();
-  return data.events;
+  return data.evenementen;
   
 });

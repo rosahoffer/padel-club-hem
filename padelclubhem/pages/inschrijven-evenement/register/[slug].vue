@@ -1,20 +1,20 @@
 <template>
     <div>
-        <RegisterForm :event-slug="eventSlug" :event-name="eventName" />
+        <RegisterForm :evenement-slug="evenementSlug" :evenement-name="evenementName" />
     </div>
 </template>
 
 <script setup>
-import RegisterForm from '../../components/evenementen/RegisterForm.vue';
+import RegisterForm from '@/components/evenementen/RegisterForm.vue';
 import { ref, onMounted } from 'vue';
 
 const route = useRoute();
-const eventSlug = ref(route.params.slug);
-const eventName = ref('');
+const evenementSlug = ref(route.params.slug);
+const evenementName = ref('');
 
 onMounted(async () => {
     try {
-        const response = await fetch(`/api/events/${eventSlug.value}`);
+        const response = await fetch(`/api/evenementen/${evenementSlug.value}`);
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -22,8 +22,8 @@ onMounted(async () => {
 
         const data = await response.json();
 
-        if (data && data.title) {
-            eventName.value = data.title;
+        if (data && data.titel) {
+            evenementName.value = data.titel;
         } else {
             throw new Error('Event data is missing title.');
         }

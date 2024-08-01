@@ -3,7 +3,7 @@
     <div class="container">
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
-            <h3>{{ eventName }}</h3>
+            <h3>{{ evenementName }}</h3>
             <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
         <form @submit.prevent="handleSubmit">
@@ -23,8 +23,8 @@
                     <input type="email" v-model="people[0].email" :id="`email-0`" name="email-0" required placeholder="Jouw emailadres..."/>
                 </div>
                 <div class="form-group">
-                    <label class="subtitle-bold-uppercase" :for="`phone-0`">Telefoonnummer</label>
-                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" placeholder="Jouw telefoonnummer..."/>
+                    <label class="subtitle-bold-uppercase" :for="`phone-0`">Telefoonnummer *</label>
+                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" required placeholder="Jouw telefoonnummer..."/>
                 </div>
             </div>
             <div v-if="people.length > 1">
@@ -81,8 +81,8 @@ import { ref } from 'vue';
 import emailjs from 'emailjs-com';
 
 const props = defineProps({
-    eventSlug: String,
-    eventName: String,
+    evenementSlug: String,
+    evenementName: String,
 });
 
 
@@ -104,10 +104,10 @@ const handleSubmit = async () => {
 
     try {
         for (const person of people.value) {
-            await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION, {
+            await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION_EVENEMENTEN, {
                 from_name: 'Padelclub Hem',
                 to_email: person.email,
-                eventName: props.eventName,
+                evenementName: props.evenementName,
                 firstName: person.firstName,
                 lastName: person.lastName,
                 phone: person.phone,
@@ -124,10 +124,10 @@ const handleSubmit = async () => {
         `)
             .join('\n\n');
 
-        await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN, {
-            from_name: `Inschrijving voor evenement: ${props.eventName}`,
+        await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN_EVENEMENTEN, {
+            from_name: `Inschrijving voor evenement: ${props.evenementName}`,
             to_email: 'info@padelclubhem.nl',
-            eventName: props.eventName,
+            evenementName: props.evenementName,
             messageBody: messageBody,
         }, import.meta.env.VITE_EMAILJS_USER_ID);
 

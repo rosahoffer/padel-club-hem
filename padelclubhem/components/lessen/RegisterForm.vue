@@ -2,7 +2,7 @@
     <HeaderMainHeader/>
     <div class="container">
         <div class="title-contain">
-            <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
+            <p class="subtitle-medium">Schrijf je in voor les:</p>
             <h3>{{ lesName }}</h3>
             <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
@@ -23,8 +23,8 @@
                     <input type="email" v-model="people[0].email" :id="`email-0`" name="email-0" required placeholder="Jouw emailadres..."/>
                 </div>
                 <div class="form-group">
-                    <label class="subtitle-bold-uppercase" :for="`phone-0`">Telefoonnummer</label>
-                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" placeholder="Jouw telefoonnummer..."/>
+                    <label class="subtitle-bold-uppercase" :for="`phone-0`">Telefoonnummer *</label>
+                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" required placeholder="Jouw telefoonnummer..."/>
                 </div>
             </div>
             <div v-if="people.length > 1">
@@ -104,7 +104,7 @@ const handleSubmit = async () => {
 
     try {
         for (const person of people.value) {
-            await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION, {
+            await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CONFIRMATION_LESSEN, {
                 from_name: 'Padelclub Hem',
                 to_email: person.email,
                 lesName: props.lesName,
@@ -124,8 +124,8 @@ const handleSubmit = async () => {
         `)
             .join('\n\n');
 
-        await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN, {
-            from_name: `Inschrijving voor evenement: ${props.lesName}`,
+        await emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN_LESSEN, {
+            from_name: `Inschrijving voor les: ${props.lesName}`,
             to_email: 'info@padelclubhem.nl',
             lesName: props.lesName,
             messageBody: messageBody,

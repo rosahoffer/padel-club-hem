@@ -5,8 +5,9 @@
 </template>
 
 <script setup>
-import RegisterForm from '../../components/lessen/RegisterForm.vue';
+import RegisterForm from '@/components/lessen/RegisterForm.vue';
 import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const lesSlug = ref(route.params.slug);
@@ -22,13 +23,14 @@ onMounted(async () => {
 
         const data = await response.json();
 
-        if (data && data.title) {
-            lesName.value = data.title;
+        if (data && data.titel) {
+            lesName.value = data.titel;
         } else {
             throw new Error('les data is missing title.');
         }
 
     } catch (error) {
+        console.error('Error fetching les data:', error);
     }
 });
 </script>

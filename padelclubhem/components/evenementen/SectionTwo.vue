@@ -1,26 +1,26 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
-const events = ref<any[]>([]);
-const openEvent = ref<string | null>(null);
+const evenementen = ref<any[]>([]);
+const openEvenement = ref<string | null>(null);
 
 onMounted(async () => {
     try {
-        const response = await fetch('/api/events');
+        const response = await fetch('/api/evenementen');
         if (!response.ok) throw new Error('Network response was not ok.');
         const data = await response.json();
         if (!data) throw new Error('No data received');
-        events.value = data;
+        evenementen.value = data;
     } catch (error) {
         console.error('Failed to fetch events:', error);
     }
 });
 
-const toggleEvent = (eventSlug: string) => {
-    openEvent.value = openEvent.value === eventSlug ? null : eventSlug;
+const toggleEvenement = (evenementSlug: string) => {
+    openEvenement.value = openEvenement.value === evenementSlug ? null : evenementSlug;
 };
 
-const isOpen = (eventSlug: string) => openEvent.value === eventSlug;
+const isOpen = (evenementSlug: string) => openEvenement.value === evenementSlug;
 </script>
 
 <template>
@@ -29,20 +29,20 @@ const isOpen = (eventSlug: string) => openEvent.value === eventSlug;
             <p class="subtitle-medium">De evenementen kalender</p>
             <h2>Doe je mee?</h2>
         </div>
-        <div class="subtitle-small" v-if="events.length === 0">Er zijn op dit moment nog geen evenementen beschikbaar. Houd onze website in de gaten voor nieuwe evenementen.</div>
+        <div class="subtitle-small" v-if="evenementen.length === 0">Er zijn op dit moment nog geen evenementen beschikbaar. Houd onze website in de gaten voor nieuwe evenementen.</div>
         <div v-else>
             <ul class="events">
-                <li v-for="event in events" :key="event.slug" class="event-item">
+                <li v-for="evenement in evenementen" :key="evenement.slug" class="event-item">
                     <div
                         class="event-info"
-                        :class="{ 'active': isOpen(event.slug) }"
-                        @click="toggleEvent(event.slug)"
-                        :aria-controls="'event-details-' + event.slug"
+                        :class="{ 'active': isOpen(evenement.slug) }"
+                        @click="toggleEvenement(evenement.slug)"
+                        :aria-controls="'event-details-' + evenement.slug"
                         tabindex="0"
                     >
-                        <p class="subtitle-bold-uppercase">{{ event.date }}</p>
+                        <p class="subtitle-bold-uppercase">{{ evenement.datum }}</p>
                         <div class="title-svg-flex">
-                            <p class="subtitle-medium">{{ event.title }}</p>
+                            <p class="subtitle-medium">{{ evenement.titel }}</p>
                             <svg class="event-arrow" width="16" height="22" viewBox="0 0 16 22" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -52,24 +52,24 @@ const isOpen = (eventSlug: string) => openEvent.value === eventSlug;
                         </div>
                     </div>
                     <transition name="fade">
-                        <div v-if="isOpen(event.slug)" :id="'event-details-' + event.slug" class="event-details">
+                        <div v-if="isOpen(evenement.slug)" :id="'event-details-' + evenement.slug" class="event-details">
                             <div class="image-wrapper">
                                 <div class="image-overlay">
                                     <div class="image-container">
-                                        <img v-if="event.image" :src="event.image.url" alt="Event Image"
+                                        <img v-if="evenement.image" :src="evenement.image.url" alt="evenement Image"
                                             class="event-image" loading="lazy" width="100%" height="100%">
                                     </div>
                                 </div>
                             </div>
                             <div class="flex-event-details">
                                 <div class="event-subtags">
-                                    <p class="event-subtag">Tijd: {{ event.time }}</p>
-                                    <p class="event-subtag">Leeftijd: {{ event.ageGroup }}</p>
-                                    <p class="event-subtag">Inschrijfgeld: {{ event.registrationFee }} EUR</p>
+                                    <p class="event-subtag">Tijd: {{ evenement.tijd }}</p>
+                                    <p class="event-subtag">Leeftijd: {{ evenement.leeftijd }}</p>
+                                    <p class="event-subtag">Inschrijfgeld: {{ evenement.inschrijfgeld }} EUR</p>
                                 </div>
-                                <p class="event-description">{{ event.description }}</p>
+                                <p class="event-description">{{ evenement.beschrijving }}</p>
                                 <nuxt-link class="primary-button"
-                                    :to="'/inschrijven-evenement/register/' + event.slug">Ik
+                                    :to="'/inschrijven-evenement/register/' + evenement.slug">Ik
                                     wil meedoen!</nuxt-link>
                             </div>
                         </div>
