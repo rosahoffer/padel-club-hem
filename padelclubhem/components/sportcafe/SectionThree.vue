@@ -13,6 +13,10 @@
                 <img class="image-list-img" src="assets/images/sportcafe-impressie-binnen-2.png"
                     alt="Sfeerimpressie Sportcafe Binnen" loading="lazy">
             </div>
+            <div class="image-item" id="image-4">
+                <img class="image-list-img" src="assets/images/terras.png" alt="Sfeerimpressie Sportcafe Terras"
+                    loading="lazy">
+            </div>
         </div>
     </section>
 </template>
