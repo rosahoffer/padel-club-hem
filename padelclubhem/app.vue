@@ -4,7 +4,7 @@
     <div v-else>
       <NuxtLayout>
         <NuxtPage />
-      </NuxtLayout>n
+      </NuxtLayout>
     </div>
   </div>
 </template>
