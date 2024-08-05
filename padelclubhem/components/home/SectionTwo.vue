@@ -4,7 +4,7 @@
             <h2>Over de club</h2>
             <p>Bij Padelclub Hem staat beleving voorop. Wij heten je welkom in de community om lekker te
                 sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
-                sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffle board. De bar is zoveel
+                sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffleboard. De bar is zoveel
                 als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
             <nuxt-link href="/sportaanbod" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
                 Bekijk ons sportaanbod
@@ -28,7 +28,7 @@
                 <div class="image-overlay">
                     <div class="image-container">
                         <img src="/assets/images/man-playing-padel.jpg" alt="Afbeelding man die aan het paddellen is"
-                            loading="lazy" width="100%" height="100%">
+                            width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
                 </div>

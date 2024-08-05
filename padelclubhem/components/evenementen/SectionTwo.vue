@@ -29,17 +29,15 @@ const isOpen = (evenementSlug: string) => openEvenement.value === evenementSlug;
             <p class="subtitle-medium">De evenementen kalender</p>
             <h2>Doe je mee?</h2>
         </div>
-        <div class="subtitle-small" v-if="evenementen.length === 0">Er zijn op dit moment nog geen evenementen beschikbaar. Houd onze website in de gaten voor nieuwe evenementen.</div>
+        <div class="subtitle-small" v-if="evenementen.length === 0">Er zijn momenteel geen evenementen beschikbaar. Houd
+            onze website in de gaten voor updates over nieuwe evenementen. Voor vragen kun je mailen naar <nuxt-link 
+               class="contact-link" to="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.</div>
         <div v-else>
             <ul class="events">
                 <li v-for="evenement in evenementen" :key="evenement.slug" class="event-item">
-                    <div
-                        class="event-info"
-                        :class="{ 'active': isOpen(evenement.slug) }"
-                        @click="toggleEvenement(evenement.slug)"
-                        :aria-controls="'event-details-' + evenement.slug"
-                        tabindex="0"
-                    >
+                    <div class="event-info" :class="{ 'active': isOpen(evenement.slug) }"
+                        @click="toggleEvenement(evenement.slug)" :aria-controls="'event-details-' + evenement.slug"
+                        tabindex="0">
                         <p class="subtitle-bold-uppercase">{{ evenement.datum }}</p>
                         <div class="title-svg-flex">
                             <p class="subtitle-medium">{{ evenement.titel }}</p>
@@ -52,7 +50,8 @@ const isOpen = (evenementSlug: string) => openEvenement.value === evenementSlug;
                         </div>
                     </div>
                     <transition name="fade">
-                        <div v-if="isOpen(evenement.slug)" :id="'event-details-' + evenement.slug" class="event-details">
+                        <div v-if="isOpen(evenement.slug)" :id="'event-details-' + evenement.slug"
+                            class="event-details">
                             <div class="image-wrapper">
                                 <div class="image-overlay">
                                     <div class="image-container">
@@ -190,6 +189,15 @@ section {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  color: var(--secondary-color);
 }
 
 @media (min-width: 40rem) {

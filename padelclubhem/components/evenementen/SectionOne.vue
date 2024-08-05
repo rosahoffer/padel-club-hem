@@ -18,7 +18,7 @@ export default {
             <p class="subtitle-medium">Evenementen</p>
             <h1>Events</h1>
             <p>Blijf op de hoogte van alle toernooien, wedstrijden en speciale evenementen die we organiseren. Van
-                beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils..</p>
+                beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">
@@ -143,9 +143,7 @@ export default {
     }
 
     .ball-separator-wrapper {
-        position: absolute;
-        bottom: 0;
-        height: 6rem;
+        display: none;
     }
 
     .section-image-wrapper {

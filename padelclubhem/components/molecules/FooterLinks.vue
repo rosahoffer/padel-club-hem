@@ -27,17 +27,18 @@
       <h3>Contact</h3>
       <address>
         <p>
-          <a href="mailto:info@padelclubhem.nl" class="contact__link">info@padelclubhem.nl</a><br>
-          <a href="tel:+31615482416" class="contact__link">+31615482416</a><br>
-          Torenweg 44<br>
-          1607 CP Hem
+          <nuxt-link href="mailto:info@padelclubhem.nl" class="contact__link">info@padelclubhem.nl</nuxt-link><br>
+          <nuxt-link href="tel:+31615482416" class="contact__link">+31615482416</nuxt-link><br>
+          <nuxt-link href="https://g.co/kgs/ae2kT3V" class="contact__link" aria-label="bekijk onze locatie">
+            Torenweg 44<br>1607 CP Hem
+          </nuxt-link>
         </p>
       </address>
     </div>
     <div>
       <h3>Openingstijden</h3>
       <p>Banen: ma-vr 07:00 t/m 24:00 uur</p>
-      <p>Sportcafé: Vanaf 7 oktober ma-vr 07:00 t/m 12:00 & 16:00 t/m 23:00</p>
+      <p>Sportcafé: Vanaf 12 oktober ma-vr 07:00 t/m 12:00 & 16:00 t/m 23:00</p>
       <p>Za-zo 08:00 t/m 23:00 uur</p>
     </div>
   </nav>

@@ -62,7 +62,7 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van evenementen"
                             width="100%" height="100%">
                     </div>
                 </div>
@@ -70,9 +70,7 @@ onMounted(() => {
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Doe mee aan onze leuke evenementen!</p>
                 <h3>Evenementen</h3>
-                <p>Ontdek onze leuke evenementen waar je jouw vaardigheden kunt laten zien en nieuwe vrienden kunt
-                    maken. Of
-                    je nu een beginner bent of een ervaren speler, er zijn evenementen voor iedereen!</p>
+                <p>Blijf op de hoogte van alle toernooien, wedstrijden en speciale evenementen die we organiseren. Van beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
                 <nuxt-link href="/evenementen" class="secondary-button subtitle-medium"
                     aria-label="Bekijk onze evenementen">
                     Bekijk onze evenementen
@@ -89,17 +87,14 @@ onMounted(() => {
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
                         <img src="/assets/images/man-playing-padel-blue.jpg" alt="Afbeelding van evenementen"
-                            loading="lazy" width="100%" height="100%">
+                         width="100%" height="100%">
                     </div>
                 </div>
             </div>
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Verbeter je spel met professionele lessen</p>
                 <h3>Lessen</h3>
-                <p>Bij Padelclub Hem bieden we een breed scala aan lessen om je spel naar een hoger niveau te tillen.
-                    Of je nu een beginner bent die de basisprincipes wil leren of een gevorderde speler die zijn
-                    techniek wil verfijnen, onze professionele leraren staan voor je klaar. We werken zowel met
-                    padelscholen, tennisscholen als onze eigen leraren.</p>
+                <p>Of je nu een nieuwkomer bent of je vaardigheden wilt verbeteren, onze professionele coaches staan klaar om je te helpen. Onze lessen zijn binnenkort beschikbaar voor alle niveaus.</p>
                 <nuxt-link href="/lessen" class="secondary-button-green subtitle-medium"
                     aria-label="Bekijk onze lessen">
                     Ontdek onze lessen
@@ -115,7 +110,7 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/business-image.jpg" alt="Afbeelding van evenementen" loading="lazy"
+                        <img src="/assets/images/business-image.jpg" alt="Afbeelding van evenementen"
                             width="100%" height="100%">
                     </div>
                 </div>
@@ -123,9 +118,7 @@ onMounted(() => {
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Ontdek hoe jouw bedrijf kan profiteren van onze faciliteiten</p>
                 <h3>Business</h3>
-                <p>Wekelijkse sportsessies voor teambuilding, sponsormogelijkheden voor bedrijfszichtbaarheid,
-                    toernooien, en netwerkmogelijkheden in een sportieve omgeving.
-                    ontdek de zakelijke voordelen</p>
+                <p>Ben je op zoek naar een unieke locatie voor je bedrijfsuitje of teambuilding activiteit? Binnenkort kun je hier alles vinden over onze speciale zakelijke arrangementen en aanbiedingen.</p>
                 <nuxt-link href="/business" class="secondary-button subtitle-medium"
                     aria-label="Bekijk onze business pagina">
                     Ontdek de zakelijke voordelen

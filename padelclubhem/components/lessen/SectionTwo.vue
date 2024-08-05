@@ -30,7 +30,9 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
             <h2>Vind jouw les!</h2>
         </div>
         <div class="subtitle-small" v-if="lessen.length === 0">Er zijn op dit moment nog geen lessen beschikbaar. Houd
-            onze website in de gaten voor nieuwe lessen.</div>
+            onze website in de gaten voor nieuwe lessen. Voor vragen kun je mailen naar <nuxt-link class="contact-link"
+                href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.
+        </div>
         <div v-else>
             <ul class="lessen">
                 <li v-for="les in lessen" :key="les.slug" class="les-item">
@@ -203,6 +205,15 @@ section {
 .fade-enter,
 .fade-leave-to {
     opacity: 0;
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.contact-link:hover {
+    color: var(--secondary-color);
 }
 
 @media (min-width: 40rem) {

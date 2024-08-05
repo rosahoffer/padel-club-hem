@@ -23,7 +23,9 @@ onMounted(async () => {
             <h2>Zakelijke voordelen</h2>
         </div>
         <div class="subtitle-small" v-if="businesses.length === 0">Er zijn op dit moment nog geen zakelijke abonnementen
-            beschikbaar. Houd onze website in de gaten voor nieuwe zakelijke voordelen.</div>
+            beschikbaar. Houd onze website in de gaten voor nieuwe zakelijke voordelen. Voor vragen kun je mailen naar
+            <nuxt-link class="contact-link" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.
+        </div>
         <div v-else>
             <ul class="businesses">
                 <li v-for="business in businesses" :key="business.id">
@@ -40,7 +42,7 @@ onMounted(async () => {
                         <div>
                             <p class="subtitle-bold-lowercase">{{ business.beschrijving }}</p>
                             <h3>{{ business.titel }}</h3>
-                            <nuxt-link href="mailto:info@padelclubhem.nl" class="secondary-button-white subtitle-medium"
+                            <nuxt-link href="/contact" class="secondary-button-white subtitle-medium"
                                 aria-label="Boek een tennisbaan">
                                 Doe jouw aanvraag
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
@@ -115,9 +117,18 @@ h3 {
     color: var(--secondary-color);
 }
 
-.secondary-button-white{
+.secondary-button-white {
     display: flex;
     justify-content: space-between;
+}
+
+.contact-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.contact-link:hover {
+  color: var(--secondary-color);
 }
 
 @media (min-width: 40rem) {
@@ -144,7 +155,7 @@ h3 {
         height: 20rem;
     }
 
-    .business-item > div{
+    .business-item>div {
         width: 50%;
         height: 20rem;
         justify-content: space-between;

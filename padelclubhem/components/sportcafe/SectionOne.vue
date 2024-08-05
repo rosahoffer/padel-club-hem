@@ -144,9 +144,7 @@ export default {
     }
 
     .ball-separator-wrapper {
-        position: absolute;
-        bottom: 0;
-        height: 6rem;
+        display: none;
     }
 
     .section-image-wrapper {
