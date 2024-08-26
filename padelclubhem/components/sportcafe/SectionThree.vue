@@ -2,19 +2,19 @@
     <section class="image-carousel" id="sfeerimpressie" aria-label="Sfeerimpressie Sportcafe">
         <div class="image-list">
             <div class="image-item" id="image-1">
-                <img class="image-list-img" src="assets/images/sportcafe-impressie-binnen.png"
-                    alt="Sfeerimpressie Sportcafe Binnen" loading="lazy">
-            </div>
-            <div class="image-item" id="image-2">
-                <img class="image-list-img" src="assets/images/sportcafe-impressie-terras.png"
-                    alt="Sfeerimpressie Sportcafe Terras" loading="lazy">
-            </div>
-            <div class="image-item" id="image-3">
                 <img class="image-list-img" src="assets/images/sportcafe-impressie-binnen-2.png"
                     alt="Sfeerimpressie Sportcafe Binnen" loading="lazy">
             </div>
+            <div class="image-item" id="image-2">
+                <img class="image-list-img" src="assets/images/terras.png"
+                    alt="Sfeerimpressie Sportcafe Terras" loading="lazy">
+            </div>
+            <div class="image-item" id="image-3">
+                <img class="image-list-img" src="assets/images/sportcafe-impressie-3.png"
+                    alt="Sfeerimpressie Sportcafe Binnen" loading="lazy">
+            </div>
             <div class="image-item" id="image-4">
-                <img class="image-list-img" src="assets/images/terras.png" alt="Sfeerimpressie Sportcafe Terras"
+                <img class="image-list-img" src="assets/images/sportcafe-impressie-4.png" alt="Sfeerimpressie Sportcafe Terras"
                     loading="lazy">
             </div>
         </div>
