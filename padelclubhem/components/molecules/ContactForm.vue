@@ -5,13 +5,13 @@
             <select id="subject" v-model="form.subject" required aria-required="true">
                 <option value="" disabled>Kies een optie</option>
                 <option value="Baanreservering">Baanreservering</option>
-                <option value="Competitie">Competitie</option>
-                <option value="Toernooien">Toernooien</option>
+                <option value="Evenementen">Evenementen</option>
                 <option value="Lessen">Lessen</option>
                 <option value="Business">Business</option>
+                <option value="Sportcafé">Sportcafé</option>
                 <option value="Partner worden">Partner worden</option>
-                <option value="Klachten/complimenten">Klachten/complimenten</option>
                 <option value="Vacatures">Vacatures</option>
+                <option value="Klachten/complimenten">Klachten/complimenten</option>
                 <option value="Anders">Anders</option>
             </select>
         </div>
