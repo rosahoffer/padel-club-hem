@@ -1,11 +1,47 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import gsap from 'gsap';
 
 const isMenuOpen = ref(false);
-const isMenuClosing = ref(false);
+const isInfoMenuOpen = ref(false);
 
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
+}
+
+function toggleInfoMenu() {
+    const screenWidth = window.innerWidth;
+
+    if (isInfoMenuOpen.value) {
+        // Sluit het Info-menu
+        gsap.to('.info-menu', {
+            height: 0,
+            opacity: 0,
+            duration: 0.3,
+            onComplete: () => {
+                isInfoMenuOpen.value = false;
+                // SVG terugdraaien wanneer het menu sluit
+                gsap.to('.info-button svg', {
+                    rotate: 0,
+                    duration: 0.3,
+                });
+            },
+        });
+    } else {
+        // Open het Info-menu
+        isInfoMenuOpen.value = true;
+        const animationProps = screenWidth >= 1250
+            ? { height: 'auto', opacity: 1, duration: 0.3 } // Grote schermen
+            : { height: 'auto', opacity: 1, duration: 0.3 }; // Kleine schermen
+
+        gsap.fromTo('.info-menu', { height: 0, opacity: 0 }, animationProps);
+
+        // SVG draaien wanneer het menu opent
+        gsap.to('.info-button svg', {
+            rotate: 90,
+            duration: 0.3,
+        });
+    }
 }
 
 function handleResize() {
@@ -37,6 +73,8 @@ onBeforeUnmount(() => {
 });
 </script>
 
+
+
 <template>
     <div class="navbar-container">
         <nav class="navbar">
@@ -62,11 +100,7 @@ onBeforeUnmount(() => {
             </div>
 
             <!-- The Menu -->
-            <div class="nav" :class="{ open: isMenuOpen, closing: isMenuClosing }" id="navMenu"
-                @animationend="isMenuClosing && (isMenuOpen = isMenuClosing = false)">
-                <div>
-                    <div :class="{ open: isMenuOpen }"></div>
-                </div>
+            <div class="nav" :class="{ open: isMenuOpen }" id="navMenu">
                 <ul class="nav__items">
                     <li class="nav__item">
                         <nuxt-link href="/sportaanbod" class="nav__link" @click="toggleMenu">Sportaanbod</nuxt-link>
@@ -84,13 +118,37 @@ onBeforeUnmount(() => {
                         <nuxt-link href="/sportcafe" class="nav__link" @click="toggleMenu">Sportcafé</nuxt-link>
                     </li>
                     <li class="nav__item">
-                        <nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
+                        <button class="nav__link info-button" @click="toggleInfoMenu">
+                            Info
+                            <svg width="22" height="16" viewBox="0 0 22 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M14.6254 0.736158L21.3056 7.41635C21.7156 7.82628 21.7156 8.49091 21.3056 8.90084L14.6254 15.581C14.2155 15.991 13.5509 15.991 13.1409 15.581C12.731 15.1711 12.731 14.5065 13.1409 14.0965L18.0292 9.20828H1.66895C1.08923 9.20828 0.619263 8.73832 0.619263 8.15859C0.619263 7.57886 1.08923 7.1089 1.66895 7.1089H18.0292L13.1409 2.22065C12.731 1.81072 12.731 1.14609 13.1409 0.736158C13.5509 0.326228 14.2155 0.326228 14.6254 0.736158Z"
+                                    fill="#262626" />
+                            </svg>
+                        </button>
+                        <ul class="info-menu" :class="{ open: isInfoMenuOpen }">
+                            <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Over Ons</nuxt-link>
+                            </li>
+                            <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Nieuws</nuxt-link>
+                            </li>
+                            <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Contact</nuxt-link>
+                            </li>
+                            <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Partners</nuxt-link>
+                            </li>
+                            <li><nuxt-link href="/sportaanbod" class="nav__link"
+                                    @click="toggleMenu">Vacatures</nuxt-link>
+                            </li>
+                            <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">FAQ</nuxt-link>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </nav>
     </div>
 </template>
+
 
 <style scoped>
 @keyframes slideIn {
@@ -225,7 +283,7 @@ onBeforeUnmount(() => {
 
 .nav__items {
     list-style: none;
-    margin: 6rem 0 0 0;
+    margin: 5rem 0 0 0;
     text-align: left;
 }
 
@@ -234,18 +292,19 @@ onBeforeUnmount(() => {
 }
 
 .nav__item {
-    padding: 0.3rem 0;
+    padding: 0;
 }
 
 .nav__link {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(--background-color);
     text-decoration: none;
     text-transform: lowercase;
     font-weight: 600;
-    padding: 1rem;
+    padding: 0.7rem 0.5rem;
     display: block;
     transition: background-color 0.3s;
+    text-transform: capitalize;
 }
 
 .primary-button {
@@ -259,6 +318,48 @@ onBeforeUnmount(() => {
 .nav__items {
     z-index: 18;
 }
+
+/* Existing styles */
+
+.nav.open {
+    min-height: 100px;
+}
+
+.info-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.7rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.info-menu {
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Bij uitbreiding wordt de hoogte automatisch aangepast */
+.info-menu.open {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-menu .nav__link {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.nav__item.info-button svg {
+    transform: rotate(90deg);
+}
+
 
 @media (min-width: 1250px) {
     .nav__open {
@@ -326,6 +427,7 @@ onBeforeUnmount(() => {
         border: 2px solid transparent;
         border-radius: var(--border-radius);
         transition: all 0.3s ease;
+        text-transform: lowercase;
     }
 
     .nav__link:hover,
@@ -349,5 +451,45 @@ onBeforeUnmount(() => {
     .nav.closing {
         animation: none;
     }
+
+    .info-menu {
+        position: absolute;
+        top: 90%;
+        width: auto;
+        background-color: var(--navbar-bg-color);
+        border-radius: var(--border-radius);
+        z-index: 20;
+        padding: 1rem;
+        list-style-type: none;
+        border: 2px solid var(--primary-color);
+    }
+
+
+    .info-menu .nav__link {
+        text-transform: capitalize;
+    }
+
+    .info-menu.open {
+        height: auto;
+    }
+
+    .nav.open {
+        display: flex;
+        justify-content: center;
+        min-height: 3rem;
+    }
+
+    .info-menu .nav__link:hover,
+    .info-menu .nav__link:focus-visible {
+        color: var(--primary-color);
+        border-color: var(--navbar-bg-color);
+        transform: scale(1.05);
+    }
+
+    .info-button svg path {
+        fill: var(--primary-color);
+        transition: fill 0.3s ease;
+    }
+
 }
 </style>
