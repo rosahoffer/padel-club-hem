@@ -15,10 +15,10 @@ export default {
 <template>
     <div class="wrapper">
         <section class="intro-content">
-            <p class="subtitle-medium">Evenementen</p>
+            <p class="subtitle-medium">Evenementen & competities</p>
             <h1>Events</h1>
-            <p>Blijf op de hoogte van alle toernooien, wedstrijden en speciale evenementen die we organiseren. Van
-                beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
+            <p>Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen die we
+                organiseren. Van beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">

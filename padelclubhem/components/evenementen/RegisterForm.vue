@@ -2,8 +2,8 @@
     <HeaderMainHeader/>
     <div class="container">
         <div class="title-contain">
-            <p class="subtitle-medium">Schrijf je in voor het evenement:</p>
-            <h3>{{ evenementName }}</h3>
+            <p class="subtitle-medium">Schrijf je in voor:</p>
+            <h3 class="subtitle-bold-uppercase">{{ evenementName }}</h3>
             <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
         <form @submit.prevent="handleSubmit">

@@ -2,10 +2,12 @@
     <div class="wrapper">
         <section class="intro-content">
             <h2>Over de club</h2>
-            <p>Bij Padelclub Hem staat beleving voorop. Wij heten je welkom in de community om lekker te
-                sporten, sportwedstrijden te kijken of wellicht om een drankje te doen met vrienden of kennissen. Qua
-                sportfaciliteiten is er naast padel ook tennis, padel pingpong en een shuffleboard. De bar is zoveel
-                als mogelijk geopend en er zal altijd sport worden uitgezonden op één van de schermen.</p>
+            <p>Welkom bij Padelclub Hem, waar jouw sportbeleving centraal staat! Of je nu zin hebt in het sporten,
+                kijken van een sportwedstrijd of gewoon wilt ontspannen met een drankje en een hapje samen met vrienden
+                of familie, bij ons zit je goed. Qua sportfaciliteiten is er naast padel ook tennis, padel pingpong en
+                een shuffleboard. En maak gebruik van ons drank- & eetaanbod in het sportcafé! Kom langs en ervaar het
+                zelf!
+            </p>
             <nuxt-link href="/sportaanbod" class="secondary-button subtitle-medium" aria-label="Bekijk ons sportaanbod">
                 Bekijk ons sportaanbod
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +16,8 @@
                         fill="#414141" />
                 </svg>
             </nuxt-link>
-            <nuxt-link href="/contact" class="secondary-button subtitle-medium" aria-label="Benieuwd naar onze locatie?">
+            <nuxt-link href="/contact" class="secondary-button subtitle-medium"
+                aria-label="Benieuwd naar onze locatie?">
                 Benieuwd naar onze locatie?
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"

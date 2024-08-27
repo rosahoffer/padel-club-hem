@@ -6,21 +6,34 @@
                     <h2>Padel</h2>
                     <p>Padel is een snelgroeiende en populaire sport die leuk is voor alle niveaus en leeftijden. Onze
                         moderne banen bieden de perfecte omgeving voor zowel recreatieve als competitieve spelers. Op
-                        onze locatie vind je vijf dubbelbanen en één singlebaan, perfect voor elke liefhebber.</p>
-                    <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
-                        Boek hier je padelbaan
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
-                                fill="#414141" />
-                        </svg>
-                    </nuxt-link>
+                        onze locatie vind je vijf dubbelbanen en één singlebaan, perfect voor elke liefhebber.
+                    </p>
+                    <div class="buttons">
+                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
+                            Boek hier je padelbaan
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#414141" />
+                            </svg>
+                        </nuxt-link>
+                        <nuxt-link href="/" class="secondary-button subtitle-medium spelregels-button"
+                            aria-label="Boek een padelbaan">
+                            bekijk de spelregels
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#414141" />
+                            </svg>
+                        </nuxt-link>
+                    </div>
                 </div>
             </section>
             <div class="image-overlay-service-card">
                 <div class="image-container-service-card">
-                    <img src="/assets/images/padel-image.png" alt="Afbeelding van evenementen" width="100%"
-                        height="100%">
+                    <img src="/assets/images/padelhal.png" alt="Afbeelding van evenementen" width="100%" height="100%">
                 </div>
             </div>
         </article>
@@ -31,14 +44,28 @@
                     <p>Tennis is één van de grootste sporten ter wereld. Kom snel een keer bij ons langs! Ook voor
                         tennis verhuren we rackets en verkopen we ballen. Zorg zelf voor het juiste schoeisel, want onze
                         ondergrond is kunstgras. We zien je graag bij ons op bezoek!</p>
-                    <nuxt-link href="/" class="secondary-button-white subtitle-medium" aria-label="Boek een tennisbaan">
-                        Boek hier je tennisbaan
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
-                                fill="#FFEAE3" />
-                        </svg>
-                    </nuxt-link>
+                    <div class="buttons">
+                        <nuxt-link href="/" class="secondary-button-white subtitle-medium"
+                            aria-label="Boek een tennisbaan">
+                            Boek hier je tennisbaan
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#FFEAE3" />
+                            </svg>
+                        </nuxt-link>
+                        <nuxt-link href="/" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Boek een tennisbaan">
+                            Bekijk de spelregels
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#FFEAE3" />
+                            </svg>
+                        </nuxt-link>
+                    </div>
                 </div>
             </section>
             <div class="image-overlay-service-card">
@@ -57,14 +84,27 @@
                         vier personen. Doordat het balletje groter is dan bij het 'normale' pingpong ontstaan er langere
                         rally's. Het balletje beweegt langzamer, waardoor je meer controle hebt. Ben je nieuwsgierig
                         geworden? Proef zelf de unieke ervaring van Padel Pingpong!</p>
-                    <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
-                        Boek hier je Padel Pingpong sessie
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
-                                fill="#414141" />
-                        </svg>
-                    </nuxt-link>
+                    <div class="buttons">
+                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
+                            Boek hier je Padel Pingpong sessie
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#414141" />
+                            </svg>
+                        </nuxt-link>
+                        <nuxt-link href="/" class="secondary-button subtitle-medium spelregels-button"
+                            aria-label="Boek een padelbaan">
+                            Bekijk de spelregels
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#414141" />
+                            </svg>
+                        </nuxt-link>
+                    </div>
                 </div>
             </section>
             <div class="image-overlay-service-card">
@@ -81,17 +121,29 @@
                     <p>Ontdek shuffleboard in ons sportcafé! Kom gezellig borrelen met vrienden of familie en probeer
                         shuffleboard uit! Dit leuke spel lijkt op miniatuurcurling, maar in plaats van op ijs glijden
                         jouw pucks over een glad bord bedekt met een laagje zand. Aan het einde van de tafel liggen
-                        vlakken waarin je punten kunt scoren.
-                        Shuffleboard is een ontspannen maar fanatiek spelletje dat voor iedereen leuk is. Kom langs en
-                        ervaar zelf hoe leuk en uitdagend shuffleboard kan zijn. We zien je graag in ons sportcafé!</p>
-                    <nuxt-link href="/" class="secondary-button-white subtitle-medium" aria-label="Boek een tennisbaan">
-                        Boek hier een shuffleboard-sessie
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
-                                fill="#FFEAE3" />
-                        </svg>
-                    </nuxt-link>
+                        vlakken waarin je punten kunt scoren.</p>
+                    <div class="buttons">
+                        <nuxt-link href="/" class="secondary-button-white subtitle-medium"
+                            aria-label="Boek een tennisbaan">
+                            Boek hier een shuffleboard-sessie
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#FFEAE3" />
+                            </svg>
+                        </nuxt-link>
+                        <nuxt-link href="/" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Boek een tennisbaan">
+                            Bekijk de spelregels
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
+                                    fill="#FFEAE3" />
+                            </svg>
+                        </nuxt-link>
+                    </div>
                 </div>
             </section>
             <div class="image-overlay-service-card">
@@ -144,6 +196,16 @@ article {
 .card-two h2,
 .card-two p {
     color: var(--secondary-color);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.spelregels-button {
+    border-top: none;
+    gap: 0;
 }
 
 @media (min-width: 40rem) {

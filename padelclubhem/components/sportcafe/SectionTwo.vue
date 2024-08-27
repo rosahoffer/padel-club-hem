@@ -146,7 +146,6 @@ section {
 .section-details p {
     font-size: 0.8rem;
     line-height: 1.5rem;
-
 }
 
 .fade-enter-active,

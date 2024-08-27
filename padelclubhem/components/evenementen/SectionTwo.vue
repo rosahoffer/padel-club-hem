@@ -26,7 +26,7 @@ const isOpen = (evenementSlug: string) => openEvenement.value === evenementSlug;
 <template>
     <section>
         <div class="title-contain">
-            <p class="subtitle-medium">De evenementen kalender</p>
+            <p class="subtitle-medium">De kalender</p>
             <h2>Doe je mee?</h2>
         </div>
         <div class="subtitle-small" v-if="evenementen.length === 0">Er zijn momenteel geen evenementen beschikbaar. Houd

@@ -19,7 +19,7 @@ onMounted(async () => {
 <template>
     <section>
         <div class="title-contain">
-            <p class="subtitle-medium">Bekijk al onze zakelijke voordelen</p>
+            <p class="subtitle-medium">bekijk al onze zakelijke voordelen</p>
             <h2>Zakelijke voordelen</h2>
         </div>
         <div class="subtitle-small" v-if="businesses.length === 0">Er zijn op dit moment nog geen zakelijke abonnementen
@@ -40,11 +40,11 @@ onMounted(async () => {
                             </div>
                         </div>
                         <div>
-                            <p class="subtitle-bold-lowercase">{{ business.beschrijving }}</p>
+                            <p class="subtitle-small">{{ business.beschrijving }}</p>
                             <h3>{{ business.titel }}</h3>
                             <nuxt-link href="/contact" class="secondary-button-white subtitle-medium"
                                 aria-label="Boek een tennisbaan">
-                                Doe jouw aanvraag
+                                doe jouw aanvraag
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -108,13 +108,12 @@ section {
     height: 15rem;
 }
 
-.subtitle-bold-lowercase {
-    color: var(--secondary-color);
-    font-size: 1rem;
+.subtitle-medium {
+    text-transform: inherit;
 }
 
 h3 {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .secondary-button-white {
@@ -123,12 +122,12 @@ h3 {
 }
 
 .contact-link {
-  color: var(--primary-color);
-  text-decoration: underline;
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .contact-link:hover {
-  color: var(--secondary-color);
+    color: var(--secondary-color);
 }
 
 @media (min-width: 40rem) {
@@ -160,6 +159,12 @@ h3 {
         height: 20rem;
         justify-content: space-between;
     }
+
+    h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+        color: var(--primary-color);
+    }
 }
 
 @media (min-width: 60rem) {
@@ -172,6 +177,12 @@ h3 {
 
     .business-item {
         gap: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        color: var(--primary-color);
     }
 }
 

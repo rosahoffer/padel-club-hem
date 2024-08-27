@@ -62,15 +62,16 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van evenementen"
-                            width="100%" height="100%">
+                        <img src="/assets/images/playing-padel-orange.jpg" alt="Afbeelding van evenementen" width="100%"
+                            height="100%">
                     </div>
                 </div>
             </div>
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Doe mee aan onze leuke evenementen!</p>
                 <h3>Evenementen</h3>
-                <p>Blijf op de hoogte van alle toernooien, wedstrijden en speciale evenementen die we organiseren. Van beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
+                <p>Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen die we
+                    organiseren. Van beginnerstoernooien tot professionele wedstrijden, er is voor ieder wat wils.</p>
                 <nuxt-link href="/evenementen" class="secondary-button subtitle-medium"
                     aria-label="Bekijk onze evenementen">
                     Bekijk onze evenementen
@@ -87,14 +88,15 @@ onMounted(() => {
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
                         <img src="/assets/images/man-playing-padel-blue.jpg" alt="Afbeelding van evenementen"
-                         width="100%" height="100%">
+                            width="100%" height="100%">
                     </div>
                 </div>
             </div>
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Verbeter je spel met professionele lessen</p>
                 <h3>Lessen</h3>
-                <p>Of je nu een nieuwkomer bent of je vaardigheden wilt verbeteren, onze professionele coaches staan klaar om je te helpen. Onze lessen zijn binnenkort beschikbaar voor alle niveaus.</p>
+                <p>Of je nu een nieuwkomer bent of je vaardigheden wilt verbeteren, onze professionele coaches staan
+                    klaar om je te helpen. Onze lessen zijn binnenkort beschikbaar voor alle niveaus.</p>
                 <nuxt-link href="/lessen" class="secondary-button-green subtitle-medium"
                     aria-label="Bekijk onze lessen">
                     Ontdek onze lessen
@@ -110,15 +112,16 @@ onMounted(() => {
             <div class="image-wrapper-service-card">
                 <div class="image-overlay-service-card">
                     <div class="image-container-service-card">
-                        <img src="/assets/images/business-image.jpg" alt="Afbeelding van evenementen"
-                            width="100%" height="100%">
+                        <img src="/assets/images/business-image.jpg" alt="Afbeelding van evenementen" width="100%"
+                            height="100%">
                     </div>
                 </div>
             </div>
             <div class="information-service-card">
                 <p class="subtitle-bold-lowercase">Ontdek hoe jouw bedrijf kan profiteren van onze faciliteiten</p>
                 <h3>Business</h3>
-                <p>Ben je op zoek naar een unieke locatie voor je bedrijfsuitje of teambuilding activiteit? Binnenkort kun je hier alles vinden over onze speciale zakelijke arrangementen en aanbiedingen.</p>
+                <p>Ben je op zoek naar een unieke locatie voor je bedrijfsuitje of teambuilding activiteit? Binnenkort
+                    kun je hier alles vinden over onze speciale zakelijke arrangementen en aanbiedingen.</p>
                 <nuxt-link href="/business" class="secondary-button subtitle-medium"
                     aria-label="Bekijk onze business pagina">
                     Ontdek de zakelijke voordelen

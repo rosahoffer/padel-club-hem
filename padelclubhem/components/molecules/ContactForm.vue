@@ -11,6 +11,7 @@
                 <option value="Business">Business</option>
                 <option value="Partner worden">Partner worden</option>
                 <option value="Klachten/complimenten">Klachten/complimenten</option>
+                <option value="Vacatures">Vacatures</option>
                 <option value="Anders">Anders</option>
             </select>
         </div>
