@@ -19,12 +19,11 @@ onMounted(async () => {
 <template>
     <section>
         <div class="title-contain">
-            <p class="subtitle-medium">spetterend vieuws uit de club!</p>
+            <p class="subtitle-medium">spetterend nieuws uit de club!</p>
             <h2>De smashes van de week</h2>
         </div>
-        <div class="subtitle-small" v-if="nieuwtjes.length === 0">Er zijn op dit moment nog geen zakelijke abonnementen
-            beschikbaar. Houd onze website in de gaten voor nieuwe zakelijke voordelen. Voor vragen kun je mailen naar
-            <nuxt-link class="contact-link" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.
+        <div class="subtitle-small" v-if="nieuwtjes.length === 0">
+            Er zijn op dit moment nog geen zakelijke abonnementen beschikbaar. Houd onze website in de gaten voor nieuwe zakelijke voordelen. Voor vragen kun je mailen naar <nuxt-link class="contact-link" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.
         </div>
         <div v-else>
             <ul class="nieuwtjes">
@@ -42,9 +41,9 @@ onMounted(async () => {
                         <div>
                             <p class="subtitle-small">{{ nieuws.introductie }}</p>
                             <h3>{{ nieuws.titel }}</h3>
-                            <nuxt-link href="/contact" class="secondary-button-white subtitle-medium"
+                            <nuxt-link :href="`/news/${nieuws.slug}`" class="secondary-button-white subtitle-medium"
                                 aria-label="Lees meer">
-                                lees meer
+                                lees het volledige nieuwsitem
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"

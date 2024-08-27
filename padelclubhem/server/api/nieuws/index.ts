@@ -1,18 +1,22 @@
-// api/nieuws/index.ts
+// server/api/nieuws/index.ts
 export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
   const query = `
     {
-        nieuwtjes {
+      nieuwtjes {
         id
         titel
         image {
           url
         }
         introductie
+        beschrijving{
+          html
         }
+        slug
+      }
     }
-    `;
+  `;
 
   const response = await fetch(config.public.hygraphApiUrl, {
     method: 'POST',
