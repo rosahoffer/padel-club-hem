@@ -10,6 +10,7 @@ export default defineEventHandler(async () => {
           url
         }
         introductie
+        datum
         beschrijving{
           html
         }

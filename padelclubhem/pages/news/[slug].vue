@@ -23,6 +23,7 @@ onMounted(async () => {
 <template>
     <section v-if="nieuws">
         <h2>{{ nieuws.titel }}</h2>
+        <p class="subtitle-date">{{ nieuws.datum }}</p>
         <div class="image-wrapper">
             <div class="image-overlay">
                 <div class="image-container">
@@ -31,8 +32,8 @@ onMounted(async () => {
                 </div>
             </div>
         </div>
-            <div class="description" v-html="nieuws.beschrijving.html"></div>
-            <nuxt-link href="/nieuws" class="primary-button">Terug naar nieuws</nuxt-link>
+        <div class="description" v-html="nieuws.beschrijving.html"></div>
+        <nuxt-link href="/nieuws" class="primary-button">Terug naar nieuws</nuxt-link>
     </section>
 </template>
 
@@ -48,7 +49,7 @@ section {
 }
 
 h2 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .description {
@@ -65,6 +66,11 @@ h2 {
     margin-left: auto;
 }
 
+.image-wrapper {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
 @media (min-width: 40rem) {
     section {
         gap: 3rem;
@@ -78,8 +84,11 @@ h2 {
     }
 
     h2 {
-        color: var(--primary-color);
         text-align: center;
+    }
+
+    .subtitle-date {
+        margin: 0 auto;
     }
 
 }
