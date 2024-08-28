@@ -131,6 +131,10 @@ h3 {
     color: var(--secondary-color);
 }
 
+.image-overlay {
+    background-color: transparent;
+}
+
 @media (min-width: 40rem) {
     section {
         gap: 3rem;

@@ -22,6 +22,19 @@ onMounted(async () => {
 
 <template>
     <section v-if="nieuws">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <ul class="breadcrumb-list">
+                <li class="breadcrumb-item">
+                    <NuxtLink to="/">Home</NuxtLink>
+                </li>
+                <li class="breadcrumb-item">
+                    <NuxtLink to="/nieuws">Nieuws</NuxtLink>
+                </li>
+                <li class="breadcrumb-item">
+                    {{ nieuws.titel }}
+                </li>
+            </ul>
+        </nav>
         <h2>{{ nieuws.titel }}</h2>
         <p class="subtitle-date">{{ nieuws.datum }}</p>
         <div class="image-wrapper">
@@ -33,7 +46,6 @@ onMounted(async () => {
             </div>
         </div>
         <div class="description" v-html="nieuws.beschrijving.html"></div>
-        <nuxt-link href="/nieuws" class="primary-button">Terug naar nieuws</nuxt-link>
     </section>
 </template>
 
@@ -69,6 +81,10 @@ h2 {
 .image-wrapper {
     max-width: 50rem;
     margin: 0 auto;
+}
+
+.image-overlay {
+    background-color: transparent;
 }
 
 @media (min-width: 40rem) {
