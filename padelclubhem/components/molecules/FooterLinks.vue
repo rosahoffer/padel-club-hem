@@ -18,8 +18,28 @@
         <li>
           <nuxt-link to="/sportcafe" class="nav__link">Sportcafé</nuxt-link>
         </li>
+      </ul>
+    </div>
+    <div>
+      <h3>Info</h3>
+      <ul>
+        <li>
+          <nuxt-link to="/over-ons" class="nav__link">Over ons</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/nieuws" class="nav__link">Nieuws</nuxt-link>
+        </li>
         <li>
           <nuxt-link to="/contact" class="nav__link">Contact</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/" class="nav__link">Partners</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/vacatures" class="nav__link">Vacatures</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/faq" class="nav__link">FAQ</nuxt-link>
         </li>
       </ul>
     </div>

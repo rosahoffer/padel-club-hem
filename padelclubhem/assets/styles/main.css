@@ -561,7 +561,6 @@ a:focus-visible{
   height: 25rem;
   display: flex;
   align-items: center;
-  background-color: var(--primary-color);
 }
 
 .image-overlay img {
@@ -588,7 +587,6 @@ a:focus-visible{
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--primary-color);
 }
 
 .image-overlay-service-card img {

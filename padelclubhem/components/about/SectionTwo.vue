@@ -27,7 +27,7 @@ const isOpen = (faqId: number) => openFaq.value === faqId;
 <template>
     <section>
         <div class="title-contain">
-            <p class="subtitle-medium">vind hier je antwoorden</p>
+            <p class="subtitle-medium">vind hier je jouw antwoorden</p>
             <h2>Wat Wil Je Weten?</h2>
         </div>
         <div class="subtitle-small" v-if="faqs.length === 0">Er zijn op dit moment nog geen vragen beschikbaar.

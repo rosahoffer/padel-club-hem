@@ -16,7 +16,7 @@
                         fill="#414141" />
                 </svg>
             </nuxt-link>
-            <nuxt-link href="/contact" class="secondary-button subtitle-medium"
+            <nuxt-link href="/over-ons" class="secondary-button subtitle-medium"
                 aria-label="Benieuwd naar onze locatie?">
                 Benieuwd naar onze locatie?
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

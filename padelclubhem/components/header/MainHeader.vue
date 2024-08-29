@@ -128,7 +128,7 @@ onBeforeUnmount(() => {
                             </svg>
                         </button>
                         <ul class="info-menu" :class="{ open: isInfoMenuOpen }">
-                            <li><nuxt-link href="/" class="nav__link" @click="toggleMenu">Over Ons</nuxt-link>
+                            <li><nuxt-link href="/over-ons" class="nav__link" @click="toggleMenu">Over Ons</nuxt-link>
                             </li>
                             <li><nuxt-link href="/nieuws" class="nav__link" @click="toggleMenu">Nieuws</nuxt-link>
                             </li>
