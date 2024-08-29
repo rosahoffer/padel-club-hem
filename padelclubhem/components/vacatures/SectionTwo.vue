@@ -30,8 +30,7 @@ const isOpen = (vacatureSlug: string) => openVacature.value === vacatureSlug;
             <h2>Sluit je aan bij ons team!</h2>
         </div>
         <div class="subtitle-small" v-if="vacatures.length === 0">Er zijn op dit moment nog geen vacatures beschikbaar.
-            Houd
-            onze website in de gaten voor nieuwe vacatures. Voor vragen kun je mailen naar <nuxt-link
+            Houd onze website in de gaten voor nieuwe vacatures. Voor vragen kun je mailen naar <nuxt-link
                 class="contact-link" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</nuxt-link>.
         </div>
         <div v-else>

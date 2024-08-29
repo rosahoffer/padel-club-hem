@@ -9,7 +9,9 @@ function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
 
-function toggleInfoMenu() {
+function toggleInfoMenu(event) {
+    event.stopPropagation(); // Voorkom dat het evenement verder wordt verspreid
+
     const screenWidth = window.innerWidth;
 
     if (isInfoMenuOpen.value) {
@@ -20,7 +22,6 @@ function toggleInfoMenu() {
             duration: 0.3,
             onComplete: () => {
                 isInfoMenuOpen.value = false;
-                // SVG terugdraaien wanneer het menu sluit
                 gsap.to('.info-button svg', {
                     rotate: 0,
                     duration: 0.3,
@@ -31,18 +32,18 @@ function toggleInfoMenu() {
         // Open het Info-menu
         isInfoMenuOpen.value = true;
         const animationProps = screenWidth >= 1250
-            ? { height: 'auto', opacity: 1, duration: 0.3 } // Grote schermen
-            : { height: 'auto', opacity: 1, duration: 0.3 }; // Kleine schermen
+            ? { height: 'auto', opacity: 1, duration: 0.3 }
+            : { height: 'auto', opacity: 1, duration: 0.3 };
 
         gsap.fromTo('.info-menu', { height: 0, opacity: 0 }, animationProps);
 
-        // SVG draaien wanneer het menu opent
         gsap.to('.info-button svg', {
             rotate: 90,
             duration: 0.3,
         });
     }
 }
+
 
 function handleResize() {
     const screenWidth = window.innerWidth;
