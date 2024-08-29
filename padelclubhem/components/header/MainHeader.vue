@@ -267,7 +267,6 @@ onBeforeUnmount(() => {
     left: 0;
     background-color: var(--primary-color);
     z-index: 5;
-    overflow: hidden;
     transition: all 0.3s;
     padding: 1rem;
     border-radius: 10px;
@@ -276,6 +275,7 @@ onBeforeUnmount(() => {
 .nav.open {
     display: flex;
     animation: slideIn 0.3s ease-in-out;
+    overflow-y: auto;
 }
 
 .nav.closing {
@@ -339,10 +339,10 @@ onBeforeUnmount(() => {
 }
 
 .info-menu {
-    overflow: hidden;
     height: 0;
     opacity: 0;
     transition: height 0.3s ease, opacity 0.3s ease;
+    list-style-type: none;
 }
 
 /* Bij uitbreiding wordt de hoogte automatisch aangepast */
