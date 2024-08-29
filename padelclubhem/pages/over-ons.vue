@@ -3,8 +3,7 @@
 <template>
     <main aria-label="Hoofdinhoud Over ons">
         <HeaderMainHeader />
-        <AboutSectionOne />
-        <AboutSectionTwo />
+        <AboutInfoPage />
         <FooterMainFooter />
     </main>
 </template>
