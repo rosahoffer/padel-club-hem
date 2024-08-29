@@ -4,12 +4,24 @@ export default defineEventHandler(async () => {
     {
         abouts {
         id
-        titel
-        introductie
+        paginaTitel
+        paginaBeschrijving
+          paginaAfbeelding {
+            url
+          }
+        introductieTitel
+        introductieEen
         introductieTwee
-        introductieAfbeelding {
-          url
-        }
+        titelSectieEen
+        informatieSectieEen
+          afbeeldingSectieEen {
+              url
+            }
+        titelSectieTwee
+        informatieSectieTwee
+          afbeeldingSectieTwee {
+              url
+            }
         }
     }
     `;

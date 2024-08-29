@@ -37,9 +37,8 @@ onMounted(() => {
       <div v-if="abouts.length">
         <div v-for="about in abouts" :key="about.id" class="intro-item">
           <p class="subtitle-medium">Over ons</p>
-          <h1>{{ about.titel }}</h1>
-          <p>{{ about.introductie }}</p>
-          <p>{{ about.introductieTwee }}</p>
+          <h1>{{ about.paginaTitel }}</h1>
+          <p>{{ about.paginaBeschrijving }}</p>
         </div>
       </div>
       <div v-else>
@@ -60,8 +59,8 @@ onMounted(() => {
       <div class="image-wrapper">
         <div class="image-overlay">
           <div class="image-container">
-            <!-- Verander de statische afbeelding naar dynamische afbeelding -->
-            <img :src="abouts[0]?.introductieAfbeelding.url" alt="Afbeelding van de evenementen pagina" loading="lazy" width="100%" height="100%" />
+            <img :src="abouts[0]?.paginaAfbeelding.url" alt="Afbeelding van de evenementen pagina" loading="lazy"
+              width="100%" height="100%" />
           </div>
           <div class="green-separator"></div>
         </div>
@@ -74,6 +73,55 @@ onMounted(() => {
       </div>
     </section>
   </div>
+  <section class="introductie-contain">
+    <div v-if="abouts.length">
+      <div v-for="about in abouts" :key="about.id">
+        <h2>{{ about.introductieTitel }}</h2>
+        <div class="introductie-flex">
+          <p>{{ about.introductieEen }}</p>
+          <p>{{ about.introductieTwee }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services-contain">
+    <article>
+      <section class="service-card card-one-bg">
+        <div class="information-service-card card-one">
+          <div v-if="abouts.length">
+            <div v-for="about in abouts" :key="about.id" class="intro-item">
+              <h3>{{ about.titelSectieEen }}</h3>
+              <p>{{ about.informatieSectieEen }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="image-overlay-service-card">
+        <div class="image-container-service-card">
+          <img :src="abouts[0]?.afbeeldingSectieEen.url" alt="Afbeelding missie" loading="lazy" width="100%"
+            height="100%" />
+        </div>
+      </div>
+    </article>
+    <article>
+      <section class="service-card card-two-bg">
+        <div class="information-service-card card-two">
+          <div v-if="abouts.length">
+            <div v-for="about in abouts" :key="about.id" class="intro-item">
+              <h3>{{ about.titelSectieTwee }}</h3>
+              <p>{{ about.informatieSectieTwee }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="image-overlay-service-card">
+        <div class="image-container-service-card">
+          <img :src="abouts[0]?.afbeeldingSectieTwee.url" alt="Afbeelding visie" loading="lazy" width="100%"
+            height="100%" />
+        </div>
+      </div>
+    </article>
+  </section>
 </template>
 
 
@@ -87,7 +135,7 @@ onMounted(() => {
   padding: 11rem 1.5rem 3rem 1.5rem;
 }
 
-.intro-content h2 {
+.intro-content h1 {
   color: var(--primary-color);
 }
 
@@ -150,6 +198,84 @@ onMounted(() => {
   z-index: 10;
 }
 
+/* section twee  */
+
+.introductie-contain {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  padding: 4rem 1.5rem;
+}
+
+.introductie-contain h2 {
+  color: var(--background-color);
+}
+
+.introductie-contain p {
+  color: var(--background-color);
+}
+
+.introductie-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* section three  */
+
+.services-contain {
+  background-color: var(--background-color);
+}
+
+article {
+  width: 100%;
+}
+
+.service-card {
+  padding: 3rem 1.5rem;
+}
+
+.image-overlay-service-card {
+  height: 25rem;
+}
+
+.information-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card-one-bg {
+  background-color: var(--tertiary-color);
+}
+
+.card-one h3,
+.card-one p {
+  color: var(--secondary-color);
+}
+
+.card-two-bg {
+  background-color: var(--secondary-color);
+}
+
+.card-two h3,
+.card-two p {
+  color: var(--tertiary-color);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.spelregels-button {
+  border-top: none;
+  gap: 0;
+}
+
 @media (min-width: 40rem) {
   .intro-content {
     gap: 3rem;
@@ -159,6 +285,15 @@ onMounted(() => {
   .image-overlay {
     width: 100%;
     height: 30rem;
+  }
+
+  .introductie-contain {
+    gap: 1rem;
+    padding: 4rem 3rem;
+  }
+
+  .service-card {
+    padding: 5rem 3rem;
   }
 }
 
@@ -190,6 +325,54 @@ onMounted(() => {
     top: -3rem;
     right: 5rem;
   }
+
+  .introductie-contain {
+    gap: 1.5rem;
+    padding: 5rem 10rem;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+
+  .introductie-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  article {
+    width: 100%;
+    height: 35rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  article:nth-child(2) {
+    flex-direction: row;
+  }
+
+  article:nth-child(4) {
+    flex-direction: row;
+  }
+
+  .service-card {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-overlay-service-card {
+    width: 50%;
+    height: auto;
+  }
+
+  .information-service-card {
+    margin: 0;
+    gap: 3rem;
+  }
 }
 
 @media (min-width: 80rem) {
@@ -203,6 +386,28 @@ onMounted(() => {
   .scroll-down-container-wrapper {
     top: -4rem;
     right: 7rem;
+  }
+
+  .introductie-contain {
+    padding: 7rem 15rem;
+  }
+
+  .introductie-flex {
+    margin-top: 5rem;
+  }
+
+  article {
+    height: 45rem;
+  }
+
+  .information-service-card {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .introductie-contain {
+    padding: 8rem 25rem;
   }
 }
 
