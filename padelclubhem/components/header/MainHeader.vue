@@ -322,10 +322,6 @@ onBeforeUnmount(() => {
 
 /* Existing styles */
 
-.nav.open {
-    min-height: 100px;
-}
-
 .info-button {
     display: flex;
     align-items: center;
@@ -343,12 +339,14 @@ onBeforeUnmount(() => {
     opacity: 0;
     transition: height 0.3s ease, opacity 0.3s ease;
     list-style-type: none;
+    overflow: hidden;
 }
 
 /* Bij uitbreiding wordt de hoogte automatisch aangepast */
 .info-menu.open {
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
 }
 
 .info-menu .nav__link {
