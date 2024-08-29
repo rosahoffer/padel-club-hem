@@ -33,7 +33,7 @@ export default {
             <div class="image-wrapper">
                 <div class="image-overlay">
                     <div class="image-container">
-                        <img src="/assets/images/kantine.jpg" alt="Afbeelding van de kantine" loading="lazy"
+                        <img src="/assets/images/sportcafe-impressie-3.png" alt="Afbeelding van de kantine" loading="lazy"
                             width="100%" height="100%">
                     </div>
                     <div class="green-separator"></div>
