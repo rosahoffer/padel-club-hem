@@ -64,6 +64,11 @@ onMounted(async () => {
     padding: 11rem 1.5rem 3rem 1.5rem;
 }
 
+.intro-content h2 {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+
 .ball-separator-wrapper {
     overflow: hidden;
     width: 100%;
@@ -116,6 +121,11 @@ onMounted(async () => {
         width: 100%;
         height: 30rem;
     }
+
+    .intro-content h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
 }
 
 @media (min-width: 60rem) {
@@ -133,6 +143,11 @@ onMounted(async () => {
     .scroll-down-container-wrapper {
         top: -4rem;
         right: 7rem;
+    }
+
+    .intro-content h2 {
+        font-size: 5rem;
+        line-height: 5rem;
     }
 }
 

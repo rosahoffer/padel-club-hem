@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
     <main aria-label="Hoofdinhoud Sportcafé">
         <HeaderMainHeader />
