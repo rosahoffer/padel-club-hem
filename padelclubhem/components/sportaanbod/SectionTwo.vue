@@ -18,8 +18,8 @@
                                     fill="#414141" />
                             </svg>
                         </nuxt-link>
-                        <nuxt-link href="/" class="secondary-button subtitle-medium spelregels-button"
-                            aria-label="Boek een padelbaan">
+                        <nuxt-link href="/spelregels" class="secondary-button subtitle-medium spelregels-button"
+                            aria-label="Bekijk de spelregels">
                             bekijk de spelregels
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -55,8 +55,8 @@
                                     fill="#FFEAE3" />
                             </svg>
                         </nuxt-link>
-                        <nuxt-link href="/" class="secondary-button-white subtitle-medium spelregels-button"
-                            aria-label="Boek een tennisbaan">
+                        <nuxt-link href="/spelregels" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Bekijk de spelregels">
                             Bekijk de spelregels
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
                         rally's. Het balletje beweegt langzamer, waardoor je meer controle hebt. Ben je nieuwsgierig
                         geworden? Proef zelf de unieke ervaring van Padel Pingpong!</p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
+                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padel ping pong">
                             Boek hier je Padel Pingpong sessie
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -94,8 +94,8 @@
                                     fill="#414141" />
                             </svg>
                         </nuxt-link>
-                        <nuxt-link href="/" class="secondary-button subtitle-medium spelregels-button"
-                            aria-label="Boek een padelbaan">
+                        <nuxt-link href="/spelregels" class="secondary-button subtitle-medium spelregels-button"
+                            aria-label="Bekijk de spelregels">
                             Bekijk de spelregels
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@
                         vlakken waarin je punten kunt scoren.</p>
                     <div class="buttons">
                         <nuxt-link href="/" class="secondary-button-white subtitle-medium"
-                            aria-label="Boek een tennisbaan">
+                            aria-label="Boek een shuffleboard sessie">
                             Boek hier een shuffleboard-sessie
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -133,8 +133,8 @@
                                     fill="#FFEAE3" />
                             </svg>
                         </nuxt-link>
-                        <nuxt-link href="/" class="secondary-button-white subtitle-medium spelregels-button"
-                            aria-label="Boek een tennisbaan">
+                        <nuxt-link href="/spelregels" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Bekijk de spelregels">
                             Bekijk de spelregels
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
