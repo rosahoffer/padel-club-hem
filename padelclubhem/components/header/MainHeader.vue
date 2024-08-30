@@ -81,7 +81,7 @@ onBeforeUnmount(() => {
         <nav class="navbar">
             <!-- Logo Section -->
             <div class="logo-container" :class="{ 'menu-open': isMenuOpen }">
-                <nuxt-link href="/homepage" class="logo" id="logo" aria-label="Ga naar de homepagina">
+                <nuxt-link href="/" class="logo" id="logo" aria-label="Ga naar de homepagina">
                     <img src="assets/images/padelclubhem-logo.png" alt="Logo Padelclub Hem" />
                 </nuxt-link>
             </div>
@@ -89,7 +89,8 @@ onBeforeUnmount(() => {
             <!-- Booking Button Section -->
             <div class="wrapper">
                 <div class="book-button-container" :class="{ 'menu-open': isMenuOpen }">
-                    <nuxt-link href="/" class="primary-button">🏓 Boek een baan!</nuxt-link>
+                    <a href="https://meetandplay.nl/club/88199" class="primary-button" target="_blank"
+                        rel="noopener noreferrer">🏓 Boek een baan!</a>
                 </div>
 
                 <!-- Menu Toggle Button -->
@@ -137,8 +138,7 @@ onBeforeUnmount(() => {
                             </li>
                             <li><nuxt-link href="/contact" class="nav__link" @click="toggleMenu">Partners</nuxt-link>
                             </li>
-                            <li><nuxt-link href="/vacatures" class="nav__link"
-                                    @click="toggleMenu">Vacatures</nuxt-link>
+                            <li><nuxt-link href="/vacatures" class="nav__link" @click="toggleMenu">Vacatures</nuxt-link>
                             </li>
                             <li><nuxt-link href="/faq" class="nav__link" @click="toggleMenu">FAQ</nuxt-link>
                             </li>

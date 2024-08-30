@@ -9,7 +9,8 @@
                         onze locatie vind je vijf dubbelbanen en één singlebaan, perfect voor elke liefhebber.
                     </p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padelbaan">
+                        <a href="https://meetandplay.nl/club/88199" rel="noopener noreferrer"
+                            class="secondary-button subtitle-medium" target="_blank" aria-label="Boek een padelbaan">
                             Boek hier je padelbaan
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -17,7 +18,7 @@
                                     d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
                                     fill="#414141" />
                             </svg>
-                        </nuxt-link>
+                        </a>
                         <nuxt-link href="/spelregels" class="secondary-button subtitle-medium spelregels-button"
                             aria-label="Bekijk de spelregels">
                             bekijk de spelregels
@@ -85,7 +86,8 @@
                         rally's. Het balletje beweegt langzamer, waardoor je meer controle hebt. Ben je nieuwsgierig
                         geworden? Proef zelf de unieke ervaring van Padel Pingpong!</p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button subtitle-medium" aria-label="Boek een padel ping pong">
+                        <nuxt-link href="/" class="secondary-button subtitle-medium"
+                            aria-label="Boek een padel ping pong">
                             Boek hier je Padel Pingpong sessie
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
