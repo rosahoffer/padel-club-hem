@@ -1,9 +1,12 @@
 <template>
-    <HeaderMainHeader/>
+    <HeaderMainHeader />
     <div class="container">
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor:</p>
             <h3 class="subtitle-bold-uppercase">{{ evenementName }}</h3>
+            <div v-if="evenement">
+                <div class="description" v-html="evenement.beschrijving.html"></div>
+            </div>
             <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
         <form @submit.prevent="handleSubmit">
@@ -11,20 +14,23 @@
                 <p class="subtitle-medium padding">Persoon 1</p>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" :for="`first-name-0`">Voornaam *</label>
-                    <input type="text" v-model="people[0].firstName" :id="`first-name-0`" name="first-name-0"
-                        required placeholder="Jouw naam..."/>
+                    <input type="text" v-model="people[0].firstName" :id="`first-name-0`" name="first-name-0" required
+                        placeholder="Jouw naam..." />
                 </div>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" :for="`last-name-0`">Achternaam *</label>
-                    <input type="text" v-model="people[0].lastName" :id="`last-name-0`" name="last-name-0" required placeholder="Jouw achternaam..."/>
+                    <input type="text" v-model="people[0].lastName" :id="`last-name-0`" name="last-name-0" required
+                        placeholder="Jouw achternaam..." />
                 </div>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" :for="`email-0`">Email *</label>
-                    <input type="email" v-model="people[0].email" :id="`email-0`" name="email-0" required placeholder="Jouw emailadres..."/>
+                    <input type="email" v-model="people[0].email" :id="`email-0`" name="email-0" required
+                        placeholder="Jouw emailadres..." />
                 </div>
                 <div class="form-group">
                     <label class="subtitle-bold-uppercase" :for="`phone-0`">Telefoonnummer *</label>
-                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" required placeholder="Jouw telefoonnummer..."/>
+                    <input type="tel" v-model="people[0].phone" :id="`phone-0`" name="phone-0" required
+                        placeholder="Jouw telefoonnummer..." />
                 </div>
             </div>
             <div v-if="people.length > 1">
@@ -33,21 +39,22 @@
                     <div class="form-group">
                         <label class="subtitle-bold-uppercase" :for="`first-name-${index + 1}`">Voornaam *</label>
                         <input type="text" v-model="person.firstName" :id="`first-name-${index + 1}`"
-                            name="first-name-${index + 1}" required placeholder="Naam..."/>
+                            name="first-name-${index + 1}" required placeholder="Naam..." />
                     </div>
                     <div class="form-group">
                         <label class="subtitle-bold-uppercase" :for="`last-name-${index + 1}`">Achternaam *</label>
                         <input type="text" v-model="person.lastName" :id="`last-name-${index + 1}`"
-                            name="last-name-${index + 1}" required placeholder="Achternaam..."/>
+                            name="last-name-${index + 1}" required placeholder="Achternaam..." />
                     </div>
                     <div class="form-group">
                         <label class="subtitle-bold-uppercase" :for="`email-${index + 1}`">Email *</label>
                         <input type="email" v-model="person.email" :id="`email-${index + 1}`" name="email-${index + 1}"
-                            required placeholder="Emailadres..."/>
+                            required placeholder="Emailadres..." />
                     </div>
                     <div class="form-group">
                         <label class="subtitle-bold-uppercase" :for="`phone-${index + 1}`">Telefoonnummer</label>
-                        <input type="tel" v-model="person.phone" :id="`phone-${index + 1}`" name="phone-${index + 1}" placeholder="Telefoonnummer..."/>
+                        <input type="tel" v-model="person.phone" :id="`phone-${index + 1}`" name="phone-${index + 1}"
+                            placeholder="Telefoonnummer..." />
                     </div>
                 </div>
             </div>
@@ -73,16 +80,44 @@
             </p>
         </form>
     </div>
-    <FooterMainFooter/>
+    <FooterMainFooter />
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
     evenementSlug: String,
     evenementName: String,
+});
+
+// Fetch evenementen bij het laden van de component
+const evenement = ref(null);
+const route = useRoute();
+
+onMounted(async () => {
+    const slug = route.params.slug; // Haal de slug direct van de route
+
+    if (!slug) {
+        console.error('Geen slug gevonden in de route.');
+        return;
+    }
+
+    try {
+        const response = await fetch(`/api/evenementen`); // Zorg ervoor dat je API endpoint correct is
+        if (!response.ok) throw new Error('Fout bij het ophalen van evenementen.');
+
+        const data = await response.json();
+        const item = data.find((n) => n.slug === slug); // Zoek naar het juiste evenement op basis van de slug
+
+        if (!item) throw new Error('Evenement niet gevonden met de opgegeven slug.');
+        
+        evenement.value = item; // Sla het evenement op als het gevonden is
+    } catch (error) {
+        console.error('Error bij het ophalen van evenement:', error.message);
+    }
 });
 
 
@@ -149,7 +184,6 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-
 .container {
     width: 100%;
     padding: 10rem 1.5rem 3rem 1.5rem;
@@ -168,7 +202,7 @@ h3 {
     text-wrap: flex;
 }
 
-.subtitle-small{
+.subtitle-small {
     font-size: 0.8rem;
     line-height: 1.2rem;
 }
@@ -178,12 +212,12 @@ h3 {
     padding-top: 3rem;
 }
 
-.person-form{
+.person-form {
     width: 100%;
     padding-bottom: 3rem;
 }
 
-.padding{
+.padding {
     padding-bottom: 1.5rem
 }
 
@@ -252,7 +286,8 @@ form .submit-buttons {
     margin-right: 0.3rem;
 }
 
-form .primary-button, .primary-button-outline {
+form .primary-button,
+.primary-button-outline {
     margin-left: auto;
 }
 
@@ -273,7 +308,7 @@ form .primary-button, .primary-button-outline {
 
 @media (min-width: 60rem) {
 
-    .subtitle-small{
+    .subtitle-small {
         font-size: 1rem;
         line-height: 1.8rem;
     }

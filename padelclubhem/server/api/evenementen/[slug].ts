@@ -9,12 +9,16 @@ export default defineEventHandler(async (evenement) => {
       image {
         url
       }
-      beschrijving
+      introductie
       datum
       tijd
       leeftijd
       inschrijfgeld
+      duur
       slug
+      beschrijving{
+        html
+      }
     }
   }`;
   

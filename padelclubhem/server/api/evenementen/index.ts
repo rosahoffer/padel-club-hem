@@ -8,12 +8,16 @@ export default defineEventHandler(async () => {
         image {
           url
         }
-        beschrijving
+        introductie
         datum
         tijd
         leeftijd
         inschrijfgeld
+        duur
         slug
+        beschrijving{
+          html
+        }
         }
     }
     `;

@@ -3,7 +3,7 @@
         <p>
             Padelclub Hem © 2024 • Powered by
             <nuxt-link href="https://www.instagram.com/contraztmedia" target="_blank">CONTRAZT MEDIA</nuxt-link> •
-            <nuxt-link to="/">Privacybeleid</nuxt-link> •
+            <nuxt-link to="/privacybeleid">Privacybeleid</nuxt-link> •
             <nuxt-link to="/">Cookies</nuxt-link> •
             <nuxt-link to="/">Algemene voorwaarden</nuxt-link>
         </p>

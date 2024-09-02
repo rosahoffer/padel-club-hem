@@ -137,6 +137,13 @@ p {
   text-decoration: none;
 }
 
+.description {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  text-align: left;
+  max-width: 50rem;
+}
+
 
 @media (min-width: 40rem) {
 
@@ -192,6 +199,11 @@ p {
   .subtitle-bold-uppercase {
     font-size: 1.2rem;
     line-height: 2rem;
+  }
+
+
+  .description {
+    font-size: 1.2rem;
   }
 }
 

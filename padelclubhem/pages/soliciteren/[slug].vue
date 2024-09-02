@@ -104,13 +104,6 @@ h2 {
     margin: 0 auto;
 }
 
-.description {
-    color: var(--secondary-color);
-    font-size: 1rem;
-    text-align: left;
-    max-width: 50rem;
-}
-
 .primary-button {
     margin: 3rem 0;
     max-width: 10rem;
