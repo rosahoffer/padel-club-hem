@@ -21,6 +21,7 @@ onMounted(async () => {
 </script>
 
 <template>
+    <HeaderMainHeader />
     <section v-if="vacature">
         <nav aria-label="Breadcrumb" class="breadcrumb">
             <ul class="breadcrumb-list">
@@ -64,6 +65,7 @@ onMounted(async () => {
         <nuxt-link href="mailto:info@padelclubhem.nl" class="primary-button-black">Stuur mijn motivatie en
             CV</nuxt-link>
     </section>
+    <HeaderMainFooter />
 </template>
 
 <style scoped>

@@ -21,6 +21,7 @@ onMounted(async () => {
 </script>
 
 <template>
+    <HeaderMainHeader />
     <section v-if="nieuws">
         <nav aria-label="Breadcrumb" class="breadcrumb">
             <ul class="breadcrumb-list">
@@ -47,6 +48,7 @@ onMounted(async () => {
         </div>
         <div class="description" v-html="nieuws.beschrijving.html"></div>
     </section>
+    <HeaderMainFooter />
 </template>
 
 <style scoped>

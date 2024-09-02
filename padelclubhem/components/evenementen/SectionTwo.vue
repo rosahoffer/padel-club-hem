@@ -65,7 +65,7 @@ const isOpen = (evenementSlug: string) => openEvenement.value === evenementSlug;
                                     <p class="event-subtag">Tijd: {{ evenement.tijd }}</p>
                                     <p class="event-subtag">Leeftijd: {{ evenement.leeftijd }}</p>
                                     <p class="event-subtag">Inschrijfgeld: {{ evenement.inschrijfgeld}}</p>
-                                    <p class="event-subtag">Inschrijfgeld: {{ evenement.duur}}</p>
+                                    <p class="event-subtag">Duur: {{ evenement.duur}}</p>
                                 </div>
                                 <p class="event-description">{{ evenement.introductie }}</p>
                                 <nuxt-link class="primary-button"

@@ -48,6 +48,7 @@ watch(landingPage, () => {
 </script>
 
 <template>
+  <HeaderMainHeader />
     <!-- Intro Container -->
     <LandingpageIntroContainer />
 
@@ -62,4 +63,5 @@ watch(landingPage, () => {
 
     <!-- CTA Container -->
     <LandingpageCtaContainer />
+    <FooterMainHeader />
 </template>
