@@ -2,7 +2,7 @@
     <section>
         <h2>Promoot je bedrijf op onze banen!</h2>
         <p>Laat jouw bedrijf stralen op het hart van onze club. Sluit je aan als baansponsor!</p>
-        <nuxt-link href="/" class="primary-button-black">Word Baansponsor</nuxt-link>
+        <nuxt-link href="/partners" class="primary-button-black">Word Baansponsor</nuxt-link>
     </section>
 </template>
 
