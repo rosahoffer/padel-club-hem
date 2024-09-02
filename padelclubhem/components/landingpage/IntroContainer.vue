@@ -130,8 +130,8 @@ onMounted(async () => {
 
 @media (min-width: 60rem) {
 
-    .text-container {
-        padding: 5rem 10rem;
+    .intro-container {
+        padding: 3rem 5rem 0 5rem;
         margin: 0 auto;
         text-align: center;
         align-items: center;
@@ -139,6 +139,10 @@ onMounted(async () => {
 }
 
 @media (min-width: 80rem) {
+
+    .intro-container {
+        padding: 5rem 10rem 0 10rem;
+    }
 
     .scroll-down-container-wrapper {
         top: -4rem;

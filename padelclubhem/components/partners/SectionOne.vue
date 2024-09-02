@@ -15,12 +15,13 @@ export default {
 <template>
     <div class="wrapper">
         <section class="intro-content">
-            <p class="subtitle-medium">Sportcafé</p>
-            <h1>Even pauze?</h1>
-            <p>Ons sportcafé is ontstaan uit het idee om een gezellige ontmoetingsplek te creëren waar je kunt afspreken
-                met vrienden, familie en kennissen voor een drankje en een hapje. Of je nu voor of na het sporten komt
-                of gewoon enkel voor een gezellige borrel, we zorgen ervoor dat je je altijd thuis en welkom voelt.</p>
+            <p class="subtitle-medium">Partners</p>
+            <h1>Partners</h1>
+            <p>Coming Soon! Houd onze website in de gaten. Voor vragen kun je mailen naar
+                <a class="p-link-two" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</a>.
+            </p>
         </section>
+
         <div class="ball-separator-wrapper">
             <div class="ball-separator">
                 <MoleculesBallSeparator />
@@ -29,22 +30,6 @@ export default {
                 <MoleculesBallSeparator />
             </div>
         </div>
-        <section class="section-image-wrapper">
-            <div class="image-wrapper">
-                <div class="image-overlay">
-                    <div class="image-container">
-                        <img src="/assets/images/sportcafe-impressie-3.png" alt="Afbeelding van de kantine"
-                            loading="lazy" width="100%" height="100%">
-                    </div>
-                    <div class="green-separator"></div>
-                </div>
-            </div>
-            <div class="scroll-down-container-wrapper">
-                <div class="scroll-down-container">
-                    <AtomsRacketScrollDown />
-                </div>
-            </div>
-        </section>
     </div>
 </template>
 
@@ -111,6 +96,11 @@ export default {
     right: 3rem;
     background-color: transparent;
     z-index: 10;
+}
+
+.p-link-two {
+    color: var(--primary-color);
+    font-weight: 300;
 }
 
 @media (min-width: 40rem) {

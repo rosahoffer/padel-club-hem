@@ -33,7 +33,7 @@
           <nuxt-link to="/contact" class="nav__link">Contact</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/" class="nav__link">Partners</nuxt-link>
+          <nuxt-link to="/partners" class="nav__link">Partners</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/vacatures" class="nav__link">Vacatures</nuxt-link>

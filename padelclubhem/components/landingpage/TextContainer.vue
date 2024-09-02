@@ -31,7 +31,6 @@ onMounted(async () => {
 
 
 <style scoped>
-
 /* text container  */
 
 .text-container {
@@ -67,12 +66,7 @@ onMounted(async () => {
     }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 80rem) {}
 
-}
-
-@media (min-width: 120rem) {
-
-
-}
+@media (min-width: 120rem) {}
 </style>
