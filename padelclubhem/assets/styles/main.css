@@ -66,7 +66,7 @@ p {
   color: var(--secondary-color);
 }
 
-.subtitle-small{
+.subtitle-small {
   font-size: 0.8rem;
   line-height: 1.3rem;
   color: var(--secondary-color);
@@ -118,22 +118,43 @@ p {
   margin-top: 1rem;
 }
 
+.p-link {
+  color: var(--background-color);
+  font-weight: 700;
+}
+
+.p-link:hover {
+  color: var(--background-color);
+  text-decoration: none;
+}
+
+.p-link-two {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.p-link-two:hover {
+  text-decoration: none;
+}
+
+
 @media (min-width: 40rem) {
 
-h1,h2 {
+  h1,
+  h2 {
     font-size: 4.5rem;
     line-height: 4.5rem;
-}
+  }
 
-h2 {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-}
+  h2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
 
   h3 {
     font-size: 2.5rem;
     line-height: 2.5rem;
-}
+  }
 }
 
 @media (min-width: 80rem) {
@@ -142,21 +163,21 @@ h2 {
     font-size: 6rem;
     line-height: 6rem;
   }
-  
+
   h2 {
-  font-size: 5rem;
-  line-height: 5rem;
-}
+    font-size: 5rem;
+    line-height: 5rem;
+  }
 
   h3 {
     font-size: 3.5rem;
     line-height: 3.5rem;
-}
+  }
 
   p {
     font-size: 1.2rem;
     line-height: 2.2rem;
-}
+  }
 
   .subtitle-medium {
     font-size: 1.2rem;
@@ -178,7 +199,7 @@ h2 {
 
 /* all links  */
 
-a:focus-visible{
+a:focus-visible {
   outline: var(--primary-color);
   border: solid 2px var(--primary-color);
   border-radius: var(--hook-radius);
@@ -642,4 +663,3 @@ a:focus-visible{
   text-decoration: underline;
   color: var(--primary-color);
 }
-

@@ -182,8 +182,8 @@ onMounted(() => {
 }
 
 .image-overlay img {
-  width: 150%;
-  height: 150%;
+  width: 120%;
+  height: 120%;
 }
 
 .section-image-wrapper {
@@ -304,11 +304,6 @@ article {
     justify-content: space-between;
     height: 100vh;
     padding-top: 3rem;
-  }
-
-  .image-overlay img {
-    width: 150%;
-    height: 150%;
   }
 
   .ball-separator-wrapper {

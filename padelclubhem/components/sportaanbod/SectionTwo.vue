@@ -6,7 +6,9 @@
                     <h2>Padel</h2>
                     <p>Padel is een snelgroeiende en populaire sport die leuk is voor alle niveaus en leeftijden. Onze
                         moderne banen bieden de perfecte omgeving voor zowel recreatieve als competitieve spelers. Op
-                        onze locatie vind je vijf dubbelbanen en één singlebaan, perfect voor elke liefhebber.
+                        onze locatie vind je vijf dubbelbanen en één singlebaan, perfect voor elke liefhebber. Wil je de
+                        spelregels nog eens doornemen? Bekijk de <nuxt-link to="/spelregels"
+                            class="p-link">spelregels</nuxt-link> hier.
                     </p>
                     <div class="buttons">
                         <a href="https://meetandplay.nl/club/88199" rel="noopener noreferrer"
@@ -19,9 +21,9 @@
                                     fill="#414141" />
                             </svg>
                         </a>
-                        <nuxt-link href="/spelregels" class="secondary-button subtitle-medium spelregels-button"
+                        <nuxt-link href="/tarieven" class="secondary-button subtitle-medium spelregels-button"
                             aria-label="Bekijk de spelregels">
-                            bekijk de spelregels
+                            Bekijk de tarieven
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -44,10 +46,12 @@
                     <h2>Tennis</h2>
                     <p>Tennis is één van de grootste sporten ter wereld. Kom snel een keer bij ons langs! Ook voor
                         tennis verhuren we rackets en verkopen we ballen. Zorg zelf voor het juiste schoeisel, want onze
-                        ondergrond is kunstgras. We zien je graag bij ons op bezoek!</p>
+                        ondergrond is kunstgras. We zien je graag bij ons op bezoek! Wil je de
+                        spelregels nog eens doornemen? Bekijk de <nuxt-link to="/spelregels"
+                            class="p-link-two">spelregels</nuxt-link> hier.</p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button-white subtitle-medium"
-                            aria-label="Boek een tennisbaan">
+                        <a href="https://meetandplay.nl/club/88199" rel="noopener noreferrer" target="_blank"
+                            class="secondary-button-white subtitle-medium" aria-label="Boek een tennisbaan">
                             Boek hier je tennisbaan
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -55,10 +59,10 @@
                                     d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
                                     fill="#FFEAE3" />
                             </svg>
-                        </nuxt-link>
-                        <nuxt-link href="/spelregels" class="secondary-button-white subtitle-medium spelregels-button"
-                            aria-label="Bekijk de spelregels">
-                            Bekijk de spelregels
+                        </a>
+                        <nuxt-link href="/tarieven" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Bekijk de tarieven">
+                            Bekijk de tarieven
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -84,21 +88,24 @@
                         je met twee of
                         vier personen. Doordat het balletje groter is dan bij het 'normale' pingpong ontstaan er langere
                         rally's. Het balletje beweegt langzamer, waardoor je meer controle hebt. Ben je nieuwsgierig
-                        geworden? Proef zelf de unieke ervaring van Padel Pingpong!</p>
+                        geworden? Proef zelf de unieke ervaring van Padel Pingpong! Wil je de
+                        spelregels nog eens doornemen? Bekijk de <nuxt-link to="/spelregels"
+                            class="p-link">spelregels</nuxt-link> hier.</p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button subtitle-medium"
-                            aria-label="Boek een padel ping pong">
-                            Boek hier je Padel Pingpong sessie
+                        <a href="https://meetandplay.nl/club/88199" rel="noopener noreferrer"
+                            class="secondary-button subtitle-medium" target="_blank"
+                            aria-label="Boek een padel pingpong sessie">
+                            Boek hier je padel pingpong sessie
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
                                     fill="#414141" />
                             </svg>
-                        </nuxt-link>
-                        <nuxt-link href="/spelregels" class="secondary-button subtitle-medium spelregels-button"
+                        </a>
+                        <nuxt-link href="/tarieven" class="secondary-button subtitle-medium spelregels-button"
                             aria-label="Bekijk de spelregels">
-                            Bekijk de spelregels
+                            Bekijk de tarieven
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -123,21 +130,23 @@
                     <p>Ontdek shuffleboard in ons sportcafé! Kom gezellig borrelen met vrienden of familie en probeer
                         shuffleboard uit! Dit leuke spel lijkt op miniatuurcurling, maar in plaats van op ijs glijden
                         jouw pucks over een glad bord bedekt met een laagje zand. Aan het einde van de tafel liggen
-                        vlakken waarin je punten kunt scoren.</p>
+                        vlakken waarin je punten kunt scoren. Wil je de
+                        spelregels nog eens doornemen? Bekijk de <nuxt-link to="/spelregels"
+                            class="p-link-two">spelregels</nuxt-link> hier.</p>
                     <div class="buttons">
-                        <nuxt-link href="/" class="secondary-button-white subtitle-medium"
-                            aria-label="Boek een shuffleboard sessie">
-                            Boek hier een shuffleboard-sessie
+                        <a href="https://meetandplay.nl/club/88199" rel="noopener noreferrer" target="_blank"
+                            class="secondary-button-white subtitle-medium" aria-label="Boek een shuffleboard-sessie">
+                            Boek hier je shuffleboard-sessie
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M5.28239 0.452916L14.7293 0.3712C15.309 0.366184 15.783 0.832064 15.788 1.41177L15.8697 10.8586C15.8747 11.4383 15.4088 11.9123 14.8291 11.9174C14.2494 11.9224 13.7754 11.4565 13.7704 10.8768L13.7106 3.96401L2.24266 15.6321C1.83629 16.0455 1.17169 16.0513 0.758226 15.6449C0.344766 15.2386 0.339017 14.574 0.745385 14.1605L12.2133 2.49242L5.30055 2.55222C4.72085 2.55723 4.24684 2.09135 4.24182 1.51165C4.23681 0.93194 4.70269 0.457931 5.28239 0.452916Z"
                                     fill="#FFEAE3" />
                             </svg>
-                        </nuxt-link>
-                        <nuxt-link href="/spelregels" class="secondary-button-white subtitle-medium spelregels-button"
-                            aria-label="Bekijk de spelregels">
-                            Bekijk de spelregels
+                        </a>
+                        <nuxt-link href="/tarieven" class="secondary-button-white subtitle-medium spelregels-button"
+                            aria-label="Bekijk de tarieven">
+                            Bekijk de tarieven
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"

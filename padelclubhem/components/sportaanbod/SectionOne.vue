@@ -96,8 +96,11 @@ export default {
 }
 
 .image-overlay img {
-    width: 150%;
-    height: 150%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0.9;
 }
 
 .section-image-wrapper {
@@ -135,11 +138,6 @@ export default {
 
     .intro-content>p {
         max-width: 35rem;
-    }
-
-    .image-overlay img {
-        width: 150%;
-        height: 150%;
     }
 
     .ball-separator-wrapper {
