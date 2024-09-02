@@ -124,7 +124,7 @@ address {
   .footer-menu {
     flex-direction: row;
     justify-content: left;
-    gap: 4rem;
+    gap: 2.5rem;
   }
 }
 

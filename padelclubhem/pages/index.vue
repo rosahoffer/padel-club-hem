@@ -25,10 +25,13 @@ useSeoMeta({
 </script>
 
 <template>
-  <main>
-    <div>
-      <ComingSoon />
-    </div>
-  </main>
+    <main aria-label="Hoofdinhoud Homepagina">
+        <HeaderMainHeader />
+        <HomeSectionOne />
+        <HomeSectionTwo />
+        <HomeSectionThree />
+        <HomeSectionFour />
+        <FooterMainFooter />
+    </main>
 </template>
 
