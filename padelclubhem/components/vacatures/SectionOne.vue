@@ -17,7 +17,7 @@ export default {
         <section class="intro-content">
             <p class="subtitle-medium">vacatures</p>
             <h1>Werken bij</h1>
-            <p>Padelclub Hem is de nieuwste en meest gezellige padelclub in de regio, met de ambitie om uit te groeien
+            <p>Padel Club Hem is de nieuwste en meest gezellige padelclub in de regio, met de ambitie om uit te groeien
                 tot de gezelligste padelclub van heel Noord-Holland en West-Friesland. Onze club is stijlvol en
                 hotelchic ingericht, wat zorgt voor een unieke ervaring op en naast de baan. Om deze visie waar te
                 maken, zijn we op zoek naar enthousiaste medewerkers met een passie voor padel.</p>

@@ -17,7 +17,7 @@ export default {
         <section class="intro-content">
             <p class="subtitle-medium">Sportaanbod</p>
             <h1>Let's Play!</h1>
-            <p>Bij Padelclub Hem bieden we een breed scala aan sportmogelijkheden voor iedereen. Of je nu een
+            <p>Bij Padel Club Hem bieden we een breed scala aan sportmogelijkheden voor iedereen. Of je nu een
                 doorgewinterde speler bent of net begint, bij ons kun je zowel padellen als tennissen op topniveau.</p>
         </section>
         <div class="ball-separator-wrapper">

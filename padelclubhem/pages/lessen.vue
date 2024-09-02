@@ -3,15 +3,15 @@ import { ref, onMounted } from 'vue'
 
 // SEO meta gegevens
 useSeoMeta({
-  title: 'Lessen bij Padelclub Hem - Lessen en Meer',
+  title: 'Padel- en Tennislessen bij Padel Club Hem - Leer van Professionele Coaches',
   meta: [
-    { name: 'description', content: 'Blijf op de hoogte van onze lessen bij Padelclub Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
-    { name: 'keywords', content: 'lessen, competities, padel toernooien, tennis toernooien, sportwedstrijden, Padelclub Hem, wintercompetitie padel, sportlessen West-Friesland' },
+    { name: 'description', content: 'Volg padel- en tennislessen bij Padel Club Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
+    { name: 'keywords', content: 'padellessen, tennislessen, sportlessen, padel trainingen, tennis trainingen, lessen voor beginners, lessen voor gevorderden, Padel Club Hem, West-Friesland' },
     { property: 'og:url', content: 'https://www.padelclubhem.nl/lessen' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Lessen bij Padelclub Hem' },
-    { property: 'og:description', content: 'Blijf op de hoogte van onze lessen bij Padelclub Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
-    { property: 'og:image', content: 'https://www.padelclubhem.nl/_nuxt/playing-padel-orange.CNQYwvZ6.jpg' },
+    { property: 'og:title', content: 'Padel- en Tennislessen bij Padel Club Hem' },
+    { property: 'og:description', content: 'Volg padel- en tennislessen bij Padel Club Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
+    { property: 'og:image', content: 'http://localhost:3000/_nuxt/assets/images/man-playing-padel-blue.jpg' },
     { name: 'address', content: 'Torenweg 44, 1607 CP Hem, Nederland' },
     { name: 'geo.region', content: 'NL-NH' },
     { name: 'geo.placename', content: 'Hem' },
@@ -23,6 +23,7 @@ useSeoMeta({
   ]
 });
 </script>
+
 
 <template>
     <main aria-label="Hoofdinhoud Lessen">

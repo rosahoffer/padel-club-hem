@@ -3,14 +3,14 @@ import { ref, onMounted } from 'vue'
 
 // SEO meta gegevens
 useSeoMeta({
-  title: 'Evenementen & Competities bij Padelclub Hem - Toernooien, Wedstrijden en Meer',
+  title: 'Evenementen & Competities bij Padel Club Hem - Toernooien, Wedstrijden en Meer',
   meta: [
-    { name: 'description', content: 'Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen bij Padelclub Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
-    { name: 'keywords', content: 'evenementen, competities, padel toernooien, tennis toernooien, sportwedstrijden, Padelclub Hem, wintercompetitie padel, sportevenementen West-Friesland' },
+    { name: 'description', content: 'Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen bij Padel Club Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
+    { name: 'keywords', content: 'evenementen, competities, padel toernooien, tennis toernooien, sportwedstrijden, Padel Club Hem, wintercompetitie padel, sportevenementen West-Friesland' },
     { property: 'og:url', content: 'https://www.padelclubhem.nl/evenementen' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Evenementen & Competities bij Padelclub Hem' },
-    { property: 'og:description', content: 'Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen bij Padelclub Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
+    { property: 'og:title', content: 'Evenementen & Competities bij Padel Club Hem' },
+    { property: 'og:description', content: 'Blijf op de hoogte van alle toernooien, competities, wedstrijden en speciale evenementen bij Padel Club Hem. Van beginnerstoernooien tot professionele wedstrijden, er is altijd iets te beleven.' },
     { property: 'og:image', content: 'https://www.padelclubhem.nl/_nuxt/playing-padel-orange.CNQYwvZ6.jpg' },
     { name: 'address', content: 'Torenweg 44, 1607 CP Hem, Nederland' },
     { name: 'geo.region', content: 'NL-NH' },

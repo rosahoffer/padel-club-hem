@@ -1,7 +1,7 @@
 <template>
     <div class="copyright-container">
         <p>
-            Padelclub Hem © 2024 • Powered by
+            Padel Club Hem © 2024 • Powered by
             <nuxt-link href="https://www.instagram.com/contraztmedia" target="_blank">CONTRAZT MEDIA</nuxt-link> •
             <nuxt-link to="/privacybeleid">Privacybeleid</nuxt-link>
             <!-- <nuxt-link to="/">Cookies</nuxt-link> • -->
