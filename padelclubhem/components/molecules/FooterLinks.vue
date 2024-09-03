@@ -131,7 +131,7 @@ address {
 @media (min-width: 80rem) {
 
   .footer-menu {
-    gap: 8rem;
+    gap: 5rem;
   }
 }
 </style>
