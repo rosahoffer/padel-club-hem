@@ -8,15 +8,15 @@ const landingPage = ref<any>(null);
 // SEO Meta instellingen
 const setSeoMeta = () => {
   useSeoMeta({
-    title: landingPage.value?.metaTitle || 'Padel Club Hem - Boek een Padel- of Tennisbaan in West-Friesland',
+    title: landingPage.value?.metaTitle || 'Padelclub Hem - Boek een Padel- of Tennisbaan in West-Friesland',
     meta: [
       {
         name: 'description',
-        content: landingPage.value?.metaDescription || 'Ontdek de gezelligste indoor sportclub in West-Friesland. Boek vandaag nog een padelbaan of tennisbaan bij Padel Club Hem en beleef sport op topniveau.',
+        content: landingPage.value?.metaDescription || 'Ontdek de gezelligste indoor sportclub in West-Friesland. Boek vandaag nog een padelbaan of tennisbaan bij Padelclub Hem en beleef sport op topniveau.',
       },
       {
         name: 'keywords',
-        content: 'padellen, tennissen, pingpong padel, shuffleboard, padelbaan boeken, tennisbaan boeken, pingpong padel boeken, padelbaan huren, tennisbaan huren, padellen West-Friesland, tennissen West-Friesland, Padel Club Hem',
+        content: 'padellen, tennissen, pingpong padel, shuffleboard, padelbaan boeken, tennisbaan boeken, pingpong padel boeken, padelbaan huren, tennisbaan huren, padellen West-Friesland, tennissen West-Friesland, Padelclub Hem',
       },
     ],
   });

@@ -3,14 +3,14 @@ import { ref, onMounted } from 'vue'
 
 // SEO meta gegevens
 useSeoMeta({
-  title: 'Padel- en Tennislessen bij Padel Club Hem - Leer van Professionele Coaches',
+  title: 'Padel- en Tennislessen bij Padelclub Hem - Leer van Professionele Coaches',
   meta: [
-    { name: 'description', content: 'Volg padel- en tennislessen bij Padel Club Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
-    { name: 'keywords', content: 'padellessen, tennislessen, sportlessen, padel trainingen, tennis trainingen, lessen voor beginners, lessen voor gevorderden, Padel Club Hem, West-Friesland' },
+    { name: 'description', content: 'Volg padel- en tennislessen bij Padelclub Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
+    { name: 'keywords', content: 'padellessen, tennislessen, sportlessen, padel trainingen, tennis trainingen, lessen voor beginners, lessen voor gevorderden, Padelclub Hem, West-Friesland' },
     { property: 'og:url', content: 'https://www.padelclubhem.nl/lessen' },
     { property: 'og:type', content: 'website' },
-    { property: 'og:title', content: 'Padel- en Tennislessen bij Padel Club Hem' },
-    { property: 'og:description', content: 'Volg padel- en tennislessen bij Padel Club Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
+    { property: 'og:title', content: 'Padel- en Tennislessen bij Padelclub Hem' },
+    { property: 'og:description', content: 'Volg padel- en tennislessen bij Padelclub Hem onder begeleiding van professionele coaches. Geschikt voor beginners en gevorderden. Houd onze website in de gaten voor nieuwe lessen.' },
     { property: 'og:image', content: 'http://localhost:3000/_nuxt/assets/images/man-playing-padel-blue.jpg' },
     { name: 'address', content: 'Torenweg 44, 1607 CP Hem, Nederland' },
     { name: 'geo.region', content: 'NL-NH' },

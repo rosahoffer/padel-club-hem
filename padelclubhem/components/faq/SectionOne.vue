@@ -17,7 +17,7 @@ export default {
         <section class="intro-content">
             <p class="subtitle-medium">veelgestelde vragen</p>
             <h1>FAQ</h1>
-            <p>Heb je vragen over Padel Club Hem? Op deze pagina vind je antwoorden op de meest gestelde vragen over
+            <p>Heb je vragen over Padelclub Hem? Op deze pagina vind je antwoorden op de meest gestelde vragen over
                 lidmaatschap, lessen, banen reserveren, toernooien, en meer. We hebben de informatie overzichtelijk voor
                 je op een rij gezet, zodat je snel kunt vinden wat je zoekt</p>
         </section>

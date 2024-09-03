@@ -2,7 +2,7 @@
     <div class="wrapper">
         <section class="intro-content">
             <h1>Coming Soon!</h1>
-            <p>Welkom bij Padel Club Hem! We zijn druk bezig met het ontwikkelen van nieuwe spannende secties voor onze
+            <p>Welkom bij Padelclub Hem! We zijn druk bezig met het ontwikkelen van nieuwe spannende secties voor onze
                 website. Binnenkort kun je hier alles vinden over:
             </p>
         </section>

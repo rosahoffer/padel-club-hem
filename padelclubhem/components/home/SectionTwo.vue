@@ -2,7 +2,7 @@
     <div class="wrapper">
         <section class="intro-content">
             <h2>Over de club</h2>
-            <p>Welkom bij Padel Club Hem, waar jouw sportbeleving centraal staat! Of je nu zin hebt in het sporten,
+            <p>Welkom bij Padelclub Hem, waar jouw sportbeleving centraal staat! Of je nu zin hebt in het sporten,
                 kijken van een sportwedstrijd of gewoon wilt ontspannen met een drankje en een hapje samen met vrienden
                 of familie, bij ons zit je goed. Qua sportfaciliteiten is er naast padel ook tennis, padel pingpong en
                 een shuffleboard. En maak gebruik van ons drank- & eetaanbod in het sportcafé! Kom langs en ervaar het

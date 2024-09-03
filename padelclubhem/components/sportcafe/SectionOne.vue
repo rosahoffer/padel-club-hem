@@ -17,9 +17,9 @@ export default {
         <section class="intro-content">
             <p class="subtitle-medium">Sportcafé</p>
             <h1>Even pauze?</h1>
-            <p>Ons sportcafé is ontstaan uit het idee om een gezellige ontmoetingsplek te creëren waar je kunt afspreken
-                met vrienden, familie en kennissen voor een drankje en een hapje. Of je nu voor of na het sporten komt
-                of gewoon enkel voor een gezellige borrel, we zorgen ervoor dat je je altijd thuis en welkom voelt.</p>
+            <p>Ons sportcafé is een gezellige plek om af te spreken met vrienden, familie of kennissen voor een hapje en
+                een drankje. Of je nu komt voor of na het sporten, of gewoon voor een borrel, je voelt je altijd thuis
+                en welkom.</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">

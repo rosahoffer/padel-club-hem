@@ -14,7 +14,7 @@
     <div class="subtags">
       <p class="subtag">Inleiding</p>
     </div>
-    <p class="introductie">Welkom bij Padel Club Hem. Wij waarderen je privacy en doen er alles aan om je
+    <p class="introductie">Welkom bij Padelclub Hem. Wij waarderen je privacy en doen er alles aan om je
       persoonsgegevens te beschermen. Dit privacybeleid legt uit hoe wij omgaan met de gegevens die wij van je
       verzamelen wanneer je onze website bezoekt, een account aanmaakt of gebruik maakt van onze diensten.</p>
     <div class="information-contain">
@@ -92,7 +92,7 @@
         Als je vragen hebt over dit privacybeleid of over hoe wij je gegevens verwerken, neem dan contact met ons op
         via:
         <br>
-        Padel Club Hem<br>
+        Padelclub Hem<br>
         Adres: Torenweg 44, 1607 CP Hem<br>
         E-mailadres: <a class="p-link-two" href="mailto:info@padelclubhem.nl">info@padelclubhem.nl</a>
       </p>
