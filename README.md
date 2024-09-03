@@ -1,6 +1,3 @@
-Hier is het volledige README-bestand in Markdown-indeling dat je direct kunt gebruiken. Kopieer de onderstaande inhoud naar een `README.md`-bestand in je repository.
-
-```markdown
 # Padel Club Hem 🏓🎾
 
 Welkom bij de repository van **Padel Club Hem**, een moderne website voor de gezelligste indoor sportclub in West-Friesland. Op deze website kunnen bezoekers eenvoudig padel- en tennisbanen boeken, informatie vinden over ons sportcafé, en meer te weten komen over ons sportaanbod.
