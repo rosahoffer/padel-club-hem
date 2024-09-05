@@ -78,7 +78,7 @@ const isOpen = (lesSlug: string) => openLes.value === lesSlug;
                                     <p class="les-subtag">Lesduur: {{ les.lesduur }}</p>
                                     <p class="les-subtag">Inschrijfgeld: {{ les.prijsPerLes }} EUR</p>
                                 </div>
-                                <p class="les-description">{{ les.beschrijving }}</p>
+                                <p class="les-description">{{ les.introductie }}</p>
                                 <nuxt-link class="primary-button" :to="'/inschrijven-les/register/' + les.slug">Ik
                                     wil mij inschrijven!</nuxt-link>
                             </div>

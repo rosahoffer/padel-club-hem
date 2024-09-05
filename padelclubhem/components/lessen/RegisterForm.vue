@@ -4,6 +4,9 @@
         <div class="title-contain">
             <p class="subtitle-medium">Schrijf je in voor:</p>
             <h3 class="subtitle-bold-uppercase">{{ lesName }}</h3>
+            <div v-if="les">
+                <div class="description" v-html="les.beschrijving.html"></div>
+            </div>
             <p class="subtitle-small">Je kunt meerdere personen inschrijven (maximaal 8 personen).</p>
         </div>
         <form @submit.prevent="handleSubmit">
@@ -79,10 +82,38 @@
 <script setup>
 import { ref } from 'vue';
 import emailjs from 'emailjs-com';
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
     lesSlug: String,
     lesName: String,
+});
+
+// Fetch evenementen bij het laden van de component
+const les = ref(null);
+const route = useRoute();
+
+onMounted(async () => {
+    const slug = route.params.slug; // Haal de slug direct van de route
+
+    if (!slug) {
+        console.error('Geen slug gevonden in de route.');
+        return;
+    }
+
+    try {
+        const response = await fetch(`/api/lessen`); // Zorg ervoor dat je API endpoint correct is
+        if (!response.ok) throw new Error('Fout bij het ophalen van lessen.');
+
+        const data = await response.json();
+        const item = data.find((n) => n.slug === slug); // Zoek naar het juiste les op basis van de slug
+
+        if (!item) throw new Error('les niet gevonden met de opgegeven slug.');
+        
+        les.value = item; // Sla het les op als het gevonden is
+    } catch (error) {
+        console.error('Error bij het ophalen van les:', error.message);
+    }
 });
 
 

@@ -11,7 +11,10 @@ export default defineEventHandler(async () => {
         prijsPerLes
         lesduur
         aantalPersonen
-        beschrijving
+        introductie
+        beschrijving{
+          html
+        }
         slug
         }
     }
