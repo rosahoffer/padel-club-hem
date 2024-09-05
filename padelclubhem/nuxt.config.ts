@@ -16,7 +16,8 @@ export default defineNuxtConfig({
 
   modules: [
     'nuxt-marquee',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@nuxtjs/sitemap' // Voeg de sitemap module toe
   ],
 
   components: true,
@@ -31,6 +32,32 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
+    }
+  },
+
+  // Configureer de sitemap module
+  sitemap: {
+    hostname: 'https://www.padelclubhem.nl', // Basis-URL van je site
+    gzip: true, // Sitemap compressie
+    routes: [
+      '/sportaanbod', // Sportaanbod pagina
+      '/evenementen', // Evenementen pagina
+      '/lessen', // Lessen pagina
+      '/business', // Business pagina
+      '/contact',  // Contact pagina
+      {
+        url: 'https://meetandplay.nl/club/88199', // Boek een baan link
+        changefreq: 'monthly',
+        priority: 0.8
+      }
+    ],
+    exclude: [
+      '/over-ons',
+    ],
+    defaults: {
+      changefreq: 'weekly',
+      priority: 1,
+      lastmod: new Date()
     }
   }
 });

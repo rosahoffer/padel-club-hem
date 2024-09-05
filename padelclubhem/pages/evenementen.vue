@@ -24,7 +24,6 @@ useSeoMeta({
 });
 </script>
 
-
 <template>
     <main aria-label="Hoofdinhoud Evenementen">
         <HeaderMainHeader />

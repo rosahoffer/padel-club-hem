@@ -57,9 +57,11 @@
     </div>
     <div>
       <h3>Openingstijden</h3>
-      <p>Banen: ma-vr 07:00 t/m 24:00 uur</p>
-      <p>Sportcafé: Vanaf 12 oktober ma-vr 07:00 t/m 12:00 & 16:00 t/m 23:00</p>
-      <p>Za-zo 08:00 t/m 23:00 uur</p>
+      <p class="bold">Tijden banen:</p>
+      <p>Ma-Zo 7:00-23:00</p>
+      <p class="bold">Tijden Sportcafé: (vanaf 12 okt geopend)</p>
+      <p>Ma-vr 7:00-12:00 & 16:00-23:00</p>
+      <p>Za-zo 8:00-23:00</p>
     </div>
   </nav>
 </template>
@@ -108,6 +110,10 @@ p {
 
 address {
   font-style: normal;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 @media (min-width: 40rem) {
