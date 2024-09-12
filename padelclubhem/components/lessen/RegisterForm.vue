@@ -200,6 +200,7 @@ h3 {
 }
 
 .subtitle-small{
+    margin-bottom: 3rem;
     font-size: 0.8rem;
     line-height: 1.2rem;
 }
@@ -304,15 +305,21 @@ form .primary-button, .primary-button-outline {
 
 @media (min-width: 60rem) {
 
-    .subtitle-small{
+    .subtitle-small {
         font-size: 1rem;
         line-height: 1.8rem;
     }
 
     form {
-        max-width: 80rem;
+        max-width: 60rem;
         margin: 0 auto;
         margin-top: 5rem;
+    }
+
+    .title-contain {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding-top: 5rem;
     }
 
     .form-group {
@@ -334,12 +341,6 @@ form .primary-button, .primary-button-outline {
         font-size: 1rem;
         line-height: 1.8rem;
         padding: 2rem 0;
-    }
-}
-
-@media (min-width: 120rem) {
-    .title-contain {
-        padding: 3rem 7rem 0rem 7rem;
     }
 }
 </style>

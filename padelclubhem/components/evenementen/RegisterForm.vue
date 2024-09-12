@@ -70,7 +70,7 @@
                     </svg>
                     Extra persoon inschrijven
                 </button>
-                <button class="primary-button" type="submit" :disabled="loading">{{ loading ? 'Verzenden...' : 'Verzend je inschrijving'}}</button>
+                <button class="primary-button" type="submit" :disabled="loading">{{ loading ? 'Verzenden...' : 'Verzendje inschrijving'}}</button>
             </div>
             <p v-if="error" class="error">{{ error }}</p>
             <p v-if="success" class="success">
@@ -113,7 +113,7 @@ onMounted(async () => {
         const item = data.find((n) => n.slug === slug); // Zoek naar het juiste evenement op basis van de slug
 
         if (!item) throw new Error('Evenement niet gevonden met de opgegeven slug.');
-        
+
         evenement.value = item; // Sla het evenement op als het gevonden is
     } catch (error) {
         console.error('Error bij het ophalen van evenement:', error.message);
@@ -205,6 +205,7 @@ h3 {
 .subtitle-small {
     font-size: 0.8rem;
     line-height: 1.2rem;
+    margin-bottom: 3rem;
 }
 
 .form {
@@ -314,9 +315,15 @@ form .primary-button,
     }
 
     form {
-        max-width: 80rem;
+        max-width: 60rem;
         margin: 0 auto;
         margin-top: 5rem;
+    }
+
+    .title-contain {
+        max-width: 60rem;
+        margin: 0 auto;
+        padding-top: 5rem;
     }
 
     .form-group {
@@ -338,12 +345,6 @@ form .primary-button,
         font-size: 1rem;
         line-height: 1.8rem;
         padding: 2rem 0;
-    }
-}
-
-@media (min-width: 120rem) {
-    .title-contain {
-        padding: 3rem 7rem 0rem 7rem;
     }
 }
 </style>

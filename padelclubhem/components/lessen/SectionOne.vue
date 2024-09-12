@@ -17,8 +17,10 @@ export default {
         <section class="intro-content">
             <p class="subtitle-medium">Lessen</p>
             <h1>Lessen</h1>
-            <p>Of je nu een nieuwkomer bent of je vaardigheden wilt verbeteren, onze professionele coaches staan klaar
-                om je te helpen. Onze lessen zijn binnenkort beschikbaar voor alle niveaus.</p>
+            <p>Bij Padelclub Hem bieden we een breed scala aan lessen om je spel naar een hoger
+                niveau te tillen. Of je nu een beginner bent die de basisprincipes wil leren of een gevorderde speler
+                die zijn techniek wil verfijnen, onze professionele leraren staan voor je klaar. We werken zowel met
+                padel/tennisscholen, verenigingen als onze eigen leraren.</p>
         </section>
         <div class="ball-separator-wrapper">
             <div class="ball-separator">

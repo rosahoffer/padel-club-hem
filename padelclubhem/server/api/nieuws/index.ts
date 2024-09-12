@@ -2,16 +2,16 @@
 export default defineEventHandler(async () => {
   const config = useRuntimeConfig();
   const query = `
-    {
-      nieuwtjes {
+    query {
+      nieuwtjes(orderBy: createdAt_DESC) { 
         id
         titel
         image {
           url
         }
         introductie
-        datum
-        beschrijving{
+        createdAt 
+        beschrijving {
           html
         }
         slug
@@ -27,7 +27,14 @@ export default defineEventHandler(async () => {
     },
     body: JSON.stringify({ query }),
   });
-  
-  const { data } = await response.json();
+
+  const { data, errors } = await response.json();
+
+  // Log eventuele fouten die optreden tijdens het ophalen van de gegevens
+  if (errors) {
+    console.error('GraphQL Errors:', errors);
+    throw new Error('Failed to fetch nieuws.');
+  }
+
   return data.nieuwtjes;
 });
