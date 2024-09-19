@@ -62,7 +62,7 @@ onMounted(async () => {
         <!-- Bekijk al het nieuws knop -->
         <div class="button-container">
             <nuxt-link to="/nieuws" class="primary-button">
-                Bekijk al het nieuws
+                Lees meer clubnieuws
             </nuxt-link>
         </div>
     </section>
