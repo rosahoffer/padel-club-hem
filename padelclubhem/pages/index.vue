@@ -31,6 +31,7 @@ useSeoMeta({
         <HomeSectionTwo />
         <HomeSectionThree />
         <HomeSectionFour />
+        <HomeSectionFive />
         <FooterMainFooter />
     </main>
 </template>

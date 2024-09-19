@@ -59,7 +59,7 @@
       <h3>Openingstijden</h3>
       <p class="bold">Tijden banen:</p>
       <p>Ma-Zo 7:00-23:00</p>
-      <p class="bold">Tijden Sportcafé: (vanaf 12 okt geopend)</p>
+      <p class="bold">Tijden Sportcafé: (vanaf 18 okt geopend)</p>
       <p>Ma-vr 7:00-12:00 & 16:00-23:00</p>
       <p>Za-zo 8:00-23:00</p>
     </div>

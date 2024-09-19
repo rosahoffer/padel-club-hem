@@ -27,8 +27,9 @@ onMounted(async () => {
             updates!
         </div>
         <div v-else>
+            <!-- Toon de laatste 3 nieuwsberichten -->
             <ul class="nieuwtjes">
-                <li v-for="nieuws in nieuwtjes" :key="nieuws.id">
+                <li v-for="nieuws in nieuwtjes.slice(0, 3)" :key="nieuws.id">
                     <div class="nieuws-item">
                         <div class="image-wrapper">
                             <div class="image-overlay">
@@ -57,6 +58,12 @@ onMounted(async () => {
                     </div>
                 </li>
             </ul>
+        </div>
+        <!-- Bekijk al het nieuws knop -->
+        <div class="button-container">
+            <nuxt-link to="/nieuws" class="primary-button">
+                Bekijk al het nieuws
+            </nuxt-link>
         </div>
     </section>
 </template>
@@ -135,6 +142,15 @@ h3 {
     background-color: transparent;
 }
 
+.button-container {
+    padding: 3rem 0 0 0;
+}
+
+.primary-button {
+    max-width: fit-content;
+    margin-left: auto;
+}
+
 @media (min-width: 40rem) {
     section {
         gap: 3rem;
@@ -194,6 +210,14 @@ h3 {
     .nieuws-item {
         gap: 3rem;
         max-width: 20rem;
+    }
+
+    .button-container {
+        padding: 8rem 0 0 0;
+    }
+
+    .primary-button{
+        margin: 0 auto ;
     }
 }
 
