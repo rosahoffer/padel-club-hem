@@ -36,7 +36,7 @@
             </section>
             <div class="image-overlay-service-card">
                 <div class="image-container-service-card">
-                    <img src="/assets/images/padelhal.png" alt="Afbeelding van evenementen" width="100%" height="100%">
+                    <img src="/assets/images/padelhal-padelclubhem.jpg" alt="Afbeelding van evenementen" width="100%" height="100%">
                 </div>
             </div>
         </article>
@@ -75,7 +75,7 @@
             </section>
             <div class="image-overlay-service-card">
                 <div class="image-container-service-card">
-                    <img src="/assets/images/tennis-image.webp" alt="Afbeelding van evenementen" width="100%"
+                    <img src="/assets/images/tennishal-padelclubhem.jpg" alt="Afbeelding van evenementen" width="100%"
                         height="100%">
                 </div>
             </div>
